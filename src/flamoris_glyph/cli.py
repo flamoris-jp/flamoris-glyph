@@ -20,7 +20,7 @@ def main() -> None:
     lyrics = parse_lyrics(data, srt=args.lyrics.suffix.lower() == ".srt")
     manifest = build_manifest(lyrics, song=args.song, title=args.title)
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    args.out.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    args.out.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {manifest['glyph_count']} unique glyphs to {args.out}")
 
 
