@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "name": "red-shoes-tango",
+  "palette": ["#C72F42", "#222222"],
+  "variation": 0.65,
+  "stroke_width": 42,
+  "width": 1.0,
+  "height": 1.0,
+  "slant": 0.03,
+  "hane_length": 65,
+  "harai_taper": 0.08
+}

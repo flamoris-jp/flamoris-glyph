@@ -4,13 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "flamoris-glyph"
-version = "0.1.0"
+version = "0.2.0"
 description = "Song-specific vector glyph preparation for KineticTypo"
 requires-python = ">=3.11"
 license = {text = "Apache-2.0"}
+dependencies = ["fonttools>=4.61,<5"]
 
 [project.scripts]
 flamoris-glyph = "flamoris_glyph.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+

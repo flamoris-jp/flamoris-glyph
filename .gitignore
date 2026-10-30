@@ -24,4 +24,14 @@ tmp/
 temp/
 .cache/
 
-# Language- and runtime-specific ignores belong in each generated repository.
+# Python and generated local bundles
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+output-*/
+demo-preview.svg
+!examples/demo-preview.svg
+

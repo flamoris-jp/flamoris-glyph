@@ -3,14 +3,7 @@
 from __future__ import annotations
 
 from collections import Counter
-import re
 import unicodedata
-
-_TIME = re.compile(
-    r"^\s*\d{2}:\d{2}:\d{2}[,.]\d{3}\s*-->\s*"
-    r"\d{2}:\d{2}:\d{2}[,.]\d{3}(?:\s+.*)?$"
-)
-_SEQUENCE = re.compile(r"^\s*\d+\s*$")
 
 
 def parse_lyrics(content: str, *, srt: bool = False) -> str:
@@ -18,13 +11,8 @@ def parse_lyrics(content: str, *, srt: bool = False) -> str:
     content = content.removeprefix("\ufeff")
     if not srt:
         return content
-    lines: list[str] = []
-    for raw in content.splitlines():
-        line = raw.strip()
-        if not line or _TIME.fullmatch(line) or _SEQUENCE.fullmatch(line):
-            continue
-        lines.append(raw)
-    return "\n".join(lines)
+    from .lyrics import parse_cues
+    return "\n".join(cue.text for cue in parse_cues(content, srt=True))
 
 
 def build_manifest(lyrics: str, *, song: str, title: str = "") -> dict:
@@ -42,3 +30,4 @@ def build_manifest(lyrics: str, *, song: str, title: str = "") -> dict:
             "codepoint": f"U+{ord(char):04X}",
         })
     return {"schema_version": 1, "song": song, "title": title, "glyph_count": len(glyphs), "glyphs": glyphs}
+

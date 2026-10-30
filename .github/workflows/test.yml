@@ -19,3 +19,14 @@ jobs:
         run: python -m pip install -e .
       - name: Run tests
         run: python -m unittest discover -s tests -v
+      - name: Generate portable demo
+        run: python -m flamoris_glyph.cli generate examples/demo.srt --song "Red Shoes experiment" --skeletons examples/skeletons.json --style examples/tango.style.json --seed 42 --out output-demo
+      - name: Validate portable demo
+        run: python -m flamoris_glyph.cli validate output-demo
+      - name: Preview portable demo
+        run: python -m flamoris_glyph.cli preview output-demo --out output-demo/preview.svg
+      - uses: actions/upload-artifact@v4
+        with:
+          name: glyph-demo-${{ matrix.os }}-py${{ matrix.python-version }}
+          path: output-demo/
+
