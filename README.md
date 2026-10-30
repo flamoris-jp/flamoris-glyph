@@ -19,9 +19,10 @@ FLAMORIS Glyph extracts the distinct characters needed for a song from lyric tex
 
 ## Quick start
 
-Requires Python 3.11+; the bootstrap uses only the standard library.
+Requires Python 3.11+; runtime uses only the standard library, but the package must be installed first.
 
 ```bash
+python -m pip install -e .
 python -m flamoris_glyph.cli lyrics.srt --song "Red Shoes Tango" --out manifest.json
 python -m unittest discover -s tests -v
 ```
