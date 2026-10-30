@@ -3,20 +3,19 @@
 from __future__ import annotations
 
 from collections import Counter
-from pathlib import Path
 import re
 import unicodedata
 
 _TIME = re.compile(
-    r"^\\s*\\d{2}:\\d{2}:\\d{2}[,.]\\d{3}\\s*-->\\s*"
-    r"\\d{2}:\\d{2}:\\d{2}[,.]\\d{3}(?:\\s+.*)?$"
+    r"^\s*\d{2}:\d{2}:\d{2}[,.]\d{3}\s*-->\s*"
+    r"\d{2}:\d{2}:\d{2}[,.]\d{3}(?:\s+.*)?$"
 )
-_SEQUENCE = re.compile(r"^\\s*\\d+\\s*$")
+_SEQUENCE = re.compile(r"^\s*\d+\s*$")
 
 
 def parse_lyrics(content: str, *, srt: bool = False) -> str:
     """Return lyric text, stripping SRT cue numbers and timestamps if requested."""
-    content = content.removeprefix("\\ufeff")
+    content = content.removeprefix("\ufeff")
     if not srt:
         return content
     lines: list[str] = []
@@ -25,7 +24,7 @@ def parse_lyrics(content: str, *, srt: bool = False) -> str:
         if not line or _TIME.fullmatch(line) or _SEQUENCE.fullmatch(line):
             continue
         lines.append(raw)
-    return "\\n".join(lines)
+    return "\n".join(lines)
 
 
 def build_manifest(lyrics: str, *, song: str, title: str = "") -> dict:
