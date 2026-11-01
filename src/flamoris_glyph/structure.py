@@ -82,7 +82,7 @@ class StructureDNA:
 
 def structure_engine():
     return {**engine_metadata(), "version": ENGINE_VERSION, "samples_per_stroke": 65, "assembly_grid": .01,
-            "assembly_hole_area": .01, "assembly_hole_budget": .05}
+            "assembly_hole_area": .01, "assembly_hole_budget": .05, "sample_precision": 4, "circle_points": 32}
 
 
 class AuthoredStructureSource:
@@ -161,49 +161,64 @@ def _points(stroke, p):
 
 
 def _cubic(points, t):
-    return tuple(sum(c*v[a] for c, v in zip(((1-t)**3, 3*(1-t)**2*t, 3*(1-t)*t*t, t**3), points)) for a in (0, 1))
+    # Python 3.12 changed float sum() accumulation. Use explicit binary
+    # products and fsum so a grid-boundary sample stays portable on 3.11/3.12.
+    r = 1-t
+    coefficients = (r*r*r, 3*r*r*t, 3*r*t*t, t*t*t)
+    return tuple(math.fsum(c*v[a] for c, v in zip(coefficients, points)) for a in (0, 1))
+
+# Fixed unit-circle coordinates avoid platform libm differences in GEOS buffer.
+_UNIT_CIRCLE = ((1.0, 0.0), (0.980785280403, 0.195090322016), (0.923879532511, 0.382683432365), (0.831469612303, 0.55557023302), (0.707106781187, 0.707106781187), (0.55557023302, 0.831469612303), (0.382683432365, 0.923879532511), (0.195090322016, 0.980785280403), (0.0, 1.0), (-0.195090322016, 0.980785280403), (-0.382683432365, 0.923879532511), (-0.55557023302, 0.831469612303), (-0.707106781187, 0.707106781187), (-0.831469612303, 0.55557023302), (-0.923879532511, 0.382683432365), (-0.980785280403, 0.195090322016), (-1.0, 0.0), (-0.980785280403, -0.195090322016), (-0.923879532511, -0.382683432365), (-0.831469612303, -0.55557023302), (-0.707106781187, -0.707106781187), (-0.55557023302, -0.831469612303), (-0.382683432365, -0.923879532511), (-0.195090322016, -0.980785280403), (-0.0, -1.0), (0.195090322016, -0.980785280403), (0.382683432365, -0.923879532511), (0.55557023302, -0.831469612303), (0.707106781187, -0.707106781187), (0.831469612303, -0.55557023302), (0.923879532511, -0.382683432365), (0.980785280403, -0.195090322016))
+
+
+def _disc(center, radius, sides=32):
+    from shapely.geometry import Polygon
+    x, y = center
+    return Polygon([(round(x+u*radius, 4), round(y+v*radius, 4))
+                    for u, v in _UNIT_CIRCLE[::32//sides]])
 
 
 def _stroke_polygon(points, start_width, end_width, cap):
-    from shapely.geometry import Point, Polygon
+    from shapely.geometry import Polygon
     from shapely import union_all
-    samples = [_cubic(points, i/64) for i in range(65)]
+    samples = [tuple(round(v, 4) for v in _cubic(points, i/64)) for i in range(65)]
     widths = []
     for i, (x, y) in enumerate(samples):
         t = i/64
         before, after = samples[max(0, i-1)], samples[min(64, i+1)]
         dx, dy = after[0]-before[0], after[1]-before[1]
-        length = math.hypot(dx, dy)
+        length = math.sqrt(dx*dx+dy*dy)
         if length < 1e-6:
             raise ValueError("Degenerate structured tangent")
         width = start_width+(end_width-start_width)*t*t
         if cap == "round":
             width *= 1+.12*math.sin(math.pi*t)
-        widths.append(width)
+        widths.append(round(width, 4))
     # Build a filled swept envelope from segment trapezoids and joint discs.
     # This defines thick curved strokes directly; no buffer(0) repair of a
     # self-crossing outline or loss of the authored centerline is involved.
     pieces = []
     for i, (a, b) in enumerate(zip(samples, samples[1:])):
         dx, dy = b[0]-a[0], b[1]-a[1]
-        length = math.hypot(dx, dy)
+        length = math.sqrt(dx*dx+dy*dy)
         if length < 1e-6:
             raise ValueError("Degenerate structured segment")
         nx, ny = -dy/length, dx/length
         ra, rb = widths[i]/2, widths[i+1]/2
-        pieces.append(Polygon([(a[0]+nx*ra, a[1]+ny*ra), (b[0]+nx*rb, b[1]+ny*rb),
-                               (b[0]-nx*rb, b[1]-ny*rb), (a[0]-nx*ra, a[1]-ny*ra)]))
-    pieces.extend(Point(samples[i]).buffer(widths[i]/2, quad_segs=4) for i in range(1, 64))
+        pieces.append(Polygon([(round(x, 4), round(y, 4)) for x, y in
+                               [(a[0]+nx*ra, a[1]+ny*ra), (b[0]+nx*rb, b[1]+ny*rb),
+                                (b[0]-nx*rb, b[1]-ny*rb), (a[0]-nx*ra, a[1]-ny*ra)]]))
+    pieces.extend(_disc(samples[i], widths[i]/2, sides=16) for i in range(1, 64))
     g = union_all(pieces, grid_size=.01)
     if cap == "round":
-        g = union_all([g, Point(samples[0]).buffer(start_width/2, quad_segs=8),
-                       Point(samples[-1]).buffer(end_width/2, quad_segs=8)], grid_size=.01)
+        g = union_all([g, _disc(samples[0], round(start_width/2, 4)),
+                       _disc(samples[-1], round(end_width/2, 4))], grid_size=.01)
     else:
         # Joint discs must not accidentally round a requested flat terminal.
         # Keep the inward endpoint tangent half-plane at each end.
         for endpoint, adjacent in ((samples[0], samples[1]), (samples[-1], samples[-2])):
             dx, dy = adjacent[0]-endpoint[0], adjacent[1]-endpoint[1]
-            length = math.hypot(dx, dy)
+            length = math.sqrt(dx*dx+dy*dy)
             tx, ty, nx, ny = dx/length, dy/length, -dy/length, dx/length
             x, y = endpoint
             plane = Polygon([(x+nx*4000, y+ny*4000), (x-nx*4000, y-ny*4000),
@@ -215,7 +230,7 @@ def _stroke_polygon(points, start_width, end_width, cap):
 
 def render_structure(base, p, legacy_params):
     from shapely import union_all, set_precision
-    from shapely.geometry import Point, Polygon
+    from shapely.geometry import Polygon
     from shapely.ops import transform
     vertical = base["vertical_width"]*p["weight"]
     ratio = base["horizontal_width"]/base["vertical_width"]
@@ -251,7 +266,9 @@ def render_structure(base, p, legacy_params):
             g = union_all([g, Polygon([(x-width*.8, y-5), (x+width*.9, y+5),
                                        (x+width*.43, y+serif*.6), (x-width*.45, y+serif*.3)])], grid_size=.01)
         if terminal == "round" and role.startswith("inner"):
-            g = union_all([g, Point(points[-1]).buffer(width*.57*p["terminal_gain"], quad_segs=10)], grid_size=.01)
+            g = union_all([g, _disc(points[-1], round(width*.57*p["terminal_gain"], 4))], grid_size=.01)
+        if g.geom_type == "MultiPolygon" and len(g.geoms) == 1:
+            g = g.geoms[0]
         if g.is_empty or not g.is_valid or g.geom_type != "Polygon":
             raise ValueError(f"Structured role {role} disconnected or invalid")
         g = transform(lambda x, y: warp((x, y), legacy_params), g)

@@ -243,12 +243,13 @@ def _validate_bundle(directory: Path) -> dict:
         structure = StructureDNA.from_dict(manifest["structure"])
         if ("pattern" in manifest or not isinstance(structure_meta, dict)
                 or set(structure_meta) != {"version", "shapely", "geos", "flatten_tolerance", "samples_per_stroke", "assembly_grid",
-                                         "assembly_hole_area", "assembly_hole_budget"}
+                                         "assembly_hole_area", "assembly_hole_budget", "sample_precision", "circle_points"}
                 or structure_meta["version"] != STRUCTURE_VERSION or structure_meta["shapely"] != "2.1.2"
                 or not isinstance(structure_meta["geos"], str) or not structure_meta["geos"]
                 or structure_meta["flatten_tolerance"] != .35 or structure_meta["samples_per_stroke"] != 65
                 or structure_meta["assembly_grid"] != .01
                 or structure_meta["assembly_hole_area"] != .01 or structure_meta["assembly_hole_budget"] != .05
+                or structure_meta["sample_precision"] != 4 or structure_meta["circle_points"] != 32
                 or manifest["generator"]["version"] != "0.2.0+structure.1"
                 or manifest["source"]["kind"] != "authored-skeleton"):
             raise ValueError("Invalid authored structure engine contract")

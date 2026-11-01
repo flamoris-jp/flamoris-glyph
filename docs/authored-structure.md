@@ -100,7 +100,13 @@ wedges and selected lower terminal bulbs are constructed by role. This is a
 limited designer-authored grammar, not general calligraphic terminal inference.
 
 Geometry assembly uses a documented 0.01 design-unit grid to avoid numerical
-slivers during unions. That is distinct from the final four-decimal SVG
+slivers during unions. Cubic evaluation uses explicit binary products and
+`math.fsum` (Python 3.12 changed float `sum` accumulation). Samples and local
+widths are rounded to four decimals before assembly, and joint/terminal discs
+use a fixed 32-point unit-circle table instead of platform-dependent buffer
+trigonometry. Segment envelopes are likewise quantized before Boolean unions.
+This makes exact geometric fixtures comparable across supported Python/OS
+combinations. The assembly grid is distinct from the final four-decimal SVG
 serialization. Tiny enclosed assembly holes are explicitly filled only when
 each is at most 0.01 square design units and their sum is at most 0.05 per role;
 counts are recorded in `assembly_holes_filled`. Larger holes fail. This rule
