@@ -90,3 +90,6 @@ Font-derived artwork remains subject to the supplied font's license; recording a
 
 FLAMORIS is open-source creative software. Commercial use is welcome within applicable licenses. Software is provided as-is, without guaranteed individual support.
 
+## CGのactor連携（設計バックログ）
+
+[Issue #3](https://github.com/flamoris-jp/flamoris-glyph/issues/3)の依存関係を[形状契約とCG側の取り込み契約](docs/scene-actor-integration.md)に分けました。Glyphは形状・Style DNA・出典、CGは配置・動作・物理研究を持ちます。全体Scene Engineスキーマ待ちは外し、必要な二者間契約を合意します。CGのGlyph取り込みは未実装。Cinemaの旧adapterは比較対象として保存し、Cinema再開・新エンジン新設は前提にしません。

@@ -82,3 +82,6 @@ No KineticTypo/Kachinco repository is modified by this MVP. Both Windows and fut
 
 Cross-platform Python 3.11 / 3.12 CI runs the full unit/integration suite and a font-free demo generation/validation. Original synthetic font fixtures exercise font extraction and composite outlines without redistributing a third-party font. A fixed asset hash fixture checks portable skeleton SVG output. Player round trips and aesthetic evaluation remain separate acceptance work.
 
+## Scene actor integration reconciliation (2026-11-01)
+
+[Issue #3](https://github.com/flamoris-jp/flamoris-glyph/issues/3) separates the existing Glyph shape contract from the future CG consumer adapter. See [scope and dependencies](scene-actor-integration.md). Generation/validation do not wait on an engine-wide schema. CG's minimum conversion/subset still needs bilateral agreement; collision proxies remain CG research. Cinema's historical adapter is prior work to compare and Cinema stays paused. No bundle schema, CLI or geometry changes here.
