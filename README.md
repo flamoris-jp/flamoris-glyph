@@ -37,6 +37,23 @@ python -m unittest discover -s tests -v
 
 これはオリジナルの簡略骨格を使った実験です。実曲の歌詞・タイミングではありません。
 
+## Optional local Noto font library (fonts not redistributed)
+
+Noto Sans CJK JP / Noto Serif CJK JP can be supplied **by each user**, without committing font binaries or licenses to this repository. Put one static `.ttf` / `.otf` and its official `OFL.txt` in each corresponding ignored directory:
+
+```text
+lib/fonts/noto-sans-jp/   <one static font file> + OFL.txt
+lib/fonts/noto-serif-jp/  <one static font file> + OFL.txt
+```
+
+Then run:
+
+```bash
+python -m flamoris_glyph.cli generate lyrics.srt --song "My song" --font-id noto-sans-jp --style examples/tango.style.json --seed 42 --out song-glyphs
+```
+
+`--font-id` resolves the local library relative to the current working directory (override with `--font-library`). It checks for a font and license file and records a provenance note, but does **not** verify rights or embed license/font bytes. Existing `--font` with `--source-license` remains supported. See [local font setup and redistribution cautions](docs/local-fonts.md), [Noto source](https://github.com/notofonts/noto-cjk) and [SIL OFL FAQ](https://openfontlicense.org/ofl-faq/).
+
 ## Arbitrary Japanese lyrics
 
 実際の日本語歌詞には、アウトライン化して作品に利用できる**静的な日本語TTF/OTF**を指定します。フォントファイルは出力に含めません。利用条件は指定フォントに従います。
@@ -85,7 +102,7 @@ python -m flamoris_glyph.cli lyrics.srt --song "My song" --out inventory.json
 ## License / FLAMORIS
 
 Code and original experimental skeleton samples: [Apache License 2.0](LICENSE).
-The fontTools dependency is MIT licensed. No third-party fonts, models or stroke datasets are included.
+The fontTools dependency is MIT licensed. No third-party fonts, models or stroke datasets are included. User-supplied fonts and license files live only in ignored `lib/fonts/`.
 Font-derived artwork remains subject to the supplied font's license; recording a license note is provenance, not automated legal verification.
 
 FLAMORIS is open-source creative software. Commercial use is welcome within applicable licenses. Software is provided as-is, without guaranteed individual support.
