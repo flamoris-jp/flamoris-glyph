@@ -81,9 +81,10 @@ class StructureDNA:
 
 
 def structure_engine():
-    return {**engine_metadata(), "version": ENGINE_VERSION, "samples_per_stroke": 65, "assembly_grid": .01,
-            "assembly_hole_area": .01, "assembly_hole_budget": .05, "sample_precision": 4, "circle_points": 32,
-            "canonical_collinear": True}
+    dependency = engine_metadata()
+    return {"version": ENGINE_VERSION, "shapely": dependency["shapely"], "geos": dependency["geos"],
+            "samples_per_stroke": 65, "coordinate_grid": .01, "sample_precision": 4,
+            "circle_points": 32, "canonical_tolerance": .01}
 
 
 class AuthoredStructureSource:
@@ -172,46 +173,67 @@ def _cubic(points, t):
 _UNIT_CIRCLE = ((1.0, 0.0), (0.980785280403, 0.195090322016), (0.923879532511, 0.382683432365), (0.831469612303, 0.55557023302), (0.707106781187, 0.707106781187), (0.55557023302, 0.831469612303), (0.382683432365, 0.923879532511), (0.195090322016, 0.980785280403), (0.0, 1.0), (-0.195090322016, 0.980785280403), (-0.382683432365, 0.923879532511), (-0.55557023302, 0.831469612303), (-0.707106781187, 0.707106781187), (-0.831469612303, 0.55557023302), (-0.923879532511, 0.382683432365), (-0.980785280403, 0.195090322016), (-1.0, 0.0), (-0.980785280403, -0.195090322016), (-0.923879532511, -0.382683432365), (-0.831469612303, -0.55557023302), (-0.707106781187, -0.707106781187), (-0.55557023302, -0.831469612303), (-0.382683432365, -0.923879532511), (-0.195090322016, -0.980785280403), (-0.0, -1.0), (0.195090322016, -0.980785280403), (0.382683432365, -0.923879532511), (0.55557023302, -0.831469612303), (0.707106781187, -0.707106781187), (0.831469612303, -0.55557023302), (0.923879532511, -0.382683432365), (0.980785280403, -0.195090322016))
 
 
-def _disc(center, radius, sides=32):
-    from shapely.geometry import Polygon
-    x, y = center
-    return Polygon([(round(x+u*radius, 4), round(y+v*radius, 4))
-                    for u, v in _UNIT_CIRCLE[::32//sides]])
-
-
 def _grid_path(g):
-    """Remove redundant collinear Boolean vertices on the exact integer grid.
+    """Canonical integer RDP with at most 0.01 design-unit boundary error.
 
-    Different GEOS builds may keep different vertices along the same segment.
-    Integer cross products canonicalize that representation without smoothing.
+    Fixed anchors/orientation and integer distance comparisons remove Boolean
+    build differences, including almost-collinear grid vertices. Every removed
+    point is measured against the final segment, avoiding accumulated error.
     """
     from shapely.geometry import Polygon
+    from shapely.geometry.polygon import orient
+    g = orient(g, sign=1)
+
+    def simplify_chain(points):
+        keep = {0, len(points)-1}
+        stack = [(0, len(points)-1)]
+        while stack:
+            first, last = stack.pop()
+            a, c = points[first], points[last]
+            dx, dy = c[0]-a[0], c[1]-a[1]
+            length2 = dx*dx+dy*dy
+            best, best_num, best_den = None, 0, 1
+            for i in range(first+1, last):
+                b = points[i]
+                ax, ay = b[0]-a[0], b[1]-a[1]
+                dot = ax*dx+ay*dy
+                if length2 == 0 or dot <= 0:
+                    num, den = ax*ax+ay*ay, 1
+                elif dot >= length2:
+                    num, den = (b[0]-c[0])**2+(b[1]-c[1])**2, 1
+                else:
+                    num, den = (ax*dy-ay*dx)**2, length2
+                if (num*best_den > best_num*den or
+                        (num*best_den == best_num*den and (best is None or b < points[best]))):
+                    best, best_num, best_den = i, num, den
+            # Coordinates are centi-units; one squared grid unit = 0.01^2.
+            if best is not None and best_num > best_den:
+                keep.add(best)
+                stack.extend([(first, best), (best, last)])
+        return [points[i] for i in sorted(keep)]
+
     def ring_points(ring):
         points = [(round(x*100), round(y*100)) for x, y in list(ring.coords)[:-1]]
         points = [p for i, p in enumerate(points) if p != points[i-1]]
-        changed = True
-        while changed and len(points) > 3:
-            changed = False
-            for i, b in enumerate(points):
-                a, c = points[i-1], points[(i+1) % len(points)]
-                if ((b[0]-a[0])*(c[1]-a[1]) == (b[1]-a[1])*(c[0]-a[0])
-                        and min(a[0],c[0]) <= b[0] <= max(a[0],c[0])
-                        and min(a[1],c[1]) <= b[1] <= max(a[1],c[1])):
-                    points.pop(i)
-                    changed = True
-                    break
-        return [(x/100, y/100) for x, y in points]
+        start = min(range(len(points)), key=lambda i: points[i])
+        points = points[start:]+points[:start]
+        a = points[0]
+        split = max(range(1, len(points)), key=lambda i: ((points[i][0]-a[0])**2+(points[i][1]-a[1])**2, points[i]))
+        first = simplify_chain(points[:split+1])
+        second = simplify_chain(points[split:]+points[:1])
+        return [(x/100, y/100) for x, y in first[:-1]+second[:-1]]
     result = Polygon(ring_points(g.exterior), [ring_points(r) for r in g.interiors])
-    if not result.is_valid or result.is_empty:
-        raise ValueError("Canonical grid outline became invalid")
+    if (not result.is_valid or result.is_empty or len(result.interiors) != len(g.interiors)
+            or result.hausdorff_distance(g) > .010001):
+        raise ValueError("Canonical grid outline exceeded its geometry error bound")
     return geometry_path(result)
 
 
-def _stroke_polygon(points, start_width, end_width, cap):
+def _stroke_polygon(points, start_width, end_width, cap, role, serif):
+    """Construct a single closed role outline directly, without Boolean unions."""
     from shapely.geometry import Polygon
-    from shapely import union_all
     samples = [tuple(round(v, 4) for v in _cubic(points, i/64)) for i in range(65)]
-    widths = []
+    widths, left, right, tangents = [], [], [], []
     for i, (x, y) in enumerate(samples):
         t = i/64
         before, after = samples[max(0, i-1)], samples[min(64, i+1)]
@@ -219,48 +241,46 @@ def _stroke_polygon(points, start_width, end_width, cap):
         length = math.sqrt(dx*dx+dy*dy)
         if length < 1e-6:
             raise ValueError("Degenerate structured tangent")
+        tx, ty = dx/length, dy/length
+        nx, ny = -ty, tx
         width = start_width+(end_width-start_width)*t*t
         if cap == "round":
             width *= 1+.12*math.sin(math.pi*t)
-        widths.append(round(width, 4))
-    # Build a filled swept envelope from segment trapezoids and joint discs.
-    # This defines thick curved strokes directly; no buffer(0) repair of a
-    # self-crossing outline or loss of the authored centerline is involved.
-    pieces = []
-    for i, (a, b) in enumerate(zip(samples, samples[1:])):
-        dx, dy = b[0]-a[0], b[1]-a[1]
-        length = math.sqrt(dx*dx+dy*dy)
-        if length < 1e-6:
-            raise ValueError("Degenerate structured segment")
-        nx, ny = -dy/length, dx/length
-        ra, rb = widths[i]/2, widths[i+1]/2
-        pieces.append(Polygon([(round(x, 4), round(y, 4)) for x, y in
-                               [(a[0]+nx*ra, a[1]+ny*ra), (b[0]+nx*rb, b[1]+ny*rb),
-                                (b[0]-nx*rb, b[1]-ny*rb), (a[0]-nx*ra, a[1]-ny*ra)]]))
-    pieces.extend(_disc(samples[i], widths[i]/2, sides=16) for i in range(1, 64))
-    g = union_all(pieces, grid_size=.01)
+        width = round(width, 4)
+        widths.append(width)
+        tangents.append((tx, ty, nx, ny))
+        left.append((x+nx*width/2, y+ny*width/2))
+        right.append((x-nx*width/2, y-ny*width/2))
     if cap == "round":
-        g = union_all([g, _disc(samples[0], round(start_width/2, 4)),
-                       _disc(samples[-1], round(end_width/2, 4))], grid_size=.01)
+        def arc(index, direction):
+            x, y = samples[index]
+            tx, ty, nx, ny = tangents[index]
+            radius = widths[index]/2
+            return [(x+direction*radius*(nx*u+tx*v), y+direction*radius*(ny*u+ty*v))
+                    for u, v in _UNIT_CIRCLE[:17]]
+        outline = left+arc(64, 1)[1:-1]+list(reversed(right))+arc(0, -1)[1:-1]
+    elif serif and role.endswith("bar"):
+        x, y = samples[-1]
+        cut = x-serif*.95
+        top = [p for p in right if p[0] < cut]
+        outline = left+[(x+serif*.2, y+end_width/2), (x-serif*.3, y-serif*1.1),
+                        (cut, y-end_width/2)]+list(reversed(top))
+    elif serif and role == "top-stem":
+        x, y = samples[0]
+        join = next((i for i, p in enumerate(samples) if p[1] >= y+max(serif*.8, 8)), 1)
+        outline = left[join:]+list(reversed(right[join:]))+[(x+start_width*.9, y+5), (x-start_width*.8, y-5)]
     else:
-        # Joint discs must not accidentally round a requested flat terminal.
-        # Keep the inward endpoint tangent half-plane at each end.
-        for endpoint, adjacent in ((samples[0], samples[1]), (samples[-1], samples[-2])):
-            dx, dy = adjacent[0]-endpoint[0], adjacent[1]-endpoint[1]
-            length = math.sqrt(dx*dx+dy*dy)
-            tx, ty, nx, ny = dx/length, dy/length, -dy/length, dx/length
-            x, y = endpoint
-            plane = Polygon([(x+nx*4000, y+ny*4000), (x-nx*4000, y-ny*4000),
-                             (x-nx*4000+tx*4000, y-ny*4000+ty*4000),
-                             (x+nx*4000+tx*4000, y+ny*4000+ty*4000)])
-            g = g.intersection(plane)
-    return g, [round(widths[i], 4) for i in (0, 32, 64)]
+        outline = left+list(reversed(right))
+    coords = [(round(x, 2), round(y, 2)) for x, y in outline]
+    coords = [p for i, p in enumerate(coords) if p != coords[i-1]]
+    g = Polygon(coords)
+    if not g.is_valid or g.is_empty:
+        raise ValueError(f"Authored role {role} self-intersects; revise its centerline or widths")
+    return g, [widths[i] for i in (0, 32, 64)]
 
 
 def render_structure(base, p, legacy_params):
-    from shapely import union_all, set_precision
     from shapely.geometry import Polygon
-    from shapely.ops import transform
     vertical = base["vertical_width"]*p["weight"]
     ratio = base["horizontal_width"]/base["vertical_width"]
     target = .13 if p["contrast"] >= 0 else 1
@@ -272,7 +292,7 @@ def render_structure(base, p, legacy_params):
         terminal = "hairline" if base["family"] == "mincho" else "block"
     serif = ((base["serif_size"] if p["terminal_style"] == "inherit" else 19)
              *p["terminal_gain"] if terminal == "hairline" else 0)
-    paths, landmarks, widths, slivers = [], {}, {}, {}
+    paths, landmarks, widths = [], {}, {}
     for stroke in base["strokes"]:
         role = stroke["id"]
         points = _points(stroke, p)
@@ -283,40 +303,19 @@ def render_structure(base, p, legacy_params):
         elif terminal == "hairline" and role not in {"top-bar", "main-bar", "top-stem"}:
             end_scale = max(.07, end_scale*.28)
         elif terminal == "round":
-            end_scale = 1.12 if role.startswith("outer") else .96
-        g, sample_widths = _stroke_polygon(points, width, width*end_scale, terminal)
-        if serif and role.endswith("bar"):
-            # Explicit author-selected bar terminals, not inferred from a font.
-            x, y = points[-1]
-            g = union_all([g, Polygon([(x-serif*.95, y+width/2), (x+serif*.2, y+width/2),
-                                       (x-serif*.3, y-serif*1.1)])], grid_size=.01)
-        if serif and role == "top-stem":
-            x, y = points[0]
-            g = union_all([g, Polygon([(x-width*.8, y-5), (x+width*.9, y+5),
-                                       (x+width*.43, y+serif*.6), (x-width*.45, y+serif*.3)])], grid_size=.01)
-        if terminal == "round" and role.startswith("inner"):
-            g = union_all([g, _disc(points[-1], round(width*.57*p["terminal_gain"], 4))], grid_size=.01)
-        if g.geom_type == "MultiPolygon" and len(g.geoms) == 1:
-            g = g.geoms[0]
-        if g.is_empty or not g.is_valid or g.geom_type != "Polygon":
-            raise ValueError(f"Structured role {role} disconnected or invalid")
-        g = transform(lambda x, y: warp((x, y), legacy_params), g)
-        g = set_precision(g, .01)
-        if not g.is_valid or not (0 <= g.bounds[0] < g.bounds[2] <= 1000 and 0 <= g.bounds[1] < g.bounds[3] <= 1000):
+            end_scale = 1.14*p["terminal_gain"] if role.startswith("inner") else 1.12
+        g, sample_widths = _stroke_polygon(points, width, width*end_scale, terminal, role, serif)
+        # Map only authored vertices; no platform-dependent Boolean assembly.
+        coords = [(round(x, 2), round(y, 2)) for x, y in
+                  [warp(tuple(point), legacy_params) for point in list(g.exterior.coords)[:-1]]]
+        g = Polygon(coords)
+        if (not g.is_valid or g.is_empty or len(g.interiors)
+                or not (0 <= g.bounds[0] < g.bounds[2] <= 1000 and 0 <= g.bounds[1] < g.bounds[3] <= 1000)):
             raise ValueError(f"Structured role {role} outside design box or invalid")
-        # A solid swept stroke has no authored counters. Grid unions can
-        # leave subpixel enclosed slivers: fill only explicitly budgeted ones
-        # and record their count. Larger holes fail instead of being erased.
-        holes = [Polygon(r).area for r in g.interiors]
-        if len(holes) > 64 or any(a > .01 for a in holes) or sum(holes) > .05:
-            raise ValueError(f"Structured role {role} unexpectedly encloses a hole")
-        slivers[role] = len(holes)
-        if holes:
-            g = Polygon(g.exterior)
         paths.append({"id": role, "d": _grid_path(g), "terminal": stroke["terminal"]})
         landmarks[role] = [[round(v, 4) for v in warp(tuple(point), legacy_params)] for point in points]
         widths[role] = sample_widths
     return {"paths": paths, "advance": 1000, "stroke_model": "authored"}, {
         "parameters": p, "source_family": base["family"], "landmarks": landmarks,
-        "stroke_widths": widths, "assembly_holes_filled": slivers, "review_required": True,
+        "stroke_widths": widths, "review_required": True,
     }

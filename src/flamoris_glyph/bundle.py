@@ -242,15 +242,13 @@ def _validate_bundle(directory: Path) -> dict:
         from .structure import StructureDNA, ENGINE_VERSION as STRUCTURE_VERSION
         structure = StructureDNA.from_dict(manifest["structure"])
         if ("pattern" in manifest or not isinstance(structure_meta, dict)
-                or set(structure_meta) != {"version", "shapely", "geos", "flatten_tolerance", "samples_per_stroke", "assembly_grid",
-                                         "assembly_hole_area", "assembly_hole_budget", "sample_precision", "circle_points", "canonical_collinear"}
+                or set(structure_meta) != {"version", "shapely", "geos", "samples_per_stroke", "coordinate_grid",
+                                         "sample_precision", "circle_points", "canonical_tolerance"}
                 or structure_meta["version"] != STRUCTURE_VERSION or structure_meta["shapely"] != "2.1.2"
                 or not isinstance(structure_meta["geos"], str) or not structure_meta["geos"]
-                or structure_meta["flatten_tolerance"] != .35 or structure_meta["samples_per_stroke"] != 65
-                or structure_meta["assembly_grid"] != .01
-                or structure_meta["assembly_hole_area"] != .01 or structure_meta["assembly_hole_budget"] != .05
+                or structure_meta["samples_per_stroke"] != 65 or structure_meta["coordinate_grid"] != .01
                 or structure_meta["sample_precision"] != 4 or structure_meta["circle_points"] != 32
-                or structure_meta["canonical_collinear"] is not True
+                or structure_meta["canonical_tolerance"] != .01
                 or manifest["generator"]["version"] != "0.2.0+structure.1"
                 or manifest["source"]["kind"] != "authored-skeleton"):
             raise ValueError("Invalid authored structure engine contract")
@@ -363,12 +361,10 @@ def _validate_bundle(directory: Path) -> dict:
             qa = g["structure_qa"]
             if (g["character"] != "赤" or g["stroke_model"] != "authored"
                     or [s["source_id"] for s in g["strokes"]] != list(ROLES)
-                    or set(qa) != {"parameters", "source_family", "landmarks", "stroke_widths", "assembly_holes_filled", "review_required"}
+                    or set(qa) != {"parameters", "source_family", "landmarks", "stroke_widths", "review_required"}
                     or qa["parameters"] != structure.parameters(key, manifest["seed"])
                     or qa["source_family"] not in {"gothic", "mincho"} or qa["review_required"] is not True
-                    or set(qa["landmarks"]) != set(ROLES) or set(qa["stroke_widths"]) != set(ROLES)
-                    or set(qa["assembly_holes_filled"]) != set(ROLES)
-                    or any(type(v) is not int or not 0 <= v <= 64 for v in qa["assembly_holes_filled"].values())):
+                    or set(qa["landmarks"]) != set(ROLES) or set(qa["stroke_widths"]) != set(ROLES)):
                 raise ValueError("Invalid authored structure diagnostics")
             for role in ROLES:
                 points, widths = qa["landmarks"][role], qa["stroke_widths"][role]

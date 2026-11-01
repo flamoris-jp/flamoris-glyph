@@ -92,31 +92,30 @@ both bases approach uniform weight under the impact direction.
 
 ## Shape generation and validation
 
-Each role is an authored cubic centerline, sampled at 65 positions. A filled
-swept envelope is assembled from valid trapezoids and joint discs, rather than
-repairing self-crossing stroke outlines with `buffer(0)`. Flat styles clip to
-endpoint tangent half-planes; round styles add endpoint discs. Explicit bar
-wedges and selected lower terminal bulbs are constructed by role. This is a
-limited designer-authored grammar, not general calligraphic terminal inference.
+Each role is an authored cubic centerline, sampled at 65 positions. Its
+variable-width left/right boundaries and explicit flat/round/hairline terminals
+are constructed as one closed polygon. Bar wedges and stem cap outlines are
+integrated directly into that polygon. The authored hook controls are chosen
+to remain regular under the heavier presets. Self-intersecting roles fail;
+there is no geometric repair or role replacement.
 
-Geometry assembly uses a documented 0.01 design-unit grid to avoid numerical
-slivers during unions. Cubic evaluation uses explicit binary products and
-`math.fsum` (Python 3.12 changed float `sum` accumulation). Samples and local
-widths are rounded to four decimals before assembly, and joint/terminal discs
-use a fixed 32-point unit-circle table instead of platform-dependent buffer
-trigonometry. Segment envelopes are likewise quantized before Boolean unions.
-This makes exact geometric fixtures comparable across supported Python/OS
-combinations. Redundant collinear vertices from Boolean unions are removed
-using exact integer cross products on the assembly grid, without smoothing
-curves or changing the filled shape. The assembly grid is distinct from the final four-decimal SVG
-serialization. Tiny enclosed assembly holes are explicitly filled only when
-each is at most 0.01 square design units and their sum is at most 0.05 per role;
-counts are recorded in `assembly_holes_filled`. Larger holes fail. This rule
-applies to solid authored stroke envelopes, never arbitrary font counters.
-All seven paths must survive as connected valid polygons and
-remain in the common 0..1000 box. The current fixture's per-role polygons have
-no holes. Crossings between different authored strokes are allowed; the global
-union's component topology is not frozen to the original because redesign is
+**The structural renderer uses no Boolean outline unions or buffer operations.**
+Keeping construction explicit avoids platform-dependent Boolean vertex/sliver
+representations and fits the known seven-role source. This is a limited
+manual grammar, not general terminal inference from fonts.
+
+Cubic evaluation uses explicit binary products and `math.fsum` (Python 3.12
+changed float `sum` accumulation). Samples/local widths are rounded to four
+decimals; round terminal arcs use a fixed 32-point unit-circle table. Constructed
+outline coordinates are quantized to 0.01 design units using Python, before
+validation. A fixed-anchor integer Ramer–Douglas–Peucker pass removes redundant
+vertices with at most 0.01 design units of boundary deviation, checked against
+the final outline. This numerical approximation is explicit. No font counters
+are repaired or discarded.
+
+All seven paths survive as connected valid polygons inside the common 0..1000
+box, with no holes in each authored stroke. Crossings between different roles
+are allowed; the global union topology is not frozen because redesign is
 intentional. No automatic readability score is claimed.
 
 Manifest `source` stays the original base identity across designs. Versioned

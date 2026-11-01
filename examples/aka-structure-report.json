@@ -5,16 +5,13 @@
     "version": "authored-structure-1",
     "shapely": "2.1.2",
     "geos": "3.13.1",
-    "flatten_tolerance": 0.35,
     "samples_per_stroke": 65,
-    "assembly_grid": 0.01,
-    "assembly_hole_area": 0.01,
-    "assembly_hole_budget": 0.05,
+    "coordinate_grid": 0.01,
     "sample_precision": 4,
     "circle_points": 32,
-    "canonical_collinear": true
+    "canonical_tolerance": 0.01
   },
-  "input_sha256": "3d0888cd702eeb5772d8ce65c15017c2c2145bb393f8f894f95c76c7a2382d3d",
+  "input_sha256": "ad0877cca00b625aea03044f1126a0683b6bb80dea3102f0af664002a94c44a4",
   "fixed_seed_reproduction": true,
   "cells": [
     {
@@ -23,7 +20,7 @@
       "seed": 42,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "d818e0892235603f93d3fe90723f58d4bf81d8a34480c7bd04dff41c552f816c",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
       },
       "dna": {
@@ -40,7 +37,7 @@
         "terminal_gain": 1,
         "variation": 0
       },
-      "sha256": "5b0d56c203016f3572b1df27fcd18ce00355774107178a2747adde023f7ee36d",
+      "sha256": "c47103c585ede611a7fc33fa66a9ddae918c7f566cb55307c0978d2972b20be6",
       "metrics": {
         "view_box": [
           0,
@@ -52,7 +49,7 @@
           160.0,
           130.0,
           840.0,
-          835.28
+          829.51
         ],
         "anchor": [
           500,
@@ -158,8 +155,8 @@
               600.0
             ],
             [
-              605.0,
-              805.0
+              585.0,
+              750.0
             ],
             [
               510.0,
@@ -239,15 +236,6 @@
             43.615,
             42.46
           ]
-        },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 0,
-          "outer-right": 0
         },
         "review_required": true
       }
@@ -258,7 +246,7 @@
       "seed": 43,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "d818e0892235603f93d3fe90723f58d4bf81d8a34480c7bd04dff41c552f816c",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
       },
       "dna": {
@@ -275,7 +263,7 @@
         "terminal_gain": 1,
         "variation": 0
       },
-      "sha256": "5b0d56c203016f3572b1df27fcd18ce00355774107178a2747adde023f7ee36d",
+      "sha256": "c47103c585ede611a7fc33fa66a9ddae918c7f566cb55307c0978d2972b20be6",
       "metrics": {
         "view_box": [
           0,
@@ -287,7 +275,7 @@
           160.0,
           130.0,
           840.0,
-          835.28
+          829.51
         ],
         "anchor": [
           500,
@@ -393,8 +381,8 @@
               600.0
             ],
             [
-              605.0,
-              805.0
+              585.0,
+              750.0
             ],
             [
               510.0,
@@ -475,15 +463,6 @@
             42.46
           ]
         },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 0,
-          "outer-right": 0
-        },
         "review_required": true
       }
     },
@@ -493,7 +472,7 @@
       "seed": 42,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "d818e0892235603f93d3fe90723f58d4bf81d8a34480c7bd04dff41c552f816c",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
       },
       "dna": {
@@ -510,7 +489,7 @@
         "terminal_gain": 1,
         "variation": 0.35
       },
-      "sha256": "099570163e48770efb2ddd970626855d5212d52516eedf68347aa9178c49a9c8",
+      "sha256": "f209c2ca5080f96d1850411dfdc228947ebad9c4eeb9ecd137d4aaf5941d9a99",
       "metrics": {
         "view_box": [
           0,
@@ -521,8 +500,8 @@
         "bounds": [
           277.05,
           118.75,
-          713.45,
-          856.31
+          713.44,
+          837.88
         ],
         "anchor": [
           500,
@@ -628,8 +607,8 @@
               563.2431
             ],
             [
-              564.312,
-              794.5046
+              550.2145,
+              739.5046
             ],
             [
               498.3716,
@@ -710,15 +689,6 @@
             80.6936
           ]
         },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 0,
-          "outer-right": 0
-        },
         "review_required": true
       }
     },
@@ -728,7 +698,7 @@
       "seed": 43,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "d818e0892235603f93d3fe90723f58d4bf81d8a34480c7bd04dff41c552f816c",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
       },
       "dna": {
@@ -745,7 +715,7 @@
         "terminal_gain": 1,
         "variation": 0.35
       },
-      "sha256": "6de31b9a0adf5ef7a56123b1d94e8b81c8b67ac37b7b36abbde795b0e0e535ab",
+      "sha256": "b22cce4ac340d61937aceaa2cf69829b03a1e68a8cbe8be157ed4c8b60673a40",
       "metrics": {
         "view_box": [
           0,
@@ -756,8 +726,8 @@
         "bounds": [
           277.92,
           118.75,
-          712.51,
-          855.71
+          712.5,
+          837.52
         ],
         "anchor": [
           500,
@@ -863,8 +833,8 @@
               562.7498
             ],
             [
-              563.6025,
-              794.8335
+              549.5052,
+              739.8335
             ],
             [
               497.788,
@@ -945,15 +915,6 @@
             79.5587
           ]
         },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 0,
-          "outer-right": 0
-        },
         "review_required": true
       }
     },
@@ -963,7 +924,7 @@
       "seed": 42,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "d818e0892235603f93d3fe90723f58d4bf81d8a34480c7bd04dff41c552f816c",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
       },
       "dna": {
@@ -980,7 +941,7 @@
         "terminal_gain": 1.25,
         "variation": 0.35
       },
-      "sha256": "bb01e7c375357ec774ef8204a16c4a51e2ae029ad353d08466b7232e0abf2b15",
+      "sha256": "6081d94eaf6209fdde07cb04231f1207e1c95c368efc9f1f2f96077fc0635423",
       "metrics": {
         "view_box": [
           0,
@@ -992,7 +953,7 @@
           120.01,
           128.0,
           857.94,
-          813.58
+          812.65
         ],
         "anchor": [
           500,
@@ -1098,8 +1059,8 @@
               623.0358
             ],
             [
-              643.2791,
-              798.9761
+              621.2894,
+              743.9761
             ],
             [
               535.4097,
@@ -1180,15 +1141,6 @@
             8.9553
           ]
         },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 1,
-          "outer-right": 2
-        },
         "review_required": true
       }
     },
@@ -1198,7 +1150,7 @@
       "seed": 43,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "d818e0892235603f93d3fe90723f58d4bf81d8a34480c7bd04dff41c552f816c",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
       },
       "dna": {
@@ -1215,7 +1167,7 @@
         "terminal_gain": 1.25,
         "variation": 0.35
       },
-      "sha256": "4dc4c5478a487a0c088b2dddf08bc7d253b02e5455a8fd67083656a262deea3d",
+      "sha256": "a3e20198650ee216d633161f68b1b2e332844d09215ffee7b4a029132e21379b",
       "metrics": {
         "view_box": [
           0,
@@ -1227,7 +1179,7 @@
           120.08,
           128.0,
           857.94,
-          813.61
+          812.68
         ],
         "anchor": [
           500,
@@ -1333,8 +1285,8 @@
               623.7048
             ],
             [
-              644.4293,
-              798.5301
+              622.4563,
+              743.5301
             ],
             [
               536.4106,
@@ -1415,15 +1367,6 @@
             9.0682
           ]
         },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 2,
-          "outer-right": 0
-        },
         "review_required": true
       }
     },
@@ -1433,7 +1376,7 @@
       "seed": 42,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "d818e0892235603f93d3fe90723f58d4bf81d8a34480c7bd04dff41c552f816c",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
       },
       "dna": {
@@ -1450,7 +1393,7 @@
         "terminal_gain": 1.15,
         "variation": 0.35
       },
-      "sha256": "e40b72f7208e6919615d9cf4cf9bed0461a2e15f263daebfefa0cb2a808422e2",
+      "sha256": "e57ae553c17050d9bd95aaf9ef6d8670825933a29482d3b478935021bdde152b",
       "metrics": {
         "view_box": [
           0,
@@ -1461,8 +1404,8 @@
         "bounds": [
           60.82,
           88.26,
-          912.65,
-          859.8
+          912.6,
+          859.64
         ],
         "anchor": [
           500,
@@ -1568,8 +1511,8 @@
               608.7238
             ],
             [
-              661.2204,
-              787.5175
+              637.6526,
+              732.5175
             ],
             [
               544.1373,
@@ -1616,28 +1559,28 @@
         "stroke_widths": {
           "top-bar": [
             73.0194,
-            80.9639,
-            70.0986
+            84.2351,
+            81.7817
           ],
           "top-stem": [
             75.9739,
-            84.2399,
-            72.9349
+            87.6435,
+            85.0908
           ],
           "main-bar": [
             73.0194,
-            80.9639,
-            70.0986
+            84.2351,
+            81.7817
           ],
           "inner-left": [
             75.9739,
-            84.2399,
-            72.9349
+            91.7066,
+            99.6018
           ],
           "inner-right": [
             75.9739,
-            84.2399,
-            72.9349
+            91.7066,
+            99.6018
           ],
           "outer-left": [
             61.9047,
@@ -1650,15 +1593,6 @@
             69.3332
           ]
         },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 0,
-          "outer-right": 0
-        },
         "review_required": true
       }
     },
@@ -1668,7 +1602,7 @@
       "seed": 43,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "d818e0892235603f93d3fe90723f58d4bf81d8a34480c7bd04dff41c552f816c",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
       },
       "dna": {
@@ -1685,7 +1619,7 @@
         "terminal_gain": 1.15,
         "variation": 0.35
       },
-      "sha256": "1878f137c29153016341534302587f1517b6d4bf57f15075b6de61b364a41b3f",
+      "sha256": "04d9bfbdaab300cbf496a2a31084ecc228cb2c7c307a3cf64e2b7504bdd66ee4",
       "metrics": {
         "view_box": [
           0,
@@ -1696,8 +1630,8 @@
         "bounds": [
           60.39,
           88.78,
-          913.05,
-          859.12
+          912.99,
+          858.96
         ],
         "anchor": [
           500,
@@ -1803,8 +1737,8 @@
               609.1602
             ],
             [
-              662.1889,
-              787.2265
+              638.603,
+              732.2265
             ],
             [
               544.8772,
@@ -1851,28 +1785,28 @@
         "stroke_widths": {
           "top-bar": [
             72.0222,
-            79.8582,
-            69.1413
+            83.0848,
+            80.6649
           ],
           "top-stem": [
             74.9364,
-            83.0895,
-            71.9389
+            86.4466,
+            83.9288
           ],
           "main-bar": [
             72.0222,
-            79.8582,
-            69.1413
+            83.0848,
+            80.6649
           ],
           "inner-left": [
             74.9364,
-            83.0895,
-            71.9389
+            90.4542,
+            98.2416
           ],
           "inner-right": [
             74.9364,
-            83.0895,
-            71.9389
+            90.4542,
+            98.2416
           ],
           "outer-left": [
             61.0593,
@@ -1885,15 +1819,6 @@
             68.3864
           ]
         },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 0,
-          "outer-right": 1
-        },
         "review_required": true
       }
     },
@@ -1903,7 +1828,7 @@
       "seed": 42,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "4d245a36dd9e6a0ca3300e030512898c5b47b7d825d9d90310c4c8be9f87f90c",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
       },
       "dna": {
@@ -1920,7 +1845,7 @@
         "terminal_gain": 1,
         "variation": 0
       },
-      "sha256": "99296652ff2fbc55549e9162c047e3f1dfe53281961f616bb6c43d3265a55a85",
+      "sha256": "7a2fffa496c57c51b490fff19dfe719bfe30c3d947f2ca70cd38b4bafea1dd87",
       "metrics": {
         "view_box": [
           0,
@@ -1932,7 +1857,7 @@
           145.0,
           120.0,
           859.4,
-          812.65
+          811.6
         ],
         "anchor": [
           500,
@@ -2038,8 +1963,8 @@
               600.0
             ],
             [
-              605.0,
-              805.0
+              585.0,
+              750.0
             ],
             [
               510.0,
@@ -2119,15 +2044,6 @@
             32.8377,
             5.3508
           ]
-        },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 0,
-          "outer-right": 0
         },
         "review_required": true
       }
@@ -2138,7 +2054,7 @@
       "seed": 43,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "4d245a36dd9e6a0ca3300e030512898c5b47b7d825d9d90310c4c8be9f87f90c",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
       },
       "dna": {
@@ -2155,7 +2071,7 @@
         "terminal_gain": 1,
         "variation": 0
       },
-      "sha256": "99296652ff2fbc55549e9162c047e3f1dfe53281961f616bb6c43d3265a55a85",
+      "sha256": "7a2fffa496c57c51b490fff19dfe719bfe30c3d947f2ca70cd38b4bafea1dd87",
       "metrics": {
         "view_box": [
           0,
@@ -2167,7 +2083,7 @@
           145.0,
           120.0,
           859.4,
-          812.65
+          811.6
         ],
         "anchor": [
           500,
@@ -2273,8 +2189,8 @@
               600.0
             ],
             [
-              605.0,
-              805.0
+              585.0,
+              750.0
             ],
             [
               510.0,
@@ -2355,15 +2271,6 @@
             5.3508
           ]
         },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 0,
-          "outer-right": 0
-        },
         "review_required": true
       }
     },
@@ -2373,7 +2280,7 @@
       "seed": 42,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "4d245a36dd9e6a0ca3300e030512898c5b47b7d825d9d90310c4c8be9f87f90c",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
       },
       "dna": {
@@ -2390,7 +2297,7 @@
         "terminal_gain": 1,
         "variation": 0.35
       },
-      "sha256": "6cf09936671cc8838ea1013353a52b38e6407f9da92ec6f2a337fad8b22c2773",
+      "sha256": "b126d8eb0cfadf525465870e776ccea77786a7a3404467dafb0b1c2c51fb790d",
       "metrics": {
         "view_box": [
           0,
@@ -2402,7 +2309,7 @@
           278.76,
           112.9,
           721.24,
-          858.16
+          838.99
         ],
         "anchor": [
           500,
@@ -2508,8 +2415,8 @@
               563.2431
             ],
             [
-              564.312,
-              794.5046
+              550.2145,
+              739.5046
             ],
             [
               498.3716,
@@ -2590,15 +2497,6 @@
             75.4692
           ]
         },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 0,
-          "outer-right": 0
-        },
         "review_required": true
       }
     },
@@ -2608,7 +2506,7 @@
       "seed": 43,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "4d245a36dd9e6a0ca3300e030512898c5b47b7d825d9d90310c4c8be9f87f90c",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
       },
       "dna": {
@@ -2625,7 +2523,7 @@
         "terminal_gain": 1,
         "variation": 0.35
       },
-      "sha256": "c2d44b7b3d8f6f6a33810bd3beb447098fff0b6864dff3f6af8eb69d20fe54b7",
+      "sha256": "e06171cb07721f751cc008f645d886dadbd5d04122129a5054e6c184a70b2591",
       "metrics": {
         "view_box": [
           0,
@@ -2637,7 +2535,7 @@
           278.76,
           112.91,
           721.24,
-          857.53
+          838.62
         ],
         "anchor": [
           500,
@@ -2743,8 +2641,8 @@
               562.7498
             ],
             [
-              563.6025,
-              794.8335
+              549.5052,
+              739.8335
             ],
             [
               497.788,
@@ -2825,15 +2723,6 @@
             74.4078
           ]
         },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 1,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 0,
-          "outer-right": 0
-        },
         "review_required": true
       }
     },
@@ -2843,7 +2732,7 @@
       "seed": 42,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "4d245a36dd9e6a0ca3300e030512898c5b47b7d825d9d90310c4c8be9f87f90c",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
       },
       "dna": {
@@ -2860,7 +2749,7 @@
         "terminal_gain": 1.25,
         "variation": 0.35
       },
-      "sha256": "636b0469136fad508aefde52d7ed5709fdb0671b2f5d9e438e4e59166f4fdba9",
+      "sha256": "90bfbad0d203d50b0d0dd5df4f38e5dc096458c48bde03b92e86764c42d56247",
       "metrics": {
         "view_box": [
           0,
@@ -2872,7 +2761,7 @@
           120.59,
           123.0,
           873.52,
-          812.63
+          811.82
         ],
         "anchor": [
           500,
@@ -2978,8 +2867,8 @@
               623.0358
             ],
             [
-              643.2791,
-              798.9761
+              621.2894,
+              743.9761
             ],
             [
               535.4097,
@@ -3060,15 +2949,6 @@
             5.9837
           ]
         },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 1,
-          "outer-right": 0
-        },
         "review_required": true
       }
     },
@@ -3078,7 +2958,7 @@
       "seed": 43,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "4d245a36dd9e6a0ca3300e030512898c5b47b7d825d9d90310c4c8be9f87f90c",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
       },
       "dna": {
@@ -3095,7 +2975,7 @@
         "terminal_gain": 1.25,
         "variation": 0.35
       },
-      "sha256": "a5428928bceb52423bcc0cf56fb484a4b3365120ec8e32d1f6bdb90d47babf26",
+      "sha256": "aed2ee15ee12663475126393ee0d1e3e9a2f62251c39d1f9f4f150fedc3b5d19",
       "metrics": {
         "view_box": [
           0,
@@ -3107,7 +2987,7 @@
           120.68,
           123.0,
           873.52,
-          812.64
+          811.84
         ],
         "anchor": [
           500,
@@ -3213,8 +3093,8 @@
               623.7048
             ],
             [
-              644.4293,
-              798.5301
+              622.4563,
+              743.5301
             ],
             [
               536.4106,
@@ -3295,15 +3175,6 @@
             6.0592
           ]
         },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 0,
-          "outer-right": 2
-        },
         "review_required": true
       }
     },
@@ -3313,7 +3184,7 @@
       "seed": 42,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "4d245a36dd9e6a0ca3300e030512898c5b47b7d825d9d90310c4c8be9f87f90c",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
       },
       "dna": {
@@ -3330,7 +3201,7 @@
         "terminal_gain": 1.15,
         "variation": 0.35
       },
-      "sha256": "f32ad58947e284975a8b0640733c359d6c641c1aac10b02ca84b135e561e082f",
+      "sha256": "162f3af9ce6ba3e4ddf1001d3df4c43f0228babde6a6d74314d9059d7f079312",
       "metrics": {
         "view_box": [
           0,
@@ -3340,9 +3211,9 @@
         ],
         "bounds": [
           62.39,
-          81.15,
-          915.68,
-          862.57
+          81.16,
+          920.36,
+          862.4
         ],
         "anchor": [
           500,
@@ -3448,8 +3319,8 @@
               608.7238
             ],
             [
-              661.2204,
-              787.5175
+              637.6526,
+              732.5175
             ],
             [
               544.1373,
@@ -3496,28 +3367,28 @@
         "stroke_widths": {
           "top-bar": [
             58.528,
-            64.8959,
-            56.1869
+            67.5179,
+            65.5514
           ],
           "top-stem": [
             80.1947,
-            88.9198,
-            76.9869
+            92.5126,
+            89.818
           ],
           "main-bar": [
             58.528,
-            64.8959,
-            56.1869
+            67.5179,
+            65.5514
           ],
           "inner-left": [
             80.1947,
-            88.9198,
-            76.9869
+            96.8014,
+            105.1352
           ],
           "inner-right": [
             80.1947,
-            88.9198,
-            76.9869
+            96.8014,
+            105.1352
           ],
           "outer-left": [
             59.0908,
@@ -3530,15 +3401,6 @@
             66.1817
           ]
         },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 0,
-          "outer-right": 0
-        },
         "review_required": true
       }
     },
@@ -3548,7 +3410,7 @@
       "seed": 43,
       "source": {
         "kind": "authored-skeleton",
-        "sha256": "4d245a36dd9e6a0ca3300e030512898c5b47b7d825d9d90310c4c8be9f87f90c",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
         "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
       },
       "dna": {
@@ -3565,7 +3427,7 @@
         "terminal_gain": 1.15,
         "variation": 0.35
       },
-      "sha256": "79f99792ffdbddcdd44ba77f88464086e05567aa82041b263cdc6e3d4f0168f3",
+      "sha256": "0755b5c0f36ac6933bbb9ec33a2fe40f5b3bee9ce1e347cfb4a7ff6b6c0c0199",
       "metrics": {
         "view_box": [
           0,
@@ -3575,9 +3437,9 @@
         ],
         "bounds": [
           61.94,
-          81.7,
-          915.3,
-          861.85
+          81.71,
+          919.92,
+          861.68
         ],
         "anchor": [
           500,
@@ -3683,8 +3545,8 @@
               609.1602
             ],
             [
-              662.1889,
-              787.2265
+              638.603,
+              732.2265
             ],
             [
               544.8772,
@@ -3731,28 +3593,28 @@
         "stroke_widths": {
           "top-bar": [
             57.7288,
-            64.0097,
-            55.4196
+            66.5959,
+            64.6562
           ],
           "top-stem": [
             79.0995,
-            87.7056,
-            75.9355
+            91.2492,
+            88.5915
           ],
           "main-bar": [
             57.7288,
-            64.0097,
-            55.4196
+            66.5959,
+            64.6562
           ],
           "inner-left": [
             79.0995,
-            87.7056,
-            75.9355
+            95.4795,
+            103.6995
           ],
           "inner-right": [
             79.0995,
-            87.7056,
-            75.9355
+            95.4795,
+            103.6995
           ],
           "outer-left": [
             58.2839,
@@ -3764,15 +3626,6 @@
             67.2363,
             65.2779
           ]
-        },
-        "assembly_holes_filled": {
-          "top-bar": 0,
-          "top-stem": 0,
-          "main-bar": 0,
-          "inner-left": 0,
-          "inner-right": 0,
-          "outer-left": 1,
-          "outer-right": 0
         },
         "review_required": true
       }
