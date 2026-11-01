@@ -92,6 +92,9 @@ Python APIは `design_glyph(AuthoredStructureSource(data, base), AnatomyDNA)`。
 段階にある。以前の[お手本の輪郭研究](../research/retro-aka-reference/README.md)と
 同様、幾何の検査結果を美しさの判定には使わない。
 
+続く[骨格の6パターン比較](skeleton-pattern-study.md)では肉付けを固定し、
+傾き・長さ・画の配置が異なる12例を作成した。
+
 見た目の残課題もある。BONES ONLY列の明朝系では、斜めになった太い払いの
 付け根が細い主横画から少し突き出す。接続が成立しても、その輪郭が滑らかに
 見えるとは限らない。接合部の輪郭を整える処理は、余白の自動調整とともに

@@ -122,6 +122,15 @@ new bundle format. Visual acceptance remains open.
 python -m flamoris_glyph.anatomy_lab examples/aka-structure.json examples/anatomy-dna/elastic-retro.json --out output-anatomy
 ```
 
+The [fixed-ink skeleton comparison](docs/skeleton-pattern-study.md) tries six
+role arrangements on both authored bases: upright, rising, falling, compact,
+fan and offset rhythm. Ink rules stay fixed while angle, length and role
+placement change. Review sheets include centerline overlays.
+
+```bash
+python -m flamoris_glyph.skeleton_lab examples/aka-structure.json examples/anatomy-dna/elastic-retro.json examples/skeleton-patterns.json --out output-skeleton-study
+```
+
 ## Supported boundary
 
 - UTF-8（BOM可）、LF / CRLF、plain text / SRT。SRTの数値歌詞は保持し、cue時刻をms整数で出力。文字単位の歌唱時刻は推測しません。
