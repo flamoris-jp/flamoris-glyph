@@ -1,0 +1,117 @@
+{
+  "selection": "highest IoU to traced reference among sampled weights; all other DNA fields fixed",
+  "not_a_beauty_score": true,
+  "best": {
+    "weight": 2.1,
+    "iou_to_traced_reference": 0.7572839438623369,
+    "dna": {
+      "schema_version": 1,
+      "profile": "showa-retro-signboard",
+      "width": 1.06,
+      "bar_span": 1.03,
+      "junction_shift": -15,
+      "lower_spread": 1.25,
+      "curve_gain": 1.05,
+      "weight": 2.1,
+      "contrast": -0.65,
+      "terminal_style": "round",
+      "terminal_gain": 1.15,
+      "variation": 0.35
+    }
+  },
+  "candidates": [
+    {
+      "weight": 1.0,
+      "iou_to_traced_reference": 0.4830289126150769
+    },
+    {
+      "weight": 1.05,
+      "iou_to_traced_reference": 0.5044675660582547
+    },
+    {
+      "weight": 1.1,
+      "iou_to_traced_reference": 0.5232655458483224
+    },
+    {
+      "weight": 1.15,
+      "iou_to_traced_reference": 0.543051603250506
+    },
+    {
+      "weight": 1.2,
+      "iou_to_traced_reference": 0.5616408242225284
+    },
+    {
+      "weight": 1.25,
+      "iou_to_traced_reference": 0.5787633661483551
+    },
+    {
+      "weight": 1.3,
+      "iou_to_traced_reference": 0.5952631118115752
+    },
+    {
+      "weight": 1.35,
+      "iou_to_traced_reference": 0.6096410793817134
+    },
+    {
+      "weight": 1.4,
+      "iou_to_traced_reference": 0.625101590618832
+    },
+    {
+      "weight": 1.45,
+      "iou_to_traced_reference": 0.6390139397536297
+    },
+    {
+      "weight": 1.5,
+      "iou_to_traced_reference": 0.6529198712861286
+    },
+    {
+      "weight": 1.55,
+      "iou_to_traced_reference": 0.6656213136922059
+    },
+    {
+      "weight": 1.6,
+      "iou_to_traced_reference": 0.6785053431829592
+    },
+    {
+      "weight": 1.65,
+      "iou_to_traced_reference": 0.6896339895425584
+    },
+    {
+      "weight": 1.7,
+      "iou_to_traced_reference": 0.7004341328019358
+    },
+    {
+      "weight": 1.75,
+      "iou_to_traced_reference": 0.7105598866052445
+    },
+    {
+      "weight": 1.8,
+      "iou_to_traced_reference": 0.7197899165596013
+    },
+    {
+      "weight": 1.85,
+      "iou_to_traced_reference": 0.7284583924781808
+    },
+    {
+      "weight": 1.9,
+      "iou_to_traced_reference": 0.7352303712507865
+    },
+    {
+      "weight": 1.95,
+      "iou_to_traced_reference": 0.7413404870454798
+    },
+    {
+      "weight": 2.0,
+      "iou_to_traced_reference": 0.747048251071478
+    },
+    {
+      "weight": 2.05,
+      "iou_to_traced_reference": 0.7529052576568152
+    },
+    {
+      "weight": 2.1,
+      "iou_to_traced_reference": 0.7572839438623369
+    }
+  ],
+  "style_acceptance": "rejected: disconnected silhouettes merged from three to one"
+}

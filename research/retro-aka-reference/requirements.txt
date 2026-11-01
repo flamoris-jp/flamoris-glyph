@@ -1,0 +1,6 @@
+# Optional analysis environment only; no Glyph runtime dependency changes.
+numpy
+Pillow
+scipy
+matplotlib
+CairoSVG
