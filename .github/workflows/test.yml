@@ -33,6 +33,8 @@ jobs:
         run: python -m flamoris_glyph.anatomy_lab examples/aka-structure.json examples/anatomy-dna/elastic-retro.json --out output-anatomy-study
       - name: Generate fixed-ink skeleton pattern study
         run: python -m flamoris_glyph.skeleton_lab examples/aka-structure.json examples/anatomy-dna/elastic-retro.json examples/skeleton-patterns.json --out output-skeleton-study
+      - name: Generate skeleton DNA and calligraphy study
+        run: python -m flamoris_glyph.calligraphy_lab examples/aka-structure.json examples/calligraphy-study.json --out output-calligraphy-study
       - uses: actions/upload-artifact@v4
         with:
           name: glyph-demo-${{ matrix.os }}-py${{ matrix.python-version }}
@@ -42,5 +44,6 @@ jobs:
             output-structure-study/
             output-anatomy-study/
             output-skeleton-study/
+            output-calligraphy-study/
 
 

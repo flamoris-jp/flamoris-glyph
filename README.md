@@ -131,6 +131,16 @@ placement change. Review sheets include centerline overlays.
 python -m flamoris_glyph.skeleton_lab examples/aka-structure.json examples/anatomy-dna/elastic-retro.json examples/skeleton-patterns.json --out output-skeleton-study
 ```
 
+The [three-input calligraphy study](docs/calligraphy-study.md) separates a
+resolved skeleton, design DNA and drawing tool. Two skeletons × two intents ×
+three virtual tools produce twelve comparisons. Round, broad and brush-like
+elliptical footprints vary the resulting strokes without changing the input
+centerlines. This is a geometric study, not a physical or trained brush model.
+
+```bash
+python -m flamoris_glyph.calligraphy_lab examples/aka-structure.json examples/calligraphy-study.json --out output-calligraphy-study
+```
+
 ## Supported boundary
 
 - UTF-8（BOM可）、LF / CRLF、plain text / SRT。SRTの数値歌詞は保持し、cue時刻をms整数で出力。文字単位の歌唱時刻は推測しません。

@@ -1,0 +1,4199 @@
+{
+  "schema_version": 1,
+  "kind": "calligraphy-study-1",
+  "engine": "calligraphy-footprint-1",
+  "source_sha256": "3db13564ac25177d85915bd67e25729d75ef4cb61028b4154460d7fda3d6ca91",
+  "study_sha256": "9fe5e2e964d9f9142e5039ccebeac54b8f45171385a0c86e8f5cadadf780eec4",
+  "plans": {
+    "upright": "1ff45f0c34e1fa896adb475dd033a8cadfe8467b67b031e65b104981139024ff",
+    "fan": "ee36ddbc5cafed28e1921f7dbbefe88c928398cc45485bf569e915c10deb1e91"
+  },
+  "cells": [
+    {
+      "skeleton": "upright",
+      "dna": "neutral",
+      "tool": "round",
+      "asset": "glyphs/upright/neutral/round.svg",
+      "qa": {
+        "engine": "calligraphy-footprint-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "plan_sha256": "1ff45f0c34e1fa896adb475dd033a8cadfe8467b67b031e65b104981139024ff",
+        "dna_sha256": "d87af78f334b6fb3aaa6de0353888599e75dfd01016b7d8e4f011418d9c008fb",
+        "tool_sha256": "67e41336b542075294011fa44b464c5f1de8dc12f3147497f78eb8873c0d84dd",
+        "tool": {
+          "schema_version": 1,
+          "kind": "drawing-tool-1",
+          "mode": "round",
+          "angle": 0,
+          "aspect": 1,
+          "pressure": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "landmarks": {
+          "top-bar": [
+            [
+              255.0,
+              275.0
+            ],
+            [
+              416.7,
+              275.0
+            ],
+            [
+              583.3,
+              275.0
+            ],
+            [
+              745.0,
+              275.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              160.0,
+              430.0
+            ],
+            [
+              380.0,
+              430.0
+            ],
+            [
+              620.0,
+              430.0
+            ],
+            [
+              840.0,
+              430.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              430.0
+            ],
+            [
+              425.15,
+              605.1
+            ],
+            [
+              396.2314,
+              806.7146
+            ],
+            [
+              311.85,
+              810.5
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              430.0
+            ],
+            [
+              585.0,
+              580.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              275.0,
+              545.0
+            ],
+            [
+              273.4263,
+              613.8188
+            ],
+            [
+              247.3503,
+              673.2497
+            ],
+            [
+              217.3671,
+              710.5225
+            ]
+          ],
+          "outer-right": [
+            [
+              710.0,
+              545.0
+            ],
+            [
+              740.4271,
+              582.9927
+            ],
+            [
+              772.0307,
+              634.434
+            ],
+            [
+              790.1858,
+              687.0519
+            ]
+          ]
+        },
+        "stroke_diagnostics": {
+          "top-bar": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "top-stem": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "main-bar": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-left": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-right": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-left": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-right": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "sample_u": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 55.6,
+          "outer-right": 55.6,
+          "outer-pair": 375.6,
+          "upper-bars": 95.6
+        },
+        "silhouettes": 3,
+        "stroke_order_inferred": false,
+        "physical_brush_simulation": false,
+        "optical_correction": false,
+        "sampling": {
+          "arc_lookup": 1025,
+          "footprints": 129,
+          "ellipse_vertices": 32,
+          "grid": 0.01,
+          "max_export_boundary_error": 0.0173
+        },
+        "visual_review": "required"
+      }
+    },
+    {
+      "skeleton": "upright",
+      "dna": "neutral",
+      "tool": "broad",
+      "asset": "glyphs/upright/neutral/broad.svg",
+      "qa": {
+        "engine": "calligraphy-footprint-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "plan_sha256": "1ff45f0c34e1fa896adb475dd033a8cadfe8467b67b031e65b104981139024ff",
+        "dna_sha256": "d87af78f334b6fb3aaa6de0353888599e75dfd01016b7d8e4f011418d9c008fb",
+        "tool_sha256": "b1d37eaa3e4a42a2cee242bb725fd41397383d3aeaf5356c3c69d7dc77d5f5f8",
+        "tool": {
+          "schema_version": 1,
+          "kind": "drawing-tool-1",
+          "mode": "broad",
+          "angle": 35,
+          "aspect": 0.18,
+          "pressure": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "landmarks": {
+          "top-bar": [
+            [
+              255.0,
+              275.0
+            ],
+            [
+              416.7,
+              275.0
+            ],
+            [
+              583.3,
+              275.0
+            ],
+            [
+              745.0,
+              275.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              160.0,
+              430.0
+            ],
+            [
+              380.0,
+              430.0
+            ],
+            [
+              620.0,
+              430.0
+            ],
+            [
+              840.0,
+              430.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              430.0
+            ],
+            [
+              425.15,
+              605.1
+            ],
+            [
+              396.2314,
+              806.7146
+            ],
+            [
+              311.85,
+              810.5
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              430.0
+            ],
+            [
+              585.0,
+              580.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              275.0,
+              545.0
+            ],
+            [
+              273.4263,
+              613.8188
+            ],
+            [
+              247.3503,
+              673.2497
+            ],
+            [
+              217.3671,
+              710.5225
+            ]
+          ],
+          "outer-right": [
+            [
+              710.0,
+              545.0
+            ],
+            [
+              740.4271,
+              582.9927
+            ],
+            [
+              772.0307,
+              634.434
+            ],
+            [
+              790.1858,
+              687.0519
+            ]
+          ]
+        },
+        "stroke_diagnostics": {
+          "top-bar": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              35.1782,
+              35.1782,
+              35.1782,
+              35.1782,
+              35.1782
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "top-stem": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              49.0426,
+              49.0426,
+              49.0426,
+              49.0426,
+              49.0426
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "main-bar": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              35.1782,
+              35.1782,
+              35.1782,
+              35.1782,
+              35.1782
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-left": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              48.0613,
+              50.6631,
+              53.6334,
+              57.9429,
+              37.1952
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-right": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              49.0426,
+              49.7906,
+              52.1237,
+              56.6196,
+              57.08
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-left": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              49.7784,
+              54.0783,
+              57.1458,
+              58.9746,
+              59.2727
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-right": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              19.5851,
+              23.4015,
+              27.131,
+              31.1924,
+              35.9414
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "sample_u": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 79.88,
+          "outer-right": 76.5257,
+          "outer-pair": 387.3792,
+          "upper-bars": 119.88
+        },
+        "silhouettes": 3,
+        "stroke_order_inferred": false,
+        "physical_brush_simulation": false,
+        "optical_correction": false,
+        "sampling": {
+          "arc_lookup": 1025,
+          "footprints": 129,
+          "ellipse_vertices": 32,
+          "grid": 0.01,
+          "max_export_boundary_error": 0.0173
+        },
+        "visual_review": "required"
+      }
+    },
+    {
+      "skeleton": "upright",
+      "dna": "neutral",
+      "tool": "brush",
+      "asset": "glyphs/upright/neutral/brush.svg",
+      "qa": {
+        "engine": "calligraphy-footprint-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "plan_sha256": "1ff45f0c34e1fa896adb475dd033a8cadfe8467b67b031e65b104981139024ff",
+        "dna_sha256": "d87af78f334b6fb3aaa6de0353888599e75dfd01016b7d8e4f011418d9c008fb",
+        "tool_sha256": "480998b79ec9c23f27b0fe064b32c845d4b6eba73a872cd7d48729aa645424f1",
+        "tool": {
+          "schema_version": 1,
+          "kind": "drawing-tool-1",
+          "mode": "brush",
+          "angle": 0,
+          "aspect": 0.5,
+          "pressure": [
+            0.35,
+            0.85,
+            1.05,
+            1.15,
+            0.25
+          ]
+        },
+        "landmarks": {
+          "top-bar": [
+            [
+              255.0,
+              275.0
+            ],
+            [
+              416.7,
+              275.0
+            ],
+            [
+              583.3,
+              275.0
+            ],
+            [
+              745.0,
+              275.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              160.0,
+              430.0
+            ],
+            [
+              380.0,
+              430.0
+            ],
+            [
+              620.0,
+              430.0
+            ],
+            [
+              840.0,
+              430.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              430.0
+            ],
+            [
+              425.15,
+              605.1
+            ],
+            [
+              396.2314,
+              806.7146
+            ],
+            [
+              311.85,
+              810.5
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              430.0
+            ],
+            [
+              585.0,
+              580.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              275.0,
+              545.0
+            ],
+            [
+              273.4263,
+              613.8188
+            ],
+            [
+              247.3503,
+              673.2497
+            ],
+            [
+              217.3671,
+              710.5225
+            ]
+          ],
+          "outer-right": [
+            [
+              710.0,
+              545.0
+            ],
+            [
+              740.4271,
+              582.9927
+            ],
+            [
+              772.0307,
+              634.434
+            ],
+            [
+              790.1858,
+              687.0519
+            ]
+          ]
+        },
+        "stroke_diagnostics": {
+          "top-bar": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "top-stem": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "main-bar": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "inner-left": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "inner-right": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "outer-left": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "outer-right": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          }
+        },
+        "sample_u": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 84.6789,
+          "outer-right": 75.3066,
+          "outer-pair": 407.6505,
+          "upper-bars": 87.0079
+        },
+        "silhouettes": 3,
+        "stroke_order_inferred": false,
+        "physical_brush_simulation": false,
+        "optical_correction": false,
+        "sampling": {
+          "arc_lookup": 1025,
+          "footprints": 129,
+          "ellipse_vertices": 32,
+          "grid": 0.01,
+          "max_export_boundary_error": 0.0173
+        },
+        "visual_review": "required"
+      }
+    },
+    {
+      "skeleton": "upright",
+      "dna": "elastic",
+      "tool": "round",
+      "asset": "glyphs/upright/elastic/round.svg",
+      "qa": {
+        "engine": "calligraphy-footprint-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "plan_sha256": "1ff45f0c34e1fa896adb475dd033a8cadfe8467b67b031e65b104981139024ff",
+        "dna_sha256": "0307304c6b5d2e4976c244d7b2fe65758f20f46b3262e2e5fa8f2a51cb5171df",
+        "tool_sha256": "67e41336b542075294011fa44b464c5f1de8dc12f3147497f78eb8873c0d84dd",
+        "tool": {
+          "schema_version": 1,
+          "kind": "drawing-tool-1",
+          "mode": "round",
+          "angle": 0,
+          "aspect": 1,
+          "pressure": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "landmarks": {
+          "top-bar": [
+            [
+              255.0,
+              275.0
+            ],
+            [
+              416.7,
+              275.0
+            ],
+            [
+              583.3,
+              275.0
+            ],
+            [
+              745.0,
+              275.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              160.0,
+              430.0
+            ],
+            [
+              380.0,
+              430.0
+            ],
+            [
+              620.0,
+              430.0
+            ],
+            [
+              840.0,
+              430.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              430.0
+            ],
+            [
+              425.15,
+              605.1
+            ],
+            [
+              396.2314,
+              806.7146
+            ],
+            [
+              311.85,
+              810.5
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              430.0
+            ],
+            [
+              585.0,
+              580.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              275.0,
+              545.0
+            ],
+            [
+              273.4263,
+              613.8188
+            ],
+            [
+              247.3503,
+              673.2497
+            ],
+            [
+              217.3671,
+              710.5225
+            ]
+          ],
+          "outer-right": [
+            [
+              710.0,
+              545.0
+            ],
+            [
+              740.4271,
+              582.9927
+            ],
+            [
+              772.0307,
+              634.434
+            ],
+            [
+              790.1858,
+              687.0519
+            ]
+          ]
+        },
+        "stroke_diagnostics": {
+          "top-bar": {
+            "desired_width": [
+              75.6756,
+              49.5331,
+              49.5331,
+              58.4766,
+              85.995
+            ],
+            "projected_width": [
+              75.6756,
+              49.5331,
+              49.5331,
+              58.4766,
+              85.995
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "top-stem": {
+            "desired_width": [
+              77.22,
+              66.69,
+              70.2,
+              70.2,
+              70.2
+            ],
+            "projected_width": [
+              77.22,
+              66.69,
+              70.2,
+              70.2,
+              70.2
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "main-bar": {
+            "desired_width": [
+              82.5552,
+              61.9164,
+              60.5405,
+              64.6682,
+              92.8746
+            ],
+            "projected_width": [
+              82.5552,
+              61.9164,
+              60.5405,
+              64.6682,
+              92.8746
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-left": {
+            "desired_width": [
+              71.604,
+              78.2898,
+              85.7929,
+              46.3833,
+              0.0
+            ],
+            "projected_width": [
+              71.604,
+              78.2898,
+              85.7929,
+              46.3833,
+              0.0
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-right": {
+            "desired_width": [
+              68.796,
+              69.9368,
+              73.2958,
+              84.7884,
+              89.0838
+            ],
+            "projected_width": [
+              68.796,
+              69.9368,
+              73.2958,
+              84.7884,
+              89.0838
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-left": {
+            "desired_width": [
+              0.0,
+              40.6015,
+              75.1482,
+              89.2921,
+              79.0637
+            ],
+            "projected_width": [
+              0.0,
+              40.6015,
+              75.1482,
+              89.2921,
+              79.0637
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-right": {
+            "desired_width": [
+              0.0,
+              40.6269,
+              75.3382,
+              89.8074,
+              79.8916
+            ],
+            "projected_width": [
+              0.0,
+              40.6269,
+              75.3382,
+              89.8074,
+              79.8916
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "sample_u": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 76.1875,
+          "outer-right": 80.8939,
+          "outer-pair": 425.6232,
+          "upper-bars": 75.269
+        },
+        "silhouettes": 3,
+        "stroke_order_inferred": false,
+        "physical_brush_simulation": false,
+        "optical_correction": false,
+        "sampling": {
+          "arc_lookup": 1025,
+          "footprints": 129,
+          "ellipse_vertices": 32,
+          "grid": 0.01,
+          "max_export_boundary_error": 0.0173
+        },
+        "visual_review": "required"
+      }
+    },
+    {
+      "skeleton": "upright",
+      "dna": "elastic",
+      "tool": "broad",
+      "asset": "glyphs/upright/elastic/broad.svg",
+      "qa": {
+        "engine": "calligraphy-footprint-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "plan_sha256": "1ff45f0c34e1fa896adb475dd033a8cadfe8467b67b031e65b104981139024ff",
+        "dna_sha256": "0307304c6b5d2e4976c244d7b2fe65758f20f46b3262e2e5fa8f2a51cb5171df",
+        "tool_sha256": "b1d37eaa3e4a42a2cee242bb725fd41397383d3aeaf5356c3c69d7dc77d5f5f8",
+        "tool": {
+          "schema_version": 1,
+          "kind": "drawing-tool-1",
+          "mode": "broad",
+          "angle": 35,
+          "aspect": 0.18,
+          "pressure": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "landmarks": {
+          "top-bar": [
+            [
+              255.0,
+              275.0
+            ],
+            [
+              416.7,
+              275.0
+            ],
+            [
+              583.3,
+              275.0
+            ],
+            [
+              745.0,
+              275.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              160.0,
+              430.0
+            ],
+            [
+              380.0,
+              430.0
+            ],
+            [
+              620.0,
+              430.0
+            ],
+            [
+              840.0,
+              430.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              430.0
+            ],
+            [
+              425.15,
+              605.1
+            ],
+            [
+              396.2314,
+              806.7146
+            ],
+            [
+              311.85,
+              810.5
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              430.0
+            ],
+            [
+              585.0,
+              580.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              275.0,
+              545.0
+            ],
+            [
+              273.4263,
+              613.8188
+            ],
+            [
+              247.3503,
+              673.2497
+            ],
+            [
+              217.3671,
+              710.5225
+            ]
+          ],
+          "outer-right": [
+            [
+              710.0,
+              545.0
+            ],
+            [
+              740.4271,
+              582.9927
+            ],
+            [
+              772.0307,
+              634.434
+            ],
+            [
+              790.1858,
+              687.0519
+            ]
+          ]
+        },
+        "stroke_diagnostics": {
+          "top-bar": {
+            "desired_width": [
+              75.6756,
+              49.5331,
+              49.5331,
+              58.4766,
+              85.995
+            ],
+            "projected_width": [
+              44.817,
+              29.3348,
+              29.3348,
+              34.6313,
+              50.9284
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "top-stem": {
+            "desired_width": [
+              77.22,
+              66.69,
+              70.2,
+              70.2,
+              70.2
+            ],
+            "projected_width": [
+              63.7554,
+              55.0614,
+              57.9594,
+              57.9594,
+              57.9594
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "main-bar": {
+            "desired_width": [
+              82.5552,
+              61.9164,
+              60.5405,
+              64.6682,
+              92.8746
+            ],
+            "projected_width": [
+              48.8913,
+              36.6685,
+              35.8536,
+              38.2982,
+              55.0027
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-left": {
+            "desired_width": [
+              71.604,
+              78.2898,
+              85.7929,
+              46.3833,
+              0.0
+            ],
+            "projected_width": [
+              57.9357,
+              66.7746,
+              77.4639,
+              45.2455,
+              0.0
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-right": {
+            "desired_width": [
+              68.796,
+              69.9368,
+              73.2958,
+              84.7884,
+              89.0838
+            ],
+            "projected_width": [
+              56.8002,
+              58.6227,
+              64.3173,
+              80.8197,
+              85.6045
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-left": {
+            "desired_width": [
+              0.0,
+              40.6015,
+              75.1482,
+              89.2921,
+              79.0637
+            ],
+            "projected_width": [
+              0.0,
+              36.964,
+              72.2964,
+              88.6526,
+              78.8943
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-right": {
+            "desired_width": [
+              0.0,
+              40.6269,
+              75.3382,
+              89.8074,
+              79.8916
+            ],
+            "projected_width": [
+              0.0,
+              16.0056,
+              34.4107,
+              47.16,
+              48.3403
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "sample_u": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 85.0071,
+          "outer-right": 95.6039,
+          "outer-pair": 430.5655,
+          "upper-bars": 103.7093
+        },
+        "silhouettes": 3,
+        "stroke_order_inferred": false,
+        "physical_brush_simulation": false,
+        "optical_correction": false,
+        "sampling": {
+          "arc_lookup": 1025,
+          "footprints": 129,
+          "ellipse_vertices": 32,
+          "grid": 0.01,
+          "max_export_boundary_error": 0.0173
+        },
+        "visual_review": "required"
+      }
+    },
+    {
+      "skeleton": "upright",
+      "dna": "elastic",
+      "tool": "brush",
+      "asset": "glyphs/upright/elastic/brush.svg",
+      "qa": {
+        "engine": "calligraphy-footprint-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "plan_sha256": "1ff45f0c34e1fa896adb475dd033a8cadfe8467b67b031e65b104981139024ff",
+        "dna_sha256": "0307304c6b5d2e4976c244d7b2fe65758f20f46b3262e2e5fa8f2a51cb5171df",
+        "tool_sha256": "480998b79ec9c23f27b0fe064b32c845d4b6eba73a872cd7d48729aa645424f1",
+        "tool": {
+          "schema_version": 1,
+          "kind": "drawing-tool-1",
+          "mode": "brush",
+          "angle": 0,
+          "aspect": 0.5,
+          "pressure": [
+            0.35,
+            0.85,
+            1.05,
+            1.15,
+            0.25
+          ]
+        },
+        "landmarks": {
+          "top-bar": [
+            [
+              255.0,
+              275.0
+            ],
+            [
+              416.7,
+              275.0
+            ],
+            [
+              583.3,
+              275.0
+            ],
+            [
+              745.0,
+              275.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              160.0,
+              430.0
+            ],
+            [
+              380.0,
+              430.0
+            ],
+            [
+              620.0,
+              430.0
+            ],
+            [
+              840.0,
+              430.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              430.0
+            ],
+            [
+              425.15,
+              605.1
+            ],
+            [
+              396.2314,
+              806.7146
+            ],
+            [
+              311.85,
+              810.5
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              430.0
+            ],
+            [
+              585.0,
+              580.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              275.0,
+              545.0
+            ],
+            [
+              273.4263,
+              613.8188
+            ],
+            [
+              247.3503,
+              673.2497
+            ],
+            [
+              217.3671,
+              710.5225
+            ]
+          ],
+          "outer-right": [
+            [
+              710.0,
+              545.0
+            ],
+            [
+              740.4271,
+              582.9927
+            ],
+            [
+              772.0307,
+              634.434
+            ],
+            [
+              790.1858,
+              687.0519
+            ]
+          ]
+        },
+        "stroke_diagnostics": {
+          "top-bar": {
+            "desired_width": [
+              75.6756,
+              49.5331,
+              49.5331,
+              58.4766,
+              85.995
+            ],
+            "projected_width": [
+              26.4865,
+              42.1032,
+              52.0098,
+              67.2481,
+              21.4988
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "top-stem": {
+            "desired_width": [
+              77.22,
+              66.69,
+              70.2,
+              70.2,
+              70.2
+            ],
+            "projected_width": [
+              27.027,
+              56.6865,
+              73.71,
+              80.73,
+              17.55
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "main-bar": {
+            "desired_width": [
+              82.5552,
+              61.9164,
+              60.5405,
+              64.6682,
+              92.8746
+            ],
+            "projected_width": [
+              28.8943,
+              52.6289,
+              63.5675,
+              74.3685,
+              23.2187
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "inner-left": {
+            "desired_width": [
+              71.604,
+              78.2898,
+              85.7929,
+              46.3833,
+              0.0
+            ],
+            "projected_width": [
+              25.0614,
+              66.5464,
+              90.0825,
+              53.3408,
+              0.0
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "inner-right": {
+            "desired_width": [
+              68.796,
+              69.9368,
+              73.2958,
+              84.7884,
+              89.0838
+            ],
+            "projected_width": [
+              24.0786,
+              59.4462,
+              76.9606,
+              97.5067,
+              22.271
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "outer-left": {
+            "desired_width": [
+              0.0,
+              40.6015,
+              75.1482,
+              89.2921,
+              79.0637
+            ],
+            "projected_width": [
+              0.0,
+              34.5113,
+              78.9056,
+              102.6859,
+              19.7659
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "outer-right": {
+            "desired_width": [
+              0.0,
+              40.6269,
+              75.3382,
+              89.8074,
+              79.8916
+            ],
+            "projected_width": [
+              0.0,
+              34.5329,
+              79.1051,
+              103.2785,
+              19.9729
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          }
+        },
+        "sample_u": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 69.8498,
+          "outer-right": 78.1505,
+          "outer-pair": 428.3874,
+          "upper-bars": 84.3394
+        },
+        "silhouettes": 3,
+        "stroke_order_inferred": false,
+        "physical_brush_simulation": false,
+        "optical_correction": false,
+        "sampling": {
+          "arc_lookup": 1025,
+          "footprints": 129,
+          "ellipse_vertices": 32,
+          "grid": 0.01,
+          "max_export_boundary_error": 0.0173
+        },
+        "visual_review": "required"
+      }
+    },
+    {
+      "skeleton": "fan",
+      "dna": "neutral",
+      "tool": "round",
+      "asset": "glyphs/fan/neutral/round.svg",
+      "qa": {
+        "engine": "calligraphy-footprint-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "plan_sha256": "ee36ddbc5cafed28e1921f7dbbefe88c928398cc45485bf569e915c10deb1e91",
+        "dna_sha256": "d87af78f334b6fb3aaa6de0353888599e75dfd01016b7d8e4f011418d9c008fb",
+        "tool_sha256": "67e41336b542075294011fa44b464c5f1de8dc12f3147497f78eb8873c0d84dd",
+        "tool": {
+          "schema_version": 1,
+          "kind": "drawing-tool-1",
+          "mode": "round",
+          "angle": 0,
+          "aspect": 1,
+          "pressure": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "landmarks": {
+          "top-bar": [
+            [
+              245.1553,
+              293.8994
+            ],
+            [
+              413.3528,
+              288.0258
+            ],
+            [
+              586.6472,
+              281.9742
+            ],
+            [
+              754.8447,
+              276.1006
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              146.4539,
+              436.1712
+            ],
+            [
+              375.219,
+              432.1781
+            ],
+            [
+              624.781,
+              427.8219
+            ],
+            [
+              853.5461,
+              423.8288
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              431.3964
+            ],
+            [
+              327.5378,
+              644.2899
+            ],
+            [
+              215.3331,
+              837.7624
+            ],
+            [
+              114.2753,
+              860.1724
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              428.5163
+            ],
+            [
+              650.4229,
+              581.3347
+            ],
+            [
+              685.8527,
+              756.2817
+            ],
+            [
+              593.2999,
+              836.0268
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              770.0,
+              545.0
+            ],
+            [
+              806.5622,
+              577.1319
+            ],
+            [
+              846.6184,
+              622.3038
+            ],
+            [
+              873.6346,
+              670.9697
+            ]
+          ]
+        },
+        "stroke_diagnostics": {
+          "top-bar": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "top-stem": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "main-bar": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-left": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-right": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-left": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-right": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "sample_u": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 25.3607,
+          "outer-right": 60.3027,
+          "outer-pair": 510.1165,
+          "upper-bars": 81.135
+        },
+        "silhouettes": 3,
+        "stroke_order_inferred": false,
+        "physical_brush_simulation": false,
+        "optical_correction": false,
+        "sampling": {
+          "arc_lookup": 1025,
+          "footprints": 129,
+          "ellipse_vertices": 32,
+          "grid": 0.01,
+          "max_export_boundary_error": 0.0173
+        },
+        "visual_review": "required"
+      }
+    },
+    {
+      "skeleton": "fan",
+      "dna": "neutral",
+      "tool": "broad",
+      "asset": "glyphs/fan/neutral/broad.svg",
+      "qa": {
+        "engine": "calligraphy-footprint-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "plan_sha256": "ee36ddbc5cafed28e1921f7dbbefe88c928398cc45485bf569e915c10deb1e91",
+        "dna_sha256": "d87af78f334b6fb3aaa6de0353888599e75dfd01016b7d8e4f011418d9c008fb",
+        "tool_sha256": "b1d37eaa3e4a42a2cee242bb725fd41397383d3aeaf5356c3c69d7dc77d5f5f8",
+        "tool": {
+          "schema_version": 1,
+          "kind": "drawing-tool-1",
+          "mode": "broad",
+          "angle": 35,
+          "aspect": 0.18,
+          "pressure": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "landmarks": {
+          "top-bar": [
+            [
+              245.1553,
+              293.8994
+            ],
+            [
+              413.3528,
+              288.0258
+            ],
+            [
+              586.6472,
+              281.9742
+            ],
+            [
+              754.8447,
+              276.1006
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              146.4539,
+              436.1712
+            ],
+            [
+              375.219,
+              432.1781
+            ],
+            [
+              624.781,
+              427.8219
+            ],
+            [
+              853.5461,
+              423.8288
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              431.3964
+            ],
+            [
+              327.5378,
+              644.2899
+            ],
+            [
+              215.3331,
+              837.7624
+            ],
+            [
+              114.2753,
+              860.1724
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              428.5163
+            ],
+            [
+              650.4229,
+              581.3347
+            ],
+            [
+              685.8527,
+              756.2817
+            ],
+            [
+              593.2999,
+              836.0268
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              770.0,
+              545.0
+            ],
+            [
+              806.5622,
+              577.1319
+            ],
+            [
+              846.6184,
+              622.3038
+            ],
+            [
+              873.6346,
+              670.9697
+            ]
+          ]
+        },
+        "stroke_diagnostics": {
+          "top-bar": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              36.7535,
+              36.7535,
+              36.7535,
+              36.7535,
+              36.7535
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "top-stem": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              49.0426,
+              49.0426,
+              49.0426,
+              49.0426,
+              49.0426
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "main-bar": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              35.97,
+              35.97,
+              35.97,
+              35.97,
+              35.97
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-left": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              58.2417,
+              58.7561,
+              59.2637,
+              59.1206,
+              44.3882
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-right": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              32.613,
+              37.5748,
+              44.4717,
+              54.5801,
+              57.6321
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-left": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              46.8433,
+              51.7831,
+              55.5491,
+              58.1495,
+              59.3877
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-right": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              12.4723,
+              15.354,
+              18.7318,
+              22.7487,
+              27.7253
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "sample_u": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 48.8251,
+          "outer-right": 83.7673,
+          "outer-pair": 520.8946,
+          "upper-bars": 104.5995
+        },
+        "silhouettes": 3,
+        "stroke_order_inferred": false,
+        "physical_brush_simulation": false,
+        "optical_correction": false,
+        "sampling": {
+          "arc_lookup": 1025,
+          "footprints": 129,
+          "ellipse_vertices": 32,
+          "grid": 0.01,
+          "max_export_boundary_error": 0.0173
+        },
+        "visual_review": "required"
+      }
+    },
+    {
+      "skeleton": "fan",
+      "dna": "neutral",
+      "tool": "brush",
+      "asset": "glyphs/fan/neutral/brush.svg",
+      "qa": {
+        "engine": "calligraphy-footprint-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "plan_sha256": "ee36ddbc5cafed28e1921f7dbbefe88c928398cc45485bf569e915c10deb1e91",
+        "dna_sha256": "d87af78f334b6fb3aaa6de0353888599e75dfd01016b7d8e4f011418d9c008fb",
+        "tool_sha256": "480998b79ec9c23f27b0fe064b32c845d4b6eba73a872cd7d48729aa645424f1",
+        "tool": {
+          "schema_version": 1,
+          "kind": "drawing-tool-1",
+          "mode": "brush",
+          "angle": 0,
+          "aspect": 0.5,
+          "pressure": [
+            0.35,
+            0.85,
+            1.05,
+            1.15,
+            0.25
+          ]
+        },
+        "landmarks": {
+          "top-bar": [
+            [
+              245.1553,
+              293.8994
+            ],
+            [
+              413.3528,
+              288.0258
+            ],
+            [
+              586.6472,
+              281.9742
+            ],
+            [
+              754.8447,
+              276.1006
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              146.4539,
+              436.1712
+            ],
+            [
+              375.219,
+              432.1781
+            ],
+            [
+              624.781,
+              427.8219
+            ],
+            [
+              853.5461,
+              423.8288
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              431.3964
+            ],
+            [
+              327.5378,
+              644.2899
+            ],
+            [
+              215.3331,
+              837.7624
+            ],
+            [
+              114.2753,
+              860.1724
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              428.5163
+            ],
+            [
+              650.4229,
+              581.3347
+            ],
+            [
+              685.8527,
+              756.2817
+            ],
+            [
+              593.2999,
+              836.0268
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              770.0,
+              545.0
+            ],
+            [
+              806.5622,
+              577.1319
+            ],
+            [
+              846.6184,
+              622.3038
+            ],
+            [
+              873.6346,
+              670.9697
+            ]
+          ]
+        },
+        "stroke_diagnostics": {
+          "top-bar": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "top-stem": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "main-bar": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "inner-left": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "inner-right": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "outer-left": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "outer-right": {
+            "desired_width": [
+              59.4,
+              59.4,
+              59.4,
+              59.4,
+              59.4
+            ],
+            "projected_width": [
+              20.79,
+              50.49,
+              62.37,
+              68.31,
+              14.85
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          }
+        },
+        "sample_u": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 53.3986,
+          "outer-right": 85.2963,
+          "outer-pair": 537.2394,
+          "upper-bars": 79.179
+        },
+        "silhouettes": 3,
+        "stroke_order_inferred": false,
+        "physical_brush_simulation": false,
+        "optical_correction": false,
+        "sampling": {
+          "arc_lookup": 1025,
+          "footprints": 129,
+          "ellipse_vertices": 32,
+          "grid": 0.01,
+          "max_export_boundary_error": 0.0173
+        },
+        "visual_review": "required"
+      }
+    },
+    {
+      "skeleton": "fan",
+      "dna": "elastic",
+      "tool": "round",
+      "asset": "glyphs/fan/elastic/round.svg",
+      "qa": {
+        "engine": "calligraphy-footprint-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "plan_sha256": "ee36ddbc5cafed28e1921f7dbbefe88c928398cc45485bf569e915c10deb1e91",
+        "dna_sha256": "0307304c6b5d2e4976c244d7b2fe65758f20f46b3262e2e5fa8f2a51cb5171df",
+        "tool_sha256": "67e41336b542075294011fa44b464c5f1de8dc12f3147497f78eb8873c0d84dd",
+        "tool": {
+          "schema_version": 1,
+          "kind": "drawing-tool-1",
+          "mode": "round",
+          "angle": 0,
+          "aspect": 1,
+          "pressure": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "landmarks": {
+          "top-bar": [
+            [
+              245.1553,
+              293.8994
+            ],
+            [
+              413.3528,
+              288.0258
+            ],
+            [
+              586.6472,
+              281.9742
+            ],
+            [
+              754.8447,
+              276.1006
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              146.4539,
+              436.1712
+            ],
+            [
+              375.219,
+              432.1781
+            ],
+            [
+              624.781,
+              427.8219
+            ],
+            [
+              853.5461,
+              423.8288
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              431.3964
+            ],
+            [
+              327.5378,
+              644.2899
+            ],
+            [
+              215.3331,
+              837.7624
+            ],
+            [
+              114.2753,
+              860.1724
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              428.5163
+            ],
+            [
+              650.4229,
+              581.3347
+            ],
+            [
+              685.8527,
+              756.2817
+            ],
+            [
+              593.2999,
+              836.0268
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              770.0,
+              545.0
+            ],
+            [
+              806.5622,
+              577.1319
+            ],
+            [
+              846.6184,
+              622.3038
+            ],
+            [
+              873.6346,
+              670.9697
+            ]
+          ]
+        },
+        "stroke_diagnostics": {
+          "top-bar": {
+            "desired_width": [
+              75.6756,
+              49.5331,
+              49.5331,
+              58.4766,
+              85.995
+            ],
+            "projected_width": [
+              75.6756,
+              49.5331,
+              49.5331,
+              58.4766,
+              85.995
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "top-stem": {
+            "desired_width": [
+              77.22,
+              66.69,
+              70.2,
+              70.2,
+              70.2
+            ],
+            "projected_width": [
+              77.22,
+              66.69,
+              70.2,
+              70.2,
+              70.2
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "main-bar": {
+            "desired_width": [
+              82.5552,
+              61.9164,
+              60.5405,
+              64.6682,
+              92.8746
+            ],
+            "projected_width": [
+              82.5552,
+              61.9164,
+              60.5405,
+              64.6682,
+              92.8746
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-left": {
+            "desired_width": [
+              71.604,
+              78.2898,
+              85.7929,
+              46.3833,
+              0.0
+            ],
+            "projected_width": [
+              71.604,
+              78.2898,
+              85.7929,
+              46.3833,
+              0.0
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-right": {
+            "desired_width": [
+              68.796,
+              69.9368,
+              73.2958,
+              84.7884,
+              89.0838
+            ],
+            "projected_width": [
+              68.796,
+              69.9368,
+              73.2958,
+              84.7884,
+              89.0838
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-left": {
+            "desired_width": [
+              0.0,
+              40.6015,
+              75.1482,
+              89.2921,
+              79.0637
+            ],
+            "projected_width": [
+              0.0,
+              40.6015,
+              75.1482,
+              89.2921,
+              79.0637
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-right": {
+            "desired_width": [
+              0.0,
+              40.6269,
+              75.3382,
+              89.8074,
+              79.8916
+            ],
+            "projected_width": [
+              0.0,
+              40.6269,
+              75.3382,
+              89.8074,
+              79.8916
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "sample_u": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 42.3795,
+          "outer-right": 81.6358,
+          "outer-pair": 550.1968,
+          "upper-bars": 68.8935
+        },
+        "silhouettes": 3,
+        "stroke_order_inferred": false,
+        "physical_brush_simulation": false,
+        "optical_correction": false,
+        "sampling": {
+          "arc_lookup": 1025,
+          "footprints": 129,
+          "ellipse_vertices": 32,
+          "grid": 0.01,
+          "max_export_boundary_error": 0.0173
+        },
+        "visual_review": "required"
+      }
+    },
+    {
+      "skeleton": "fan",
+      "dna": "elastic",
+      "tool": "broad",
+      "asset": "glyphs/fan/elastic/broad.svg",
+      "qa": {
+        "engine": "calligraphy-footprint-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "plan_sha256": "ee36ddbc5cafed28e1921f7dbbefe88c928398cc45485bf569e915c10deb1e91",
+        "dna_sha256": "0307304c6b5d2e4976c244d7b2fe65758f20f46b3262e2e5fa8f2a51cb5171df",
+        "tool_sha256": "b1d37eaa3e4a42a2cee242bb725fd41397383d3aeaf5356c3c69d7dc77d5f5f8",
+        "tool": {
+          "schema_version": 1,
+          "kind": "drawing-tool-1",
+          "mode": "broad",
+          "angle": 35,
+          "aspect": 0.18,
+          "pressure": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "landmarks": {
+          "top-bar": [
+            [
+              245.1553,
+              293.8994
+            ],
+            [
+              413.3528,
+              288.0258
+            ],
+            [
+              586.6472,
+              281.9742
+            ],
+            [
+              754.8447,
+              276.1006
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              146.4539,
+              436.1712
+            ],
+            [
+              375.219,
+              432.1781
+            ],
+            [
+              624.781,
+              427.8219
+            ],
+            [
+              853.5461,
+              423.8288
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              431.3964
+            ],
+            [
+              327.5378,
+              644.2899
+            ],
+            [
+              215.3331,
+              837.7624
+            ],
+            [
+              114.2753,
+              860.1724
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              428.5163
+            ],
+            [
+              650.4229,
+              581.3347
+            ],
+            [
+              685.8527,
+              756.2817
+            ],
+            [
+              593.2999,
+              836.0268
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              770.0,
+              545.0
+            ],
+            [
+              806.5622,
+              577.1319
+            ],
+            [
+              846.6184,
+              622.3038
+            ],
+            [
+              873.6346,
+              670.9697
+            ]
+          ]
+        },
+        "stroke_diagnostics": {
+          "top-bar": {
+            "desired_width": [
+              75.6756,
+              49.5331,
+              49.5331,
+              58.4766,
+              85.995
+            ],
+            "projected_width": [
+              46.824,
+              30.6484,
+              30.6484,
+              36.1822,
+              53.2091
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "top-stem": {
+            "desired_width": [
+              77.22,
+              66.69,
+              70.2,
+              70.2,
+              70.2
+            ],
+            "projected_width": [
+              63.7554,
+              55.0614,
+              57.9594,
+              57.9594,
+              57.9594
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "main-bar": {
+            "desired_width": [
+              82.5552,
+              61.9164,
+              60.5405,
+              64.6682,
+              92.8746
+            ],
+            "projected_width": [
+              49.9918,
+              37.4938,
+              36.6606,
+              39.1602,
+              56.2407
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-left": {
+            "desired_width": [
+              71.604,
+              78.2898,
+              85.7929,
+              46.3833,
+              0.0
+            ],
+            "projected_width": [
+              70.2077,
+              77.4412,
+              85.596,
+              46.1651,
+              0.0
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "inner-right": {
+            "desired_width": [
+              68.796,
+              69.9368,
+              73.2958,
+              84.7884,
+              89.0838
+            ],
+            "projected_width": [
+              37.7718,
+              44.2401,
+              54.8753,
+              77.9084,
+              86.4325
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-left": {
+            "desired_width": [
+              0.0,
+              40.6015,
+              75.1482,
+              89.2921,
+              79.0637
+            ],
+            "projected_width": [
+              0.0,
+              35.3952,
+              70.2763,
+              87.4124,
+              79.0473
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "outer-right": {
+            "desired_width": [
+              0.0,
+              40.6269,
+              75.3382,
+              89.8074,
+              79.8916
+            ],
+            "projected_width": [
+              0.0,
+              10.5015,
+              23.7579,
+              34.3939,
+              37.2899
+            ],
+            "pressure": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "sample_u": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 42.5726,
+          "outer-right": 98.2015,
+          "outer-pair": 557.5725,
+          "upper-bars": 97.0593
+        },
+        "silhouettes": 3,
+        "stroke_order_inferred": false,
+        "physical_brush_simulation": false,
+        "optical_correction": false,
+        "sampling": {
+          "arc_lookup": 1025,
+          "footprints": 129,
+          "ellipse_vertices": 32,
+          "grid": 0.01,
+          "max_export_boundary_error": 0.0173
+        },
+        "visual_review": "required"
+      }
+    },
+    {
+      "skeleton": "fan",
+      "dna": "elastic",
+      "tool": "brush",
+      "asset": "glyphs/fan/elastic/brush.svg",
+      "qa": {
+        "engine": "calligraphy-footprint-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "plan_sha256": "ee36ddbc5cafed28e1921f7dbbefe88c928398cc45485bf569e915c10deb1e91",
+        "dna_sha256": "0307304c6b5d2e4976c244d7b2fe65758f20f46b3262e2e5fa8f2a51cb5171df",
+        "tool_sha256": "480998b79ec9c23f27b0fe064b32c845d4b6eba73a872cd7d48729aa645424f1",
+        "tool": {
+          "schema_version": 1,
+          "kind": "drawing-tool-1",
+          "mode": "brush",
+          "angle": 0,
+          "aspect": 0.5,
+          "pressure": [
+            0.35,
+            0.85,
+            1.05,
+            1.15,
+            0.25
+          ]
+        },
+        "landmarks": {
+          "top-bar": [
+            [
+              245.1553,
+              293.8994
+            ],
+            [
+              413.3528,
+              288.0258
+            ],
+            [
+              586.6472,
+              281.9742
+            ],
+            [
+              754.8447,
+              276.1006
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              146.4539,
+              436.1712
+            ],
+            [
+              375.219,
+              432.1781
+            ],
+            [
+              624.781,
+              427.8219
+            ],
+            [
+              853.5461,
+              423.8288
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              431.3964
+            ],
+            [
+              327.5378,
+              644.2899
+            ],
+            [
+              215.3331,
+              837.7624
+            ],
+            [
+              114.2753,
+              860.1724
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              428.5163
+            ],
+            [
+              650.4229,
+              581.3347
+            ],
+            [
+              685.8527,
+              756.2817
+            ],
+            [
+              593.2999,
+              836.0268
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              770.0,
+              545.0
+            ],
+            [
+              806.5622,
+              577.1319
+            ],
+            [
+              846.6184,
+              622.3038
+            ],
+            [
+              873.6346,
+              670.9697
+            ]
+          ]
+        },
+        "stroke_diagnostics": {
+          "top-bar": {
+            "desired_width": [
+              75.6756,
+              49.5331,
+              49.5331,
+              58.4766,
+              85.995
+            ],
+            "projected_width": [
+              26.4865,
+              42.1032,
+              52.0098,
+              67.2481,
+              21.4988
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "top-stem": {
+            "desired_width": [
+              77.22,
+              66.69,
+              70.2,
+              70.2,
+              70.2
+            ],
+            "projected_width": [
+              27.027,
+              56.6865,
+              73.71,
+              80.73,
+              17.55
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "main-bar": {
+            "desired_width": [
+              82.5552,
+              61.9164,
+              60.5405,
+              64.6682,
+              92.8746
+            ],
+            "projected_width": [
+              28.8943,
+              52.6289,
+              63.5675,
+              74.3685,
+              23.2187
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "inner-left": {
+            "desired_width": [
+              71.604,
+              78.2898,
+              85.7929,
+              46.3833,
+              0.0
+            ],
+            "projected_width": [
+              25.0614,
+              66.5464,
+              90.0825,
+              53.3408,
+              0.0
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "inner-right": {
+            "desired_width": [
+              68.796,
+              69.9368,
+              73.2958,
+              84.7884,
+              89.0838
+            ],
+            "projected_width": [
+              24.0786,
+              59.4462,
+              76.9606,
+              97.5067,
+              22.271
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "outer-left": {
+            "desired_width": [
+              0.0,
+              40.6015,
+              75.1482,
+              89.2921,
+              79.0637
+            ],
+            "projected_width": [
+              0.0,
+              34.5113,
+              78.9056,
+              102.6859,
+              19.7659
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          },
+          "outer-right": {
+            "desired_width": [
+              0.0,
+              40.6269,
+              75.3382,
+              89.8074,
+              79.8916
+            ],
+            "projected_width": [
+              0.0,
+              34.5329,
+              79.1051,
+              103.2785,
+              19.9729
+            ],
+            "pressure": [
+              0.35,
+              0.85,
+              1.05,
+              1.15,
+              0.25
+            ]
+          }
+        },
+        "sample_u": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 32.999,
+          "outer-right": 86.6951,
+          "outer-pair": 550.2274,
+          "upper-bars": 76.8747
+        },
+        "silhouettes": 3,
+        "stroke_order_inferred": false,
+        "physical_brush_simulation": false,
+        "optical_correction": false,
+        "sampling": {
+          "arc_lookup": 1025,
+          "footprints": 129,
+          "ellipse_vertices": 32,
+          "grid": 0.01,
+          "max_export_boundary_error": 0.0173
+        },
+        "visual_review": "required"
+      }
+    }
+  ],
+  "fixed_input_reproduction": true,
+  "three_independent_inputs": true,
+  "visual_review": "required",
+  "limits": [
+    "Only authored 赤; no automatic font/raster decomposition.",
+    "Elliptical geometric footprints, not physical brush/hair/ink simulation.",
+    "Pressure is hand-assigned over normalized arc length; speed and stroke order are not inferred.",
+    "Tool changes alter projected widths and clearances even with identical design intent.",
+    "No optical spacing correction, traditional calligraphy fidelity or aesthetic acceptance claim."
+  ]
+}

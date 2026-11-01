@@ -225,13 +225,33 @@ def grow_ink(points, rule, nominal_width, source_end, taper_mix):
     return polygon, [round(widths[i], 4) for i in (0, 32, 64, 96, 128)]
 
 
+def inspect_layout(polygons, minimum_gap):
+    """Check exported role geometry; shared by experimental drawing models."""
+    from shapely.ops import unary_union
+    body = unary_union([polygons[r] for r in ROLES[:5]])
+    if body.geom_type != "Polygon" or len(body.interiors):
+        raise ValueError("Required body connections or open inner white space were lost")
+    for a, b in (("top-bar", "top-stem"), ("main-bar", "top-stem"),
+                 ("main-bar", "inner-left"), ("main-bar", "inner-right")):
+        if polygons[a].intersection(polygons[b]).area < 1:
+            raise ValueError(f"Required role connection lost: {a} / {b}")
+    gaps = {r: round(polygons[r].distance(body), 4) for r in ROLES[5:]}
+    gaps["outer-pair"] = round(polygons[ROLES[5]].distance(polygons[ROLES[6]]), 4)
+    gaps["upper-bars"] = round(polygons["top-bar"].distance(polygons["main-bar"]), 4)
+    if any(value <= 0 or value < minimum_gap for value in gaps.values()):
+        raise ValueError(f"White-space clearance below {minimum_gap}: {gaps}")
+    silhouette = unary_union(list(polygons.values()))
+    if silhouette.geom_type != "MultiPolygon" or len(silhouette.geoms) != 3:
+        raise ValueError("Expected body plus two separate outer marks")
+    return gaps
+
+
 def design_glyph(source, dna, char="赤"):
     """Return closed path-only SVG and diagnostics, or fail without repairs.
 
     Source widths/taper can be blended with DNA; source serif shapes are not
     reproduced. The authored role map is the only anatomy authority.
     """
-    from shapely.ops import unary_union
     if type(source) is not AuthoredStructureSource or type(dna) is not AnatomyDNA or char != "赤":
         raise ValueError("Anatomy study requires an explicit authored 赤 source and AnatomyDNA")
     engine = engine_metadata()  # same pinned optional geometry dependency
@@ -250,21 +270,7 @@ def design_glyph(source, dna, char="赤"):
         paths.append(path)
         polygons[role], landmarks[role], widths[role] = path_geometry(path["d"]), points, sample_widths
     # Boolean unions are diagnostic only, never used to construct exported ink.
-    body = unary_union([polygons[r] for r in ROLES[:5]])
-    if body.geom_type != "Polygon" or len(body.interiors):
-        raise ValueError("Required body connections or open inner white space were lost")
-    for a, b in (("top-bar", "top-stem"), ("main-bar", "top-stem"),
-                 ("main-bar", "inner-left"), ("main-bar", "inner-right")):
-        if polygons[a].intersection(polygons[b]).area < 1:
-            raise ValueError(f"Required role connection lost: {a} / {b}")
-    gaps = {r: round(polygons[r].distance(body), 4) for r in ROLES[5:]}
-    gaps["outer-pair"] = round(polygons[ROLES[5]].distance(polygons[ROLES[6]]), 4)
-    gaps["upper-bars"] = round(polygons["top-bar"].distance(polygons["main-bar"]), 4)
-    if any(value <= 0 or value < dna.minimum_gap for value in gaps.values()):
-        raise ValueError(f"White-space clearance below {dna.minimum_gap}: {gaps}")
-    silhouette = unary_union(list(polygons.values()))
-    if silhouette.geom_type != "MultiPolygon" or len(silhouette.geoms) != 3:
-        raise ValueError("Expected body plus two separate outer marks")
+    gaps = inspect_layout(polygons, dna.minimum_gap)
     svg = _svg({"paths": paths}, {"fill": "#171512"})
     validate_svg(svg)
     qa = {"engine": ENGINE, "geometry_engine": engine, "source": source.provenance,
