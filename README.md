@@ -141,6 +141,16 @@ centerlines. This is a geometric study, not a physical or trained brush model.
 python -m flamoris_glyph.calligraphy_lab examples/aka-structure.json examples/calligraphy-study.json --out output-calligraphy-study
 ```
 
+The [single-stroke action study](docs/stroke-program-study.md) models entry,
+travel and finishing as short explicit motion programs. Nine comparisons and
+two controls distinguish time alone from changes in contact position,
+pressure and nib angle. These are hand-authored research examples, not a
+trained handwriting model. Future education research is tracked in [#9](https://github.com/flamoris-jp/flamoris-glyph/issues/9).
+
+```bash
+python -m flamoris_glyph.stroke_lab examples/stroke-program-study.json --out output-stroke-study
+```
+
 ## Supported boundary
 
 - UTF-8（BOM可）、LF / CRLF、plain text / SRT。SRTの数値歌詞は保持し、cue時刻をms整数で出力。文字単位の歌唱時刻は推測しません。

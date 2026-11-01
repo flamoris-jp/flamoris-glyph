@@ -212,8 +212,22 @@ def sweep_stroke(points, ink, nominal, source_taper, taper_mix, tool):
                "pressure": [round(pressures[i], 4) for i in indices]}
 
 
-def draw_glyph(plan, dna, tool):
+def canonicalize_sweep(polygon):
+    """Quantize a valid swept role while enforcing the recorded error bound."""
     from shapely.geometry import Polygon
+    coords = [(round(x, 2), round(y, 2)) for x, y in list(polygon.exterior.coords)[:-1]]
+    coords = [p for i, p in enumerate(coords) if p != coords[i-1]]
+    snapped = Polygon(coords)
+    if not snapped.is_valid or snapped.is_empty or snapped.hausdorff_distance(polygon) > .0072:
+        raise ValueError("Calligraphy coordinate rounding lost a valid role boundary")
+    path = _grid_path(snapped)
+    exported = path_geometry(path)
+    if exported.hausdorff_distance(polygon) > .0173:
+        raise ValueError("Calligraphy export exceeded boundary error allowance")
+    return path, exported
+
+
+def draw_glyph(plan, dna, tool):
     if type(plan) is not SkeletonPlan or type(dna) is not LetterDNA or type(tool) is not CalligraphyTool:
         raise ValueError("Expected separate SkeletonPlan, LetterDNA and CalligraphyTool")
     engine = engine_metadata()
@@ -221,15 +235,8 @@ def draw_glyph(plan, dna, tool):
     for role, points, source_width, taper, ink in zip(ROLES, plan.points, plan.source_widths, plan.source_tapers, dna.ink):
         nominal = dna.weight*(plan.base_width*ink.width_ratio*(1-dna.source_width_mix)+source_width*dna.source_width_mix)
         polygon, qa = sweep_stroke(points, ink, nominal, taper, dna.source_taper_mix, tool)
-        coords = [(round(x, 2), round(y, 2)) for x, y in list(polygon.exterior.coords)[:-1]]
-        coords = [p for i, p in enumerate(coords) if p != coords[i-1]]
-        snapped = Polygon(coords)
-        if not snapped.is_valid or snapped.is_empty or snapped.hausdorff_distance(polygon) > .0072:
-            raise ValueError("Calligraphy coordinate rounding lost a valid role boundary")
-        path = {"id": role, "d": _grid_path(snapped)}
-        exported = path_geometry(path["d"])
-        if exported.hausdorff_distance(polygon) > .0173:
-            raise ValueError("Calligraphy export exceeded boundary error allowance")
+        d, exported = canonicalize_sweep(polygon)
+        path = {"id": role, "d": d}
         paths.append(path); polygons[role] = exported; diagnostics[role] = qa
     gaps = inspect_layout(polygons, dna.minimum_gap)
     svg = _svg({"paths": paths}, {"fill": "#171512"})
