@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "profile": "heavy-condensed-headline",
+  "width": 0.76,
+  "bar_span": 0.82,
+  "junction_shift": -45,
+  "lower_spread": 0.84,
+  "curve_gain": -0.4,
+  "weight": 1.9,
+  "contrast": -0.9,
+  "terminal_style": "block",
+  "terminal_gain": 1,
+  "variation": 0.35
+}

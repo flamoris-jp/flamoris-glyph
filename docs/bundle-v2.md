@@ -58,6 +58,15 @@ identity includes the pattern and engine metadata. Legacy generation is
 unchanged. Older readers reject experimental variant identities; use the
 updated validator before accepting them. See the [versioned extension](pattern-dna.md).
 
+The authored 赤 study adds a separate, mutually exclusive `structure` /
+`structure_engine` contract and per-glyph `structure_qa`, with generator
+`0.2.0+structure.1`. Variant identity includes those settings and engine
+versions. Its updated reader checks the seven role IDs, numeric landmarks,
+resolved seed parameters and family metadata. These coordinates describe the
+authored centerlines, not curve control points in the final filled SVG.
+Readers do not need Shapely to validate static assets. Older readers reject
+the experimental variant identities. See [authored structure](authored-structure.md).
+
 Consumers should call the equivalent of `validate_bundle` before import: verify paths stay inside the bundle, reject symlinks/active XML, check SHA-256 and the restricted SVG subset, then check cue/occurrence/variant/stroke/metrics links. Limits are documented in [architecture](architecture.md). Paths are relative to the manifest, never the current working directory.
 
 Read cue source text and 1-based line/column to preserve spaces and multiline structure. Do not pack visible glyphs together and lose lyric spacing. Original timing and IDs must survive the import.

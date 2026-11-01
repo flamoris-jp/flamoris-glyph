@@ -23,6 +23,13 @@ Neither path owns a playback clock or renderer. fontTools' documented TTFont / P
 [TTFont](https://fonttools.readthedocs.io/en/latest/ttLib/ttFont.html),
 [SVGPathPen](https://fonttools.readthedocs.io/en/latest/pens/svgPathPen.html).
 
+The separate [authored structure study](authored-structure.md) has an explicit
+seven-role map for 赤. Source geometry, family widths and base terminals are
+distinct from versioned Structure DNA. `compile_bundle(..., structure=...)`
+requires that source type and records engine/landmarks separately. Ordinary
+font outlines do not enter this path without a future explicit correspondence
+map. The demonstration has no font decomposition, image tracing or fitting.
+
 ### Cue / occurrence identity
 
 - Cue ID derives from physical text line number or SRT block order, not the optional SRT sequence label.

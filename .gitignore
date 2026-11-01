@@ -41,4 +41,5 @@ demo-preview.svg
 # Private staging directories for atomic local publication
 .pattern-lab-*/
 .glyph-*/
+.structure-study-*/
 

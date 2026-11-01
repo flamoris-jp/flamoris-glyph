@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "character": "赤",
+  "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset",
+  "bases": {
+    "gothic": {
+      "family": "gothic",
+      "horizontal_width": 48,
+      "vertical_width": 54,
+      "diagonal_width": 44,
+      "serif_size": 0,
+      "strokes": [
+        {
+          "id": "top-bar",
+          "points": [
+            [
+              250,
+              265
+            ],
+            [
+              415,
+              265
+            ],
+            [
+              585,
+              265
+            ],
+            [
+              750,
+              265
+            ]
+          ],
+          "end_scale": 1,
+          "terminal": "tome"
+        },
+        {
+          "id": "top-stem",
+          "points": [
+            [
+              500,
+              130
+            ],
+            [
+              500,
+              230
+            ],
+            [
+              500,
+              340
+            ],
+            [
+              500,
+              430
+            ]
+          ],
+          "end_scale": 1,
+          "terminal": "tome"
+        },
+        {
+          "id": "main-bar",
+          "points": [
+            [
+              160,
+              430
+            ],
+            [
+              380,
+              430
+            ],
+            [
+              620,
+              430
+            ],
+            [
+              840,
+              430
+            ]
+          ],
+          "end_scale": 1,
+          "terminal": "tome"
+        },
+        {
+          "id": "inner-left",
+          "points": [
+            [
+              420,
+              450
+            ],
+            [
+              425,
+              620
+            ],
+            [
+              380,
+              750
+            ],
+            [
+              315,
+              800
+            ]
+          ],
+          "end_scale": 0.32,
+          "terminal": "harai"
+        },
+        {
+          "id": "inner-right",
+          "points": [
+            [
+              585,
+              450
+            ],
+            [
+              585,
+              600
+            ],
+            [
+              605,
+              805
+            ],
+            [
+              510,
+              810
+            ]
+          ],
+          "end_scale": 0.4,
+          "terminal": "hane"
+        },
+        {
+          "id": "outer-left",
+          "points": [
+            [
+              300,
+              540
+            ],
+            [
+              285,
+              615
+            ],
+            [
+              245,
+              675
+            ],
+            [
+              205,
+              710
+            ]
+          ],
+          "end_scale": 0.55,
+          "terminal": "harai"
+        },
+        {
+          "id": "outer-right",
+          "points": [
+            [
+              700,
+              545
+            ],
+            [
+              730,
+              590
+            ],
+            [
+              760,
+              650
+            ],
+            [
+              775,
+              710
+            ]
+          ],
+          "end_scale": 0.65,
+          "terminal": "tome"
+        }
+      ]
+    },
+    "mincho": {
+      "family": "mincho",
+      "horizontal_width": 13,
+      "vertical_width": 57,
+      "diagonal_width": 42,
+      "serif_size": 22,
+      "strokes": [
+        {
+          "id": "top-bar",
+          "points": [
+            [
+              270,
+              280
+            ],
+            [
+              420,
+              280
+            ],
+            [
+              580,
+              280
+            ],
+            [
+              730,
+              280
+            ]
+          ],
+          "end_scale": 1,
+          "terminal": "tome"
+        },
+        {
+          "id": "top-stem",
+          "points": [
+            [
+              500,
+              125
+            ],
+            [
+              502,
+              230
+            ],
+            [
+              500,
+              350
+            ],
+            [
+              500,
+              450
+            ]
+          ],
+          "end_scale": 1,
+          "terminal": "tome"
+        },
+        {
+          "id": "main-bar",
+          "points": [
+            [
+              145,
+              450
+            ],
+            [
+              380,
+              450
+            ],
+            [
+              620,
+              450
+            ],
+            [
+              855,
+              450
+            ]
+          ],
+          "end_scale": 1,
+          "terminal": "tome"
+        },
+        {
+          "id": "inner-left",
+          "points": [
+            [
+              420,
+              470
+            ],
+            [
+              425,
+              620
+            ],
+            [
+              380,
+              750
+            ],
+            [
+              315,
+              800
+            ]
+          ],
+          "end_scale": 0.20800000000000002,
+          "terminal": "harai"
+        },
+        {
+          "id": "inner-right",
+          "points": [
+            [
+              585,
+              470
+            ],
+            [
+              585,
+              600
+            ],
+            [
+              605,
+              805
+            ],
+            [
+              510,
+              810
+            ]
+          ],
+          "end_scale": 0.26,
+          "terminal": "hane"
+        },
+        {
+          "id": "outer-left",
+          "points": [
+            [
+              300,
+              540
+            ],
+            [
+              285,
+              615
+            ],
+            [
+              245,
+              675
+            ],
+            [
+              205,
+              710
+            ]
+          ],
+          "end_scale": 0.385,
+          "terminal": "harai"
+        },
+        {
+          "id": "outer-right",
+          "points": [
+            [
+              700,
+              545
+            ],
+            [
+              730,
+              590
+            ],
+            [
+              760,
+              650
+            ],
+            [
+              775,
+              710
+            ]
+          ],
+          "end_scale": 0.45499999999999996,
+          "terminal": "tome"
+        }
+      ]
+    }
+  }
+}

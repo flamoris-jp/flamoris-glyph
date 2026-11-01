@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "profile": "baseline",
+  "width": 1,
+  "bar_span": 1,
+  "junction_shift": 0,
+  "lower_spread": 1,
+  "curve_gain": 0,
+  "weight": 1,
+  "contrast": 0,
+  "terminal_style": "inherit",
+  "terminal_gain": 1,
+  "variation": 0
+}

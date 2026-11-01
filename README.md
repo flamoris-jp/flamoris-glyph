@@ -101,6 +101,16 @@ semantic terminals, full Japanese visual acceptance and 1080p fine-line QA
 remain open. See [contract and reproduction commands](docs/pattern-dna.md)
 and [first comparison](docs/pattern-lab-report.md).
 
+The next [authored structural study](docs/authored-structure.md) explicitly
+maps seven roles of **赤**, then changes bar lengths, junction height, lower
+curves, contrast and terminals. Paired original gothic/mincho-like bases show
+how the same DNA retains different source traits. This is a manually authored
+one-character study, **not automatic decomposition of an existing font**.
+
+```bash
+python -m flamoris_glyph.structure_lab examples/aka-structure.json --out output-structure-study
+```
+
 ## Supported boundary
 
 - UTF-8（BOM可）、LF / CRLF、plain text / SRT。SRTの数値歌詞は保持し、cue時刻をms整数で出力。文字単位の歌唱時刻は推測しません。
