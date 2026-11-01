@@ -15,6 +15,7 @@ from flamoris_glyph import (FontSource, SkeletonSource, StyleDNA, compile_bundle
                             parse_cues, validate_bundle, write_bundle)
 from flamoris_glyph.bundle import validate_svg
 from flamoris_glyph.cli import main
+from flamoris_glyph.font_library import resolve_local_font
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -213,6 +214,55 @@ class GenerationTests(unittest.TestCase):
                       '<path id="stroke001" fill="#000000" d="M-10 1 L3 3 L4 1Z"/>'):
             with self.subTest(inner=inner), self.assertRaises(ValueError):
                 validate_svg(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">{inner}</svg>')
+
+
+    def test_local_font_library_generates_without_embedding_source(self):
+        with tempfile.TemporaryDirectory() as tmp, redirect_stdout(io.StringIO()):
+            root = Path(tmp)
+            folder = root / "lib" / "fonts" / "noto-sans-jp"
+            folder.mkdir(parents=True)
+            test_font(folder / "synthetic.ttf")
+            (folder / "OFL.txt").write_text("SIL OPEN FONT LICENSE\nVersion 1.1\nSynthetic test notice\n",
+                                            encoding="utf-8")
+            lyrics = root / "lyrics.txt"
+            lyrics.write_text("AÁA", encoding="utf-8")
+            out = root / "bundle"
+            main(["generate", str(lyrics), "--song", "test", "--font-id", "noto-sans-jp",
+                  "--font-library", str(root / "lib" / "fonts"), "--out", str(out)])
+            m = validate_bundle(out)
+            self.assertEqual(len(m["occurrences"]), 3)
+            self.assertIn("noto-sans-jp", m["source"]["license_note"])
+            self.assertIn("OFL.txt", m["source"]["license_note"])
+            self.assertNotIn(str(root), json.dumps(m))
+            self.assertEqual(sorted(p.suffix for p in out.rglob("*") if p.is_file()),
+                             [".json", ".svg", ".svg", ".svg"])
+            # Existing explicit --font remains unchanged.
+            direct = root / "direct"
+            main(["generate", str(lyrics), "--song", "test", "--font", str(folder / "synthetic.ttf"),
+                  "--source-license", "Original synthetic test font, Apache-2.0", "--out", str(direct)])
+            self.assertEqual(validate_bundle(direct)["source"]["license_note"],
+                             "Original synthetic test font, Apache-2.0")
+
+    def test_local_font_library_rejects_missing_or_ambiguous_sources(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "lib" / "fonts"
+            with self.assertRaisesRegex(ValueError, "Font ID"):
+                resolve_local_font("../escape", root)
+            with self.assertRaisesRegex(ValueError, "not found"):
+                resolve_local_font("noto-sans-jp", root)
+            folder = root / "noto-sans-jp"
+            folder.mkdir(parents=True)
+            test_font(folder / "synthetic.ttf")
+            with self.assertRaisesRegex(ValueError, "license"):
+                resolve_local_font("noto-sans-jp", root)
+            (folder / "OFL.txt").write_text("not an OFL license", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "SIL Open Font License"):
+                resolve_local_font("noto-sans-jp", root)
+            (folder / "OFL.txt").write_text("SIL OPEN FONT LICENSE\nVersion 1.1\nTest",
+                                            encoding="utf-8")
+            (folder / "extra.ttf").write_bytes(b"font placeholder")
+            with self.assertRaisesRegex(ValueError, "exactly one static"):
+                resolve_local_font("noto-sans-jp", root)
 
     def test_cli_end_to_end_and_legacy_inventory(self):
         with tempfile.TemporaryDirectory() as tmp, redirect_stdout(io.StringIO()):
