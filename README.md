@@ -92,6 +92,15 @@ python -m flamoris_glyph.cli lyrics.srt --song "My song" --out inventory.json
 
 [Architecture](docs/architecture.md) · [Bundle contract](docs/bundle-v2.md) · [Style / skeleton input](docs/inputs.md)
 
+## Experimental Pattern DNA
+
+Optional `.[patterns]` adds three descriptive outline-transform profiles and a
+baseline/seed comparison lab. Existing generation stays unchanged unless
+`--pattern` or `--pattern-file` is supplied. This is bounded morphology;
+semantic terminals, full Japanese visual acceptance and 1080p fine-line QA
+remain open. See [contract and reproduction commands](docs/pattern-dna.md)
+and [first comparison](docs/pattern-lab-report.md).
+
 ## Supported boundary
 
 - UTF-8（BOM可）、LF / CRLF、plain text / SRT。SRTの数値歌詞は保持し、cue時刻をms整数で出力。文字単位の歌唱時刻は推測しません。
@@ -110,3 +119,4 @@ FLAMORIS is open-source creative software. Commercial use is welcome within appl
 ## CGのactor連携（設計バックログ）
 
 [Issue #3](https://github.com/flamoris-jp/flamoris-glyph/issues/3)の依存関係を[形状契約とCG側の取り込み契約](docs/scene-actor-integration.md)に分けました。Glyphは形状・Style DNA・出典、CGは配置・動作・物理研究を持ちます。全体Scene Engineスキーマ待ちは外し、必要な二者間契約を合意します。CGのGlyph取り込みは未実装。Cinemaの旧adapterは比較対象として保存し、Cinema再開・新エンジン新設は前提にしません。
+

@@ -48,6 +48,9 @@ def main(argv: list[str] | None = None) -> None:
         parser.add_argument("--font-library", type=Path, default=Path("lib/fonts"),
                             help="Local font directory for --font-id (default: lib/fonts relative to CWD)")
         parser.add_argument("--style", type=Path, help="Version 1 Style DNA JSON; defaults to tango")
+        patterns = parser.add_mutually_exclusive_group()
+        patterns.add_argument("--pattern", help="Experimental descriptive Pattern DNA preset")
+        patterns.add_argument("--pattern-file", type=Path, help="Complete version 1 Pattern DNA JSON")
         parser.add_argument("--seed", type=int, default=0)
         parser.add_argument("--reuse", choices=["occurrence", "character"], default="occurrence")
     if mode == "preview":
@@ -75,6 +78,11 @@ def main(argv: list[str] | None = None) -> None:
             print(f"Wrote {manifest['glyph_count']} unique glyphs to {args.out}")
             return
         style = StyleDNA.from_dict(json.loads(read_text(args.style))) if args.style else StyleDNA()
+        pattern = None
+        if args.pattern or args.pattern_file:
+            from .pattern import PatternDNA
+            pattern = (PatternDNA.from_dict(json.loads(read_text(args.pattern_file))) if args.pattern_file
+                       else PatternDNA.preset(args.pattern))
         if args.font or args.font_id:
             if args.font_id:
                 if args.source_license is not None:
@@ -89,15 +97,20 @@ def main(argv: list[str] | None = None) -> None:
             source = SkeletonSource(json.loads(read_text(args.skeletons)))
         try:
             manifest, assets = compile_bundle(parse_cues(data, srt=srt), source, song=args.song,
-                                               title=args.title, style=style, seed=args.seed, reuse=args.reuse)
+                                               title=args.title, style=style, seed=args.seed, reuse=args.reuse,
+                                               pattern=pattern)
             write_bundle(args.out, manifest, assets)
         finally:
             source.close()
         print(f"Wrote {len(manifest['occurrences'])} occurrences, {len(assets)} SVG glyphs to {args.out}")
+        if pattern is not None:
+            warnings = sum(bool(g["pattern_qa"]["warnings"]) for g in manifest["glyphs"])
+            print(f"Pattern QA: {warnings} variants have warnings; visual review required for all variants")
     except (ValueError, OSError, KeyError, TypeError, ET.ParseError, TTLibError, NotImplementedError) as error:
         parser.error(str(error))
 
 
 if __name__ == "__main__":
     main()
+
 

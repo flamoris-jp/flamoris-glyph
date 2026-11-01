@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "engine": {
+    "version": "outline-pattern-1",
+    "shapely": "2.1.2",
+    "geos": "3.13.1",
+    "flatten_tolerance": 0.35
+  },
+  "source": {
+    "kind": "authored-skeleton",
+    "sha256": "a9c6514ad1c5487306d9602a4600d6589e9f8cc02407ccf11576e0f5616c9e86",
+    "license_note": "Original FLAMORIS simplified skeletons, Apache-2.0; pattern lab uses flat terminals to isolate outline transforms"
+  },
+  "cue_count": 2,
+  "input_sha256": "5433e23cb4e8ad7d86af933f1e4fef4de4f756e6ae12dc824f64f357159b040a",
+  "fixed_seed_reproduction": true,
+  "matrix": [
+    {
+      "profile": "baseline",
+      "seed": 42,
+      "occurrences": 7,
+      "asset_digest": "e253fe3b9a91f31128eb5ce360f5a4675e46dd911fae9aad8c59fd665649aaaa",
+      "warnings": []
+    },
+    {
+      "profile": "heavy-condensed-headline",
+      "seed": 42,
+      "occurrences": 7,
+      "asset_digest": "8adb2a9ff8dcf0b81c420613d325749f7bc98b1944825cfe2bf9c382f98ad5d2",
+      "warnings": [
+        {
+          "variant_id": "g1e45572439311c275ec47693",
+          "character": "赤",
+          "parameters": {
+            "width": 0.760435,
+            "offset_x": 11.944367,
+            "offset_y": 8.958275,
+            "corner_radius": 0,
+            "irregularity": 0,
+            "phase": -0.707253
+          },
+          "applied_strength": 0.5,
+          "warnings": [
+            "component-or-hole-count-change"
+          ],
+          "components": 5,
+          "holes": 0,
+          "review_required": true
+        },
+        {
+          "variant_id": "g5fcab1e851ba7dc387807e31",
+          "character": "赤",
+          "parameters": {
+            "width": 0.76138,
+            "offset_x": 11.670268,
+            "offset_y": 8.752701,
+            "corner_radius": 0,
+            "irregularity": 0,
+            "phase": 0.279258
+          },
+          "applied_strength": 0.5,
+          "warnings": [
+            "component-or-hole-count-change"
+          ],
+          "components": 5,
+          "holes": 0,
+          "review_required": true
+        }
+      ]
+    },
+    {
+      "profile": "elegant-high-contrast-editorial",
+      "seed": 42,
+      "occurrences": 7,
+      "asset_digest": "cab0f71b388ed57c0f7e8cf23347b1bbd231b2b7f54894d6791f5ea75a144666",
+      "warnings": [
+        {
+          "variant_id": "gbb35a5ffadc5eb550f320c01",
+          "character": "靴",
+          "parameters": {
+            "width": 0.975184,
+            "offset_x": 6.905113,
+            "offset_y": -2.466112,
+            "corner_radius": 0,
+            "irregularity": 0,
+            "phase": -0.506433
+          },
+          "applied_strength": 0.5,
+          "warnings": [
+            "component-or-hole-count-change"
+          ],
+          "components": 3,
+          "holes": 3,
+          "review_required": true
+        },
+        {
+          "variant_id": "g7d2e01c383ccc98fe13f1644",
+          "character": "靴",
+          "parameters": {
+            "width": 0.981862,
+            "offset_x": 6.959986,
+            "offset_y": -2.485709,
+            "corner_radius": 0,
+            "irregularity": 0,
+            "phase": 0.637402
+          },
+          "applied_strength": 0.5,
+          "warnings": [
+            "component-or-hole-count-change"
+          ],
+          "components": 3,
+          "holes": 3,
+          "review_required": true
+        }
+      ]
+    },
+    {
+      "profile": "showa-retro-signboard",
+      "seed": 42,
+      "occurrences": 7,
+      "asset_digest": "4fc905fd5ad1ae4703a04ddf10a19b8bef11f1af749f724b21f540c44d9b1b4a",
+      "warnings": []
+    },
+    {
+      "profile": "baseline",
+      "seed": 43,
+      "occurrences": 7,
+      "asset_digest": "b838307efb40980d31297423f429c0dbae0b0b95f2d99a5af6490020527a8cd3",
+      "warnings": []
+    },
+    {
+      "profile": "heavy-condensed-headline",
+      "seed": 43,
+      "occurrences": 7,
+      "asset_digest": "7a8160e1ed04ada13acdd8195b2c655b787bd3e956af6d50d8902c2e4b740dbf",
+      "warnings": [
+        {
+          "variant_id": "g4ef64e23234f185852caf758",
+          "character": "赤",
+          "parameters": {
+            "width": 0.761806,
+            "offset_x": 12.131159,
+            "offset_y": 9.098369,
+            "corner_radius": 0,
+            "irregularity": 0,
+            "phase": 0.784893
+          },
+          "applied_strength": 0.5,
+          "warnings": [
+            "component-or-hole-count-change"
+          ],
+          "components": 5,
+          "holes": 0,
+          "review_required": true
+        },
+        {
+          "variant_id": "gb4cce01d80195ee59fddf3a9",
+          "character": "赤",
+          "parameters": {
+            "width": 0.76106,
+            "offset_x": 12.004147,
+            "offset_y": 9.003111,
+            "corner_radius": 0,
+            "irregularity": 0,
+            "phase": -0.032332
+          },
+          "applied_strength": 0.5,
+          "warnings": [
+            "component-or-hole-count-change"
+          ],
+          "components": 5,
+          "holes": 0,
+          "review_required": true
+        }
+      ]
+    },
+    {
+      "profile": "elegant-high-contrast-editorial",
+      "seed": 43,
+      "occurrences": 7,
+      "asset_digest": "1335a22cadd2414012db228bfb6b2ff7c02cc6b66960b347b4230096900c9410",
+      "warnings": [
+        {
+          "variant_id": "gfa499f256860f41962ec1ce4",
+          "character": "靴",
+          "parameters": {
+            "width": 0.981724,
+            "offset_x": 7.022092,
+            "offset_y": -2.50789,
+            "corner_radius": 0,
+            "irregularity": 0,
+            "phase": 0.485504
+          },
+          "applied_strength": 0.5,
+          "warnings": [
+            "component-or-hole-count-change"
+          ],
+          "components": 3,
+          "holes": 3,
+          "review_required": true
+        },
+        {
+          "variant_id": "g8f4a7c553bc965c46d50403a",
+          "character": "靴",
+          "parameters": {
+            "width": 0.977367,
+            "offset_x": 7.097676,
+            "offset_y": -2.534884,
+            "corner_radius": 0,
+            "irregularity": 0,
+            "phase": -0.766422
+          },
+          "applied_strength": 0.5,
+          "warnings": [
+            "component-or-hole-count-change"
+          ],
+          "components": 3,
+          "holes": 3,
+          "review_required": true
+        }
+      ]
+    },
+    {
+      "profile": "showa-retro-signboard",
+      "seed": 43,
+      "occurrences": 7,
+      "asset_digest": "f05d4907683bb7e25623bea0f0e0ad24e41f5997926072087032d7f039a5f979",
+      "warnings": []
+    }
+  ],
+  "visual_review": "required",
+  "limitations": [
+    "Outline morphology does not infer strokes, radicals or terminals; no new serifs.",
+    "Topology checks do not prove legibility or fine-line survival at 1080p.",
+    "Adaptive curve flattening tolerance is 0.35 design units; curves become polygons.",
+    "A warning dot means strength was reduced or the pattern was rejected."
+  ]
+}

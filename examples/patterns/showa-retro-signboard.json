@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "profile": "showa-retro-signboard",
+  "width": 1.02,
+  "offset_x": 3,
+  "offset_y": 3,
+  "corner_radius": 3,
+  "irregularity": 2.5,
+  "variation": 0.35
+}
