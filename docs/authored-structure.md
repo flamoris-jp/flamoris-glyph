@@ -106,7 +106,9 @@ widths are rounded to four decimals before assembly, and joint/terminal discs
 use a fixed 32-point unit-circle table instead of platform-dependent buffer
 trigonometry. Segment envelopes are likewise quantized before Boolean unions.
 This makes exact geometric fixtures comparable across supported Python/OS
-combinations. The assembly grid is distinct from the final four-decimal SVG
+combinations. Redundant collinear vertices from Boolean unions are removed
+using exact integer cross products on the assembly grid, without smoothing
+curves or changing the filled shape. The assembly grid is distinct from the final four-decimal SVG
 serialization. Tiny enclosed assembly holes are explicitly filled only when
 each is at most 0.01 square design units and their sum is at most 0.05 per role;
 counts are recorded in `assembly_holes_filled`. Larger holes fail. This rule

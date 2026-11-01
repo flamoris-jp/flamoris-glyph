@@ -143,7 +143,18 @@ class StructureTests(unittest.TestCase):
             self.assertEqual(len(report["cells"]),16)
             self.assertTrue(report["fixed_seed_reproduction"])
             hashes={f"{r['base']}/{r['profile']}/{r['seed']}":r["sha256"] for r in report["cells"]}
-            self.assertEqual(hashes,json.loads((ROOT/"tests/golden/structure-assets.json").read_text()))
+            expected=json.loads((ROOT/"tests/golden/structure-assets.json").read_text())
+            if hashes != expected:
+                # Preserve precise failure evidence in the job log. Do not
+                # weaken the exact geometry contract to hide platform drift.
+                key=next(k for k in hashes if hashes[k]!=expected.get(k))
+                base,profile,seed=key.split("/")
+                bundle=root/"study"/f"{base}-{profile}-{seed}"
+                m=json.loads((bundle/"manifest.json").read_text(encoding="utf-8"))
+                g=m["glyphs"][0]
+                print("STRUCTURE_DIAGNOSTIC "+json.dumps({"case":key,"engine":m["structure_engine"],
+                      "qa":g["structure_qa"],"svg":(bundle/g["asset"]).read_text(encoding="utf-8")},ensure_ascii=True))
+            self.assertEqual(hashes,expected)
             bad=self.data();del bad["bases"]["mincho"]
             with self.assertRaises(ValueError):run_study(bad,root/"bad")
             self.assertEqual([p.name for p in root.iterdir()],["study"])

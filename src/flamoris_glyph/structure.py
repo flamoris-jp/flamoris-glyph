@@ -82,7 +82,8 @@ class StructureDNA:
 
 def structure_engine():
     return {**engine_metadata(), "version": ENGINE_VERSION, "samples_per_stroke": 65, "assembly_grid": .01,
-            "assembly_hole_area": .01, "assembly_hole_budget": .05, "sample_precision": 4, "circle_points": 32}
+            "assembly_hole_area": .01, "assembly_hole_budget": .05, "sample_precision": 4, "circle_points": 32,
+            "canonical_collinear": True}
 
 
 class AuthoredStructureSource:
@@ -176,6 +177,34 @@ def _disc(center, radius, sides=32):
     x, y = center
     return Polygon([(round(x+u*radius, 4), round(y+v*radius, 4))
                     for u, v in _UNIT_CIRCLE[::32//sides]])
+
+
+def _grid_path(g):
+    """Remove redundant collinear Boolean vertices on the exact integer grid.
+
+    Different GEOS builds may keep different vertices along the same segment.
+    Integer cross products canonicalize that representation without smoothing.
+    """
+    from shapely.geometry import Polygon
+    def ring_points(ring):
+        points = [(round(x*100), round(y*100)) for x, y in list(ring.coords)[:-1]]
+        points = [p for i, p in enumerate(points) if p != points[i-1]]
+        changed = True
+        while changed and len(points) > 3:
+            changed = False
+            for i, b in enumerate(points):
+                a, c = points[i-1], points[(i+1) % len(points)]
+                if ((b[0]-a[0])*(c[1]-a[1]) == (b[1]-a[1])*(c[0]-a[0])
+                        and min(a[0],c[0]) <= b[0] <= max(a[0],c[0])
+                        and min(a[1],c[1]) <= b[1] <= max(a[1],c[1])):
+                    points.pop(i)
+                    changed = True
+                    break
+        return [(x/100, y/100) for x, y in points]
+    result = Polygon(ring_points(g.exterior), [ring_points(r) for r in g.interiors])
+    if not result.is_valid or result.is_empty:
+        raise ValueError("Canonical grid outline became invalid")
+    return geometry_path(result)
 
 
 def _stroke_polygon(points, start_width, end_width, cap):
@@ -284,7 +313,7 @@ def render_structure(base, p, legacy_params):
         slivers[role] = len(holes)
         if holes:
             g = Polygon(g.exterior)
-        paths.append({"id": role, "d": geometry_path(g), "terminal": stroke["terminal"]})
+        paths.append({"id": role, "d": _grid_path(g), "terminal": stroke["terminal"]})
         landmarks[role] = [[round(v, 4) for v in warp(tuple(point), legacy_params)] for point in points]
         widths[role] = sample_widths
     return {"paths": paths, "advance": 1000, "stroke_model": "authored"}, {
