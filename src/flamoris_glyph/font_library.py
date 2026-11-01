@@ -33,7 +33,7 @@ def resolve_local_font(font_id: str, library: Path) -> tuple[Path, str]:
     licenses = sorted((p for p in entries if p.is_file() and p.name in _LICENSE_NAMES),
                       key=lambda p: p.name)
     if len(licenses) != 1:
-        raise ValueError(f"Local font '{font_id}' needs exactly one OFL.txt, LICENSE, or LICENSE.txt")
+        raise ValueError(f"Local font '{font_id}' needs exactly one license file (OFL.txt, LICENSE, or LICENSE.txt)")
     font, license_file = fonts[0], licenses[0]
     license_size = license_file.stat().st_size
     if not 0 < license_size <= 250_000:
