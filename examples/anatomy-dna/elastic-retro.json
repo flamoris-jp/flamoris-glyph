@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "kind": "role-anatomy-study-1",
+  "weight": 1.6,
+  "source_width_mix": 0.18,
+  "source_taper_mix": 0.1,
+  "minimum_gap": 6,
+  "roles": {
+    "top-bar": {
+      "bone": {
+        "length": 0.98,
+        "angle": -5,
+        "end_turn": 0,
+        "bend": 0,
+        "dx": 0,
+        "dy": 25,
+        "anchor": 0.5
+      },
+      "ink": {
+        "widths": [
+          1.1,
+          0.72,
+          0.72,
+          0.85,
+          1.25
+        ],
+        "stations": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "width_ratio": 1,
+        "bias": 0,
+        "start_cap": "round",
+        "end_cap": "round"
+      }
+    },
+    "top-stem": {
+      "bone": {
+        "length": 1.05,
+        "angle": 0,
+        "end_turn": 0,
+        "bend": 0,
+        "dx": 0,
+        "dy": 0,
+        "anchor": 1
+      },
+      "ink": {
+        "widths": [
+          1.1,
+          0.95,
+          1,
+          1,
+          1
+        ],
+        "stations": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "width_ratio": 1,
+        "bias": 0,
+        "start_cap": "round",
+        "end_cap": "flat"
+      }
+    },
+    "main-bar": {
+      "bone": {
+        "length": 0.96,
+        "angle": -3,
+        "end_turn": 0,
+        "bend": 0,
+        "dx": 0,
+        "dy": -10,
+        "anchor": 0.5
+      },
+      "ink": {
+        "widths": [
+          1.2,
+          0.9,
+          0.88,
+          0.94,
+          1.35
+        ],
+        "stations": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "width_ratio": 1,
+        "bias": 0,
+        "start_cap": "round",
+        "end_cap": "round"
+      }
+    },
+    "inner-left": {
+      "bone": {
+        "length": 1.35,
+        "angle": 20,
+        "end_turn": 15,
+        "bend": 22,
+        "dx": 0,
+        "dy": 0,
+        "anchor": 0
+      },
+      "ink": {
+        "widths": [
+          1.02,
+          1.12,
+          1.25,
+          0.45,
+          0
+        ],
+        "stations": [
+          0,
+          0.25,
+          0.55,
+          0.82,
+          1
+        ],
+        "width_ratio": 1,
+        "bias": 0,
+        "start_cap": "flat",
+        "end_cap": "point"
+      }
+    },
+    "inner-right": {
+      "bone": {
+        "length": 1.03,
+        "angle": -5,
+        "end_turn": 0,
+        "bend": -10,
+        "dx": 0,
+        "dy": 0,
+        "anchor": 0
+      },
+      "ink": {
+        "widths": [
+          0.98,
+          1.0,
+          1.06,
+          1.25,
+          1.35
+        ],
+        "stations": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "width_ratio": 1,
+        "bias": 0,
+        "start_cap": "flat",
+        "end_cap": "round"
+      }
+    },
+    "outer-left": {
+      "bone": {
+        "length": 0.8,
+        "angle": -15,
+        "end_turn": 0,
+        "bend": 0,
+        "dx": -100,
+        "dy": -20,
+        "anchor": 0
+      },
+      "ink": {
+        "widths": [
+          0,
+          0.6,
+          1.12,
+          1.35,
+          1.22
+        ],
+        "stations": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "width_ratio": 1,
+        "bias": 0.12,
+        "start_cap": "point",
+        "end_cap": "round"
+      }
+    },
+    "outer-right": {
+      "bone": {
+        "length": 0.9,
+        "angle": -8,
+        "end_turn": 0,
+        "bend": 0,
+        "dx": 22,
+        "dy": -5,
+        "anchor": 0
+      },
+      "ink": {
+        "widths": [
+          0,
+          0.6,
+          1.12,
+          1.35,
+          1.22
+        ],
+        "stations": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "width_ratio": 1,
+        "bias": -0.12,
+        "start_cap": "point",
+        "end_cap": "round"
+      }
+    }
+  }
+}

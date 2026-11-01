@@ -111,6 +111,17 @@ one-character study, **not automatic decomposition of an existing font**.
 python -m flamoris_glyph.structure_lab examples/aka-structure.json --out output-structure-study
 ```
 
+The [bone + ink study](docs/role-anatomy-study.md) takes this further: it
+redesigns each role's angle, length and terminal direction, then constructs
+role-specific width profiles and caps. Eight source/bones/ink/combined
+comparisons separate the two layers on the same authored bases. This is a
+standalone one-character research API, not automatic font decomposition or a
+new bundle format. Visual acceptance remains open.
+
+```bash
+python -m flamoris_glyph.anatomy_lab examples/aka-structure.json examples/anatomy-dna/elastic-retro.json --out output-anatomy
+```
+
 ## Supported boundary
 
 - UTF-8（BOM可）、LF / CRLF、plain text / SRT。SRTの数値歌詞は保持し、cue時刻をms整数で出力。文字単位の歌唱時刻は推測しません。
