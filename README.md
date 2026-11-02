@@ -165,7 +165,12 @@ bundle-v2 or player integration contracts.
 
 ```bash
 python -m flamoris_glyph.lyric_performance examples/mou-iiyo --out output-lyric-performance
+python -m flamoris_glyph.lyric_performance examples/mou-iiyo --intensity 4 --out output-lyric-exaggerated
 ```
+
+`--intensity 1..4` strengthens the existing stroke expression while keeping
+skeleton and DNA inputs fixed. Values above 1 also export a same-size
+before/after sheet. Degree 1 retains the original glyph geometry.
 
 ## Supported boundary
 

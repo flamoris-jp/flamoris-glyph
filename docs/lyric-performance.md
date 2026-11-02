@@ -49,8 +49,30 @@ Latin入力とPythonコードはApache-2.0。第三者の骨格データとコ�
 ```bash
 python -m pip install -e ".[patterns]"
 python -m flamoris_glyph.lyric_performance examples/mou-iiyo --out output-lyric-performance
+python -m flamoris_glyph.lyric_performance examples/mou-iiyo --intensity 4 --out output-lyric-exaggerated
 python -m unittest discover -s tests -v
 ```
+
+### ストロークの感情を強める
+
+`--intensity` は **1〜4の有限数**。ストローク内部の表情の度合いであり、
+第四の設計層や、計測された「感情の何倍」という値ではない。既定の1は初回の
+177個のグリフSVGとbyte単位で同じ形状を維持する。
+
+強めた場合も骨格とDNAの入力は固定する。反り・傾き・先の伸び・局所的な丸め・
+押し引きに加え、ストロークの広がりや縦の収まりを連動させる。可愛い表情は
+横にふっくら、勢いは強い反りと鋭い伸びへ寄せる。既存DNAの接触面・書法は維持する。
+
+強い変形では、元の明示経路どうしの交点付近で局所変形を弱め、横棒と縦棒が
+離れることを抑える。閉じた経路では追加の終端伸ばしを抑える。8画以上の密な字は
+追加の押し・強弱の増分を35%にし、小さい空間が太さだけで埋まることを抑える。
+これは字形の美しさ・全交点の一致・可読性の自動保証ではない。範囲外の形状は
+従来どおり拒否し、切り抜きや自動縮小で隠さない。
+
+1より大きい値では `before-after.svg` も出力する。同じ骨格・DNA・色・文字サイズで、
+初回の1と指定値を左右に配置する。`same-dna-strokes.svg` も指定した度合いになる。
+作品設定・manifest内の `inputs.stroke.intensity` に値を記録する。中間値2.5と最大値4の
+三作品・全59文字、英字Iの交点、oの穴、数値の拒否、固定入力再現をテストする。
 
 出力は3ポスター、各ポスターの中心線図、3列のまとめ、同一DNAのストローク例、
 各作品の59文字分の独立SVG・出現箇所と配置・設定・出典。グリフSVGは共通1000座標の

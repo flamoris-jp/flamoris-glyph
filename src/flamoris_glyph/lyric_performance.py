@@ -7,7 +7,7 @@ layout/timing belong to the consumer. Japanese-derived artwork is CC BY-SA 3.0.
 from __future__ import annotations
 
 import argparse
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, replace
 from functools import lru_cache
 import hashlib
 import json
@@ -54,6 +54,10 @@ class Stroke:
     roundness: int
     pulse: float
     bounce: float
+    spread: float = 1
+    squash: float = 1
+    pressure: float = 1
+    reach: float = .12
 
 
 SKELETONS = {"open": Skeleton(1.04, .97), "tall": Skeleton(.95, 1.03),
@@ -63,6 +67,26 @@ DNAS = {"ribbon": DNA(74, .52, 35, .72, .28, .22),
 STROKES = {"gentle": Stroke(.015, .008, 0, 1, .025, 0),
            "energetic": Stroke(.12, .055, 27, 0, .16, 0),
            "cute": Stroke(-.018, .018, 0, 5, .07, 6)}
+
+
+def strengthen_stroke(name, intensity=1):
+    """A bounded degree of the existing expression, not a fourth design layer."""
+    if (isinstance(intensity, bool) or not isinstance(intensity, (int, float))
+            or not math.isfinite(intensity) or not 1 <= intensity <= 4):
+        raise ValueError("Stroke intensity must be a finite number from 1 to 4")
+    base = STROKES[name]
+    if intensity == 1:
+        return base
+    extra = intensity-1
+    spread, squash, pressure = {"gentle": (.04, -.025, .12),
+                                "energetic": (.02, -.035, .13),
+                                "cute": (.055, -.055, .26)}[name]
+    return replace(base, lean=math.copysign(min(.28, abs(base.lean)*intensity), base.lean),
+                   bow=base.bow*intensity, extend=min(80, base.extend*intensity),
+                   roundness=round(base.roundness*intensity**1.4),
+                   pulse=base.pulse*intensity, bounce=base.bounce*intensity,
+                   spread=1+spread*extra, squash=1+squash*extra, pressure=1+pressure*extra,
+                   reach=.12+.04*extra)
 
 
 class _SamplePen(BasePen):
@@ -128,11 +152,26 @@ def sample_centerline(path, japanese=False):
     return tuple(result)
 
 
-def express_centerline(points, skeleton, stroke, phase=0):
+def express_centerline(points, skeleton, stroke, phase=0, *, anchors=(), junction_strength=0):
+    raw_points = points
+    if junction_strength:
+        def freedom(point):
+            distance = min((math.dist(point, a) for a in anchors), default=1000)
+            t = min(1, distance/95)
+            return 1-junction_strength*(1-t*t*(3-2*t))
+        freedoms = [freedom(p) for p in points]
+    else:
+        freedoms = [1]*len(points)
     points = [(500+(x-500)*skeleton.width, 500+(y-500)*skeleton.height) for x, y in points]
+    if stroke.spread != 1 or stroke.squash != 1:
+        points = [(500+(x-500)*stroke.spread, 500+(y-500)*stroke.squash) for x, y in points]
+    unsmoothed = points[:]
     for _ in range(stroke.roundness):
         points = [points[0], *[tuple(.22*a[k]+.56*b[k]+.22*c[k] for k in (0, 1))
                               for a, b, c in zip(points, points[1:], points[2:])], points[-1]]
+    if junction_strength:
+        points = [tuple(a[k]+f*(b[k]-a[k]) for k in (0, 1))
+                  for a, b, f in zip(unsmoothed, points, freedoms)]
     x0, y0 = points[0]
     dx, dy = points[-1][0]-x0, points[-1][1]-y0
     chord = math.hypot(dx, dy)
@@ -141,12 +180,15 @@ def express_centerline(points, skeleton, stroke, phase=0):
     tx, ty = points[-1][0]-points[-3][0], points[-1][1]-points[-3][1]
     tangent = math.hypot(tx, ty) or 1
     result = []
+    endpoint_freedom = freedoms[-1]
+    if junction_strength and math.dist(raw_points[0], raw_points[-1]) < .001:
+        endpoint_freedom *= 1-junction_strength
     for i, (x, y) in enumerate(points):
         u = i/(len(points)-1)
-        bow = stroke.bow*min(length, 700)*math.sin(math.pi*u)**1.4
-        extend = min(stroke.extend, length*.12)*u**7
+        bow = stroke.bow*min(length, 700)*math.sin(math.pi*u)**1.4*freedoms[i]
+        extend = min(stroke.extend, length*stroke.reach)*u**7*endpoint_freedom*freedoms[i]
         result.append((x+stroke.lean*(600-y)+nx*bow+tx/tangent*extend,
-                       y+ny*bow+ty/tangent*extend+stroke.bounce*math.sin(phase)))
+                       y+ny*bow+ty/tangent*extend+stroke.bounce*math.sin(phase)*freedoms[i]))
     return tuple(result)
 
 
@@ -165,7 +207,7 @@ def _outline(points, dna, stroke, phase):
                     * (dna.finish+(1-dna.finish)*finish)
                     * (1+dna.swell*math.sin(math.pi*u))
                     * (1+stroke.pulse*math.sin(math.pi*u+phase)))
-        radius = dna.width*pressure/2
+        radius = dna.width*pressure*stroke.pressure/2
         footprints.append(Polygon([
             (x+radius*(c*math.cos(a)-s*dna.aspect*math.sin(a)),
              y+radius*(s*math.cos(a)+c*dna.aspect*math.sin(a)))
@@ -184,7 +226,7 @@ def _outline(points, dna, stroke, phase):
 
 
 class PerformanceSource:
-    def __init__(self, japanese, latin, *, skeleton="open", dna="ribbon", stroke="gentle"):
+    def __init__(self, japanese, latin, *, skeleton="open", dna="ribbon", stroke="gentle", intensity=1):
         if skeleton not in SKELETONS or dna not in DNAS or stroke not in STROKES:
             raise ValueError("Unknown skeleton, DNA or stroke expression")
         if (japanese.get("kind") != "lyric-stroke-sources-1" or japanese.get("license") != "CC-BY-SA-3.0"
@@ -193,9 +235,10 @@ class PerformanceSource:
         self.japanese, self.latin = japanese["glyphs"], latin["glyphs"]
         if len(self.japanese)+len(self.latin) > 128:
             raise ValueError("Lyric experiment supports at most 128 source glyphs")
-        self.skeleton, self.dna, self.stroke = SKELETONS[skeleton], DNAS[dna], STROKES[stroke]
+        self.skeleton, self.dna, self.stroke = SKELETONS[skeleton], DNAS[dna], strengthen_stroke(stroke, intensity)
+        self.intensity = intensity
         self.identity = {"engine": ENGINE, "skeleton": {"id": skeleton, **asdict(self.skeleton)},
-                         "dna": {"id": dna, **asdict(self.dna)}, "stroke": {"id": stroke, **asdict(self.stroke)},
+                         "dna": {"id": dna, **asdict(self.dna)}, "stroke": {"id": stroke, "intensity": intensity, **asdict(self.stroke)},
                          "source_sha256": digest({"japanese": japanese, "latin": latin})}
         self.cache = {}
 
@@ -212,10 +255,33 @@ class PerformanceSource:
         if not 1 <= len(paths) <= 64:
             raise ValueError("Expected 1..64 strokes per glyph")
         shapes, bones = [], []
+        sampled = [sample_centerline(path, japanese) for path in paths]
+        anchors = []
+        if self.intensity > 1:
+            from shapely.geometry import LineString
+            def collect(geometry):
+                if geometry.geom_type == "Point":
+                    anchors.append(tuple(geometry.coords[0]))
+                elif hasattr(geometry, "geoms"):
+                    for part in geometry.geoms:
+                        collect(part)
+                elif geometry.geom_type == "LineString" and not geometry.is_empty:
+                    anchors.extend((tuple(geometry.coords[0]), tuple(geometry.coords[-1])))
+            for i, line in enumerate(sampled):
+                for other in sampled[:i]:
+                    collect(LineString(line).intersection(LineString(other)))
         for index, path in enumerate(paths):
             phase = int(hashlib.sha256(f"{char}/{index}".encode()).hexdigest()[:4], 16)/65535*math.tau
-            points = express_centerline(sample_centerline(path, japanese), self.skeleton, self.stroke, phase)
-            shapes.append({"d": _outline(points, self.dna, self.stroke, phase)})
+            points = express_centerline(sampled[index], self.skeleton, self.stroke, phase,
+                                        anchors=anchors, junction_strength=min(1, self.intensity-1))
+            ink_stroke = self.stroke
+            if self.intensity > 1 and len(paths) >= 8:
+                # Dense characters get the same route expression, with reduced
+                # additional pressure so their small spaces are less overwhelmed.
+                base_pulse = STROKES[self.identity["stroke"]["id"]].pulse
+                ink_stroke = replace(self.stroke, pressure=1+(self.stroke.pressure-1)*.35,
+                                     pulse=base_pulse+(self.stroke.pulse-base_pulse)*.35)
+            shapes.append({"d": _outline(points, self.dna, ink_stroke, phase)})
             bones.append(points)
         svg = _svg({"paths": shapes}, {"fill": "#222222"})
         validate_svg(svg)
@@ -268,7 +334,11 @@ def poster(lines, source, performance, *, bones=False):
     ET.SubElement(root, "path", {"d": "M85 93 H1115", "stroke": accent, "stroke-width": "2"})
     _text(root, "FLAMORIS / GLYPH SESSION 01", 85, 70, 19, ink, **{"letter-spacing": "3"})
     _text(root, performance["title"], 85, 162, 38, ink, **{"letter-spacing": "4"})
-    _text(root, f"{performance['skeleton']} / {performance['dna']} / {performance['stroke']}", 85, 205, 18, accent)
+    label = f"{performance['skeleton']} / {performance['dna']} / {performance['stroke']}"
+    intensity = source.identity["stroke"]["intensity"]
+    if intensity != 1:
+        label += f" / intensity {intensity:g}"
+    _text(root, label, 85, 205, 18, accent)
     # One size for every line; mixed scripts share a baseline and remain inline.
     size = min(87, 1030/max(line_width(line, source) for line in lines)*1000)
     y, row, layouts = 278, 0, []
@@ -287,13 +357,16 @@ def poster(lines, source, performance, *, bones=False):
     return ET.tostring(root, encoding="unicode")+"\n", layouts
 
 
-def stroke_strip(japanese, latin):
+def stroke_strip(japanese, latin, *, intensity=1):
     """One DNA and skeleton, three expressions: shapes, not colour, differ."""
     root = ET.Element("svg", {"xmlns": SVG_NS, "viewBox": "0 0 1600 880"})
     ET.SubElement(root, "rect", {"width": "1600", "height": "880", "fill": "#F4EDE0"})
-    _text(root, "ONE SKELETON + ONE DNA / THREE EXPRESSIONS", 65, 65, 26)
+    title = "ONE SKELETON + ONE DNA / THREE EXPRESSIONS"
+    if intensity != 1:
+        title += f" / {intensity:g}"
+    _text(root, title, 65, 65, 26)
     for i, (stroke, label) in enumerate((("gentle", "GENTLE"), ("energetic", "ENERGETIC"), ("cute", "CUTE"))):
-        source = PerformanceSource(japanese, latin, skeleton="open", dna="ribbon", stroke=stroke)
+        source = PerformanceSource(japanese, latin, skeleton="open", dna="ribbon", stroke=stroke, intensity=intensity)
         y = 110+i*230
         _text(root, label, 65, y+30, 18, "#8C6554")
         place_line(root, "もういいよ　It’s all right", source, x=65, y=y+48, size=108,
@@ -302,7 +375,29 @@ def stroke_strip(japanese, latin):
     return ET.tostring(root, encoding="unicode")+"\n"
 
 
-def run_performance(inputs, output):
+def intensity_sheet(japanese, latin, performances, intensity):
+    root = ET.Element("svg", {"xmlns": SVG_NS, "viewBox": "0 0 2400 1320"})
+    phrases = ["もういいよ　It’s all right", "顔をあげて　Meet my eyes"]
+    for row, performance in enumerate(performances):
+        sources = [PerformanceSource(japanese, latin, intensity=level,
+                                     **{k: performance[k] for k in ("skeleton", "dna", "stroke")})
+                   for level in (1, intensity)]
+        size = min(115, 1040/max(line_width(t, s) for t in phrases for s in sources)*1000)
+        for col, (level, source) in enumerate(zip((1, intensity), sources)):
+            x, y = col*1200, row*440
+            ET.SubElement(root, "rect", {"x": str(x), "y": str(y), "width": "1200", "height": "440",
+                                         "fill": performance["background"]})
+            label = "ORIGINAL" if col == 0 else "EXPRESSIVE"
+            _text(root, performance["title"]+" / "+label, x+65, y+58, 25, performance["ink"])
+            _text(root, f"Stroke intensity {level:g} / same skeleton and DNA", x+65, y+94, 17, performance["accent"])
+            for line, phrase in enumerate(phrases):
+                place_line(root, phrase, source, x=x+65, y=y+125+line*126, size=size,
+                           japanese_fill=performance["ink"], latin_fill=performance["accent"])
+            _text(root, "KanjiVG / Ulrich Apel / CC BY-SA 3.0 | Latin: FLAMORIS", x+65, y+415, 13, performance["ink"])
+    return ET.tostring(root, encoding="unicode")+"\n"
+
+
+def run_performance(inputs, output, *, intensity=1):
     if output.exists() or output.is_symlink():
         raise ValueError("Performance output already exists; choose a new directory")
     def read(name):
@@ -334,7 +429,8 @@ def run_performance(inputs, output):
     records, columns = [], []
     try:
         for performance in data["performances"]:
-            source = PerformanceSource(japanese, latin, **{k: performance[k] for k in ("skeleton", "dna", "stroke")})
+            source = PerformanceSource(japanese, latin, intensity=intensity,
+                                       **{k: performance[k] for k in ("skeleton", "dna", "stroke")})
             name = performance["id"]
             dest = stage/name
             (dest/"glyphs").mkdir(parents=True)
@@ -366,11 +462,15 @@ def run_performance(inputs, output):
             group = ET.SubElement(root, "g", {"transform": f"translate({i*1200} 0)"})
             group.extend(list(column))
         (stage/"comparison.svg").write_text(ET.tostring(root, encoding="unicode")+"\n", encoding="utf-8")
-        (stage/"same-dna-strokes.svg").write_text(stroke_strip(japanese, latin), encoding="utf-8")
+        (stage/"same-dna-strokes.svg").write_text(stroke_strip(japanese, latin, intensity=intensity), encoding="utf-8")
+        if intensity != 1:
+            (stage/"before-after.svg").write_text(intensity_sheet(japanese, latin, data["performances"], intensity), encoding="utf-8")
         report = {"engine": ENGINE, "performances": records, "japanese_characters": len(japanese["glyphs"]),
                   "latin_characters": len(latin["glyphs"]), "lyrics_sha256": hashlib.sha256(lyrics.encode()).hexdigest(),
                   "limits": ["Finite explicit lyric skeletons, no font decomposition or trained handwriting.",
                              "Nib and entry/finish tendencies are inside DNA; expression modifies the centerline.",
+                             "Intensity is an expression degree, not a measured emotion multiplier or a new layer.",
+                             "Boosted routes attenuate local movement near source intersections; dense glyphs attenuate extra pressure.",
                              "No physical brush simulation, expert calligraphy claim or automatic beauty score.",
                              "Each artwork changes three choices together; the separate strip fixes skeleton and DNA.",
                              "Stroke order is sourced, not a measured singing timeline; no music supplied.",
@@ -389,9 +489,11 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("inputs", type=Path)
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--intensity", type=float, default=1,
+                        help="Degree of stroke expression, 1 (original) to 4 (exaggerated)")
     args = parser.parse_args(argv)
     try:
-        report = run_performance(args.inputs, args.out)
+        report = run_performance(args.inputs, args.out, intensity=args.intensity)
     except (ValueError, OSError, KeyError, TypeError, ET.ParseError) as error:
         parser.error(str(error))
     print(f"Wrote {len(report['performances'])} bilingual lyric artworks and explicit glyph paths")

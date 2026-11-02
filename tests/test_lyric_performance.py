@@ -46,6 +46,31 @@ class LyricPerformanceTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 sample_centerline(path)
 
+    def test_intensity_bounds_and_full_source_coverage(self):
+        for invalid in (True, False, 0, 4.1, float("nan"), float("inf"), "4"):
+            with self.subTest(invalid=invalid), self.assertRaisesRegex(ValueError, "intensity"):
+                PerformanceSource(self.jp, self.latin, intensity=invalid)
+        for p in read("performances.json")["performances"]:
+            for degree in (2.5, 4):
+                source = PerformanceSource(self.jp, self.latin, intensity=degree,
+                                           **{k: p[k] for k in ("skeleton", "dna", "stroke")})
+                for char in [*self.jp["glyphs"], *self.latin["glyphs"]]:
+                    with self.subTest(performance=p["id"], degree=degree, char=char):
+                        # draw validates every filled path and the common box.
+                        self.assertTrue(source.draw(char)["svg"])
+                self.assertEqual(source.identity["stroke"]["intensity"], degree)
+
+    def test_boosted_strokes_keep_shared_junction_and_loop(self):
+        import math
+        import xml.etree.ElementTree as ET
+        source = PerformanceSource(self.jp, self.latin, stroke="energetic", intensity=4)
+        bones = source.draw("I")["bones"]
+        self.assertLess(math.dist(bones[0][40], bones[1][0]), .01)
+        geometry = path_geometry(ET.fromstring(source.draw("o")["svg"])[0].attrib["d"])
+        self.assertEqual(len(geometry.interiors), 1)
+        repeated = PerformanceSource(self.jp, self.latin, stroke="energetic", intensity=4)
+        self.assertEqual(source.draw("I")["svg"], repeated.draw("I")["svg"])
+
     def test_full_lyric_exports_mapping_licenses_and_fontless_paths(self):
         with tempfile.TemporaryDirectory() as tmp:
             out = Path(tmp)/"artwork"

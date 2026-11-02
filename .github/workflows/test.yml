@@ -39,6 +39,8 @@ jobs:
         run: python -m flamoris_glyph.stroke_lab examples/stroke-program-study.json --out output-stroke-study
       - name: Generate bilingual lyric artwork
         run: python -m flamoris_glyph.lyric_performance examples/mou-iiyo --out output-lyric-performance
+      - name: Generate exaggerated lyric artwork
+        run: python -m flamoris_glyph.lyric_performance examples/mou-iiyo --intensity 4 --out output-lyric-exaggerated
       - uses: actions/upload-artifact@v4
         with:
           name: glyph-demo-${{ matrix.os }}-py${{ matrix.python-version }}
@@ -51,5 +53,6 @@ jobs:
             output-calligraphy-study/
             output-stroke-study/
             output-lyric-performance/
+            output-lyric-exaggerated/
 
 
