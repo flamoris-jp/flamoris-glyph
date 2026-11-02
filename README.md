@@ -151,6 +151,22 @@ trained handwriting model. Future education research is tracked in [#9](https://
 python -m flamoris_glyph.stroke_lab examples/stroke-program-study.json --out output-stroke-study
 ```
 
+## A lyric artwork: skeleton + DNA + stroke
+
+The [「もういいよ」lyric artwork](docs/lyric-performance.md) combines the three
+ideas into ten mixed Japanese/English lyric lines. TENDER, SURGE and PLAYFUL
+produce complete posters and individual closed-path glyph SVGs. The shared DNA
+contains nib/writing-style tendencies; stroke expression changes the centerline
+as well as the ink. A separate strip keeps skeleton, DNA and colour fixed while
+changing expression. This finite offline artwork uses a credited **KanjiVG
+CC BY-SA 3.0** subset and original Latin centerlines; no trained writer or music
+alignment is implied. The experimental artwork package does not change
+bundle-v2 or player integration contracts.
+
+```bash
+python -m flamoris_glyph.lyric_performance examples/mou-iiyo --out output-lyric-performance
+```
+
 ## Supported boundary
 
 - UTF-8（BOM可）、LF / CRLF、plain text / SRT。SRTの数値歌詞は保持し、cue時刻をms整数で出力。文字単位の歌唱時刻は推測しません。
@@ -161,7 +177,11 @@ python -m flamoris_glyph.stroke_lab examples/stroke-program-study.json --out out
 ## License / FLAMORIS
 
 Code and original experimental skeleton samples: [Apache License 2.0](LICENSE).
-The fontTools dependency is MIT licensed. No third-party fonts, models or stroke datasets are included. User-supplied fonts and license files live only in ignored `lib/fonts/`.
+The fontTools dependency is MIT licensed. The finite Japanese lyric skeleton
+subset and its derivative artwork are **CC BY-SA 3.0**, credited to KanjiVG /
+Ulrich Apel; see [attribution and modifications](examples/mou-iiyo/ATTRIBUTION.md).
+No third-party font binaries or models are included. User-supplied fonts and
+license files live only in ignored `lib/fonts/`.
 Font-derived artwork remains subject to the supplied font's license; recording a license note is provenance, not automated legal verification.
 
 FLAMORIS is open-source creative software. Commercial use is welcome within applicable licenses. Software is provided as-is, without guaranteed individual support.
