@@ -12,6 +12,7 @@ from fontTools.ttLib import TTLibError
 
 from .bundle import compile_bundle, preview_bundle, validate_bundle, write_bundle
 from .geometry import FontSource, SkeletonSource
+from .font_library import resolve_local_font
 from .inventory import build_manifest, parse_lyrics
 from .lyrics import parse_cues
 from .style import StyleDNA
@@ -41,8 +42,11 @@ def main(argv: list[str] | None = None) -> None:
     if mode == "generate":
         sources = parser.add_mutually_exclusive_group(required=True)
         sources.add_argument("--font", type=Path, help="Static TTF/OTF source (not included in output)")
+        sources.add_argument("--font-id", help="Local library ID under lib/fonts/ (font + license, not committed)")
         sources.add_argument("--skeletons", type=Path, help="Explicit line/quadratic stroke JSON")
-        parser.add_argument("--source-license", help="Required font license/provenance note, copied to manifest")
+        parser.add_argument("--source-license", help="Required for --font; not used with --font-id")
+        parser.add_argument("--font-library", type=Path, default=Path("lib/fonts"),
+                            help="Local font directory for --font-id (default: lib/fonts relative to CWD)")
         parser.add_argument("--style", type=Path, help="Version 1 Style DNA JSON; defaults to tango")
         parser.add_argument("--seed", type=int, default=0)
         parser.add_argument("--reuse", choices=["occurrence", "character"], default="occurrence")
@@ -71,10 +75,16 @@ def main(argv: list[str] | None = None) -> None:
             print(f"Wrote {manifest['glyph_count']} unique glyphs to {args.out}")
             return
         style = StyleDNA.from_dict(json.loads(read_text(args.style))) if args.style else StyleDNA()
-        if args.font:
-            if args.font.stat().st_size > 50_000_000:
+        if args.font or args.font_id:
+            if args.font_id:
+                if args.source_license is not None:
+                    raise ValueError("--source-license is only for --font; local library uses the supplied license file")
+                font_path, license_note = resolve_local_font(args.font_id, args.font_library)
+            else:
+                font_path, license_note = args.font, args.source_license
+            if font_path.stat().st_size > 50_000_000:
                 raise ValueError("Font exceeds 50 MB limit")
-            source = FontSource(args.font, license_note=args.source_license)
+            source = FontSource(font_path, license_note=license_note)
         else:
             source = SkeletonSource(json.loads(read_text(args.skeletons)))
         try:
