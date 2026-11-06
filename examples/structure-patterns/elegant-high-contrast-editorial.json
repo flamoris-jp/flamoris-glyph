@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "profile": "elegant-high-contrast-editorial",
+  "width": 0.98,
+  "bar_span": 1.06,
+  "junction_shift": 12,
+  "lower_spread": 1.28,
+  "curve_gain": 0.85,
+  "weight": 1.12,
+  "contrast": 0.85,
+  "terminal_style": "hairline",
+  "terminal_gain": 1.25,
+  "variation": 0.35
+}

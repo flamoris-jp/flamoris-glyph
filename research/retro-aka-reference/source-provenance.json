@@ -1,0 +1,53 @@
+{
+  "source": "AI-generated lettering concept approved in this conversation",
+  "source_filename": "赤い靴・文字デザイン3変奏.png",
+  "source_sha256": "6e51361dbd46ea62c3318cd2d379638b5055bf22c2060697c40c4bc16f5c4814",
+  "source_dimensions": [
+    1536,
+    1024
+  ],
+  "manual_roi_xyxy": [
+    280,
+    750,
+    518,
+    980
+  ],
+  "tight_box_in_roi": [
+    4,
+    12,
+    232,
+    222
+  ],
+  "binary_threshold": 128,
+  "retained_foreground_components": 3,
+  "semantic_stroke_correspondence": "unknown",
+  "trace": {
+    "tool": "Potrace 1.16",
+    "alphamax": 1,
+    "opttolerance": 0.12,
+    "turdsize": 0
+  },
+  "normalization": {
+    "kind": "isotropic-height-and-bbox-center",
+    "height": 820,
+    "center": [
+      500,
+      500
+    ],
+    "reference_native_box": [
+      4,
+      4,
+      232,
+      214
+    ]
+  },
+  "previous": {
+    "repository": "flamoris-jp/flamoris-glyph",
+    "commit": "c2482c412bfd0ef9dd18854836341499b24175d7",
+    "base": "gothic",
+    "profile": "showa-retro-signboard",
+    "seed": 42,
+    "occurrence_key": "cue0001-char0001"
+  },
+  "asset_note": "User-directed trace of generated reference artwork; no font or external stroke dataset included; three connected silhouettes are not seven semantic strokes."
+}

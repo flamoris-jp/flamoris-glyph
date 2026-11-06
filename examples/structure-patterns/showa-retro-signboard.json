@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "profile": "showa-retro-signboard",
+  "width": 1.06,
+  "bar_span": 1.03,
+  "junction_shift": -15,
+  "lower_spread": 1.25,
+  "curve_gain": 1.05,
+  "weight": 1.4,
+  "contrast": -0.65,
+  "terminal_style": "round",
+  "terminal_gain": 1.15,
+  "variation": 0.35
+}

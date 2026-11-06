@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "kind": "research-observations-not-engine-dna",
+  "character": "\u8d64",
+  "manual_semantic_annotations": true,
+  "reusable_style_rule_proven": false,
+  "measured_for_this_reference": {
+    "ink_fraction": 0.5736404087013843,
+    "upper_bar_end_neck_ratio": 1.3663366336633667,
+    "upper_white_gap_height_fraction": 0.04878048780487804,
+    "disconnected_silhouettes": 3
+  },
+  "feature_hypotheses": [
+    {
+      "id": "bulge-and-waist",
+      "scope": "upper-bars",
+      "description": "Fuller round ends; narrower necks; control bulge location independently from end roundness"
+    },
+    {
+      "id": "contrasting-terminals",
+      "scope": "role-specific",
+      "description": "Rounded upper forms coexist with a pointed broad lower-left sweep and a full lower-right foot"
+    },
+    {
+      "id": "droplet-secondary-marks",
+      "scope": "outer-marks",
+      "description": "Asymmetric swelling and a tapered entry, rather than a constant-width capsule"
+    },
+    {
+      "id": "regional-negative-space",
+      "scope": "between-parts",
+      "description": "Constrain upper density and lower separation independently"
+    }
+  ],
+  "next_validation": "Freeze candidate rules on \u8d64, then test different characters; tracing each target separately does not prove transfer"
+}

@@ -37,3 +37,9 @@ demo-preview.svg
 
 # User-supplied font files and license texts (never bundled with this repository)
 /lib/fonts/
+
+# Private staging directories for atomic local publication
+.pattern-lab-*/
+.glyph-*/
+.structure-study-*/
+

@@ -1,0 +1,2800 @@
+{
+  "schema_version": 1,
+  "kind": "authored-skeleton-patterns-1",
+  "engine": "role-anatomy-study-1",
+  "source_sha256": "3db13564ac25177d85915bd67e25729d75ef4cb61028b4154460d7fda3d6ca91",
+  "shared_dna_sha256": "75b0832add9d2279398d68704dffa1445d9ee941bfc87cb2df85bfe0b33b5490",
+  "pattern_sha256": "30ff006c131de5b8603ad495fb68a98d509dbdba236cc5d6f72f16054aedf4e9",
+  "fixed_ink_sha256": "553495ba12cd1fa65167fb2363172cfe74589277f09e3551abda50f8e91ef202",
+  "changed_layers": [
+    "bones"
+  ],
+  "fixed_input_reproduction": true,
+  "patterns": [
+    {
+      "id": "upright",
+      "title": "01 / UPRIGHT",
+      "note": "Horizontal bars; a calm, vertical axis"
+    },
+    {
+      "id": "rising",
+      "title": "02 / RISING",
+      "note": "Rising bars and an outward left sweep"
+    },
+    {
+      "id": "falling",
+      "title": "03 / FALLING",
+      "note": "Descending bars; lower marks step down"
+    },
+    {
+      "id": "compact",
+      "title": "04 / COMPACT",
+      "note": "Shorter bars and closer inner roots"
+    },
+    {
+      "id": "fan",
+      "title": "05 / FAN",
+      "note": "Open lower strokes and wider outer marks"
+    },
+    {
+      "id": "offset",
+      "title": "06 / OFFSET RHYTHM",
+      "note": "Opposing bar angles and a shifted axis"
+    }
+  ],
+  "cells": [
+    {
+      "family": "gothic",
+      "pattern": "upright",
+      "asset": "gothic-upright.svg",
+      "dna_asset": "dna/upright.json",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+        },
+        "dna_sha256": "5ffaf2dfbde4a8ccf10bc055a87cfdaae6e176f173a2f4bec182d574696c64b6",
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              255.0,
+              275.0
+            ],
+            [
+              416.7,
+              275.0
+            ],
+            [
+              583.3,
+              275.0
+            ],
+            [
+              745.0,
+              275.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              160.0,
+              430.0
+            ],
+            [
+              380.0,
+              430.0
+            ],
+            [
+              620.0,
+              430.0
+            ],
+            [
+              840.0,
+              430.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              430.0
+            ],
+            [
+              425.15,
+              605.1
+            ],
+            [
+              396.2314,
+              806.7146
+            ],
+            [
+              311.85,
+              810.5
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              430.0
+            ],
+            [
+              585.0,
+              580.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              275.0,
+              545.0
+            ],
+            [
+              273.4263,
+              613.8188
+            ],
+            [
+              247.3503,
+              673.2497
+            ],
+            [
+              217.3671,
+              710.5225
+            ]
+          ],
+          "outer-right": [
+            [
+              710.0,
+              545.0
+            ],
+            [
+              740.4271,
+              582.9927
+            ],
+            [
+              772.0307,
+              634.434
+            ],
+            [
+              790.1858,
+              687.0519
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            93.1392,
+            60.9638,
+            60.9638,
+            71.9712,
+            105.84
+          ],
+          "top-stem": [
+            95.04,
+            82.08,
+            86.4,
+            86.4,
+            86.4
+          ],
+          "main-bar": [
+            101.6064,
+            76.2048,
+            74.5114,
+            79.5917,
+            114.3072
+          ],
+          "inner-left": [
+            88.128,
+            96.3567,
+            105.5912,
+            57.0872,
+            0.0
+          ],
+          "inner-right": [
+            84.672,
+            86.076,
+            90.2102,
+            104.355,
+            109.6416
+          ],
+          "outer-left": [
+            0.0,
+            49.9711,
+            92.49,
+            109.898,
+            97.3092
+          ],
+          "outer-right": [
+            0.0,
+            50.0024,
+            92.7239,
+            110.5322,
+            98.3281
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 60.4767,
+          "outer-right": 73.1518,
+          "outer-pair": 425.1763,
+          "upper-bars": 56.9458
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "gothic",
+      "pattern": "rising",
+      "asset": "gothic-rising.svg",
+      "dna_asset": "dna/rising.json",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+        },
+        "dna_sha256": "75b0832add9d2279398d68704dffa1445d9ee941bfc87cb2df85bfe0b33b5490",
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              255.9323,
+              311.3532
+            ],
+            [
+              417.017,
+              297.2601
+            ],
+            [
+              582.983,
+              282.7399
+            ],
+            [
+              744.0677,
+              268.6468
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              115.0
+            ],
+            [
+              500.0,
+              220.0
+            ],
+            [
+              500.0,
+              325.5
+            ],
+            [
+              500.0,
+              420.0
+            ]
+          ],
+          "main-bar": [
+            [
+              174.0473,
+              437.0825
+            ],
+            [
+              384.9579,
+              426.0291
+            ],
+            [
+              615.0421,
+              413.9709
+            ],
+            [
+              825.9527,
+              402.9175
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              424.1926
+            ],
+            [
+              330.2101,
+              629.0132
+            ],
+            [
+              222.1557,
+              823.2971
+            ],
+            [
+              125.1941,
+              845.5234
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              415.5453
+            ],
+            [
+              608.3959,
+              570.6359
+            ],
+            [
+              621.8614,
+              759.0027
+            ],
+            [
+              540.3613,
+              826.1218
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              722.0,
+              540.0
+            ],
+            [
+              754.3737,
+              576.3482
+            ],
+            [
+              788.6263,
+              626.065
+            ],
+            [
+              809.5103,
+              677.6606
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            93.1392,
+            60.9638,
+            60.9638,
+            71.9712,
+            105.84
+          ],
+          "top-stem": [
+            95.04,
+            82.08,
+            86.4,
+            86.4,
+            86.4
+          ],
+          "main-bar": [
+            101.6064,
+            76.2048,
+            74.5114,
+            79.5917,
+            114.3072
+          ],
+          "inner-left": [
+            88.128,
+            96.3567,
+            105.5912,
+            57.0872,
+            0.0
+          ],
+          "inner-right": [
+            84.672,
+            86.076,
+            90.2102,
+            104.355,
+            109.6416
+          ],
+          "outer-left": [
+            0.0,
+            49.9711,
+            92.49,
+            109.898,
+            97.3092
+          ],
+          "outer-right": [
+            0.0,
+            50.0024,
+            92.7239,
+            110.5322,
+            98.3281
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 19.6659,
+          "outer-right": 78.8147,
+          "outer-pair": 500.8482,
+          "upper-bars": 32.9275
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "gothic",
+      "pattern": "falling",
+      "asset": "gothic-falling.svg",
+      "dna_asset": "dna/falling.json",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+        },
+        "dna_sha256": "2c3e694807719a23e52b894dd9d5e353ef13c635410e5a9730a68198d0de9cd4",
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              252.433,
+              260.2067
+            ],
+            [
+              415.8272,
+              283.1703
+            ],
+            [
+              584.1728,
+              306.8297
+            ],
+            [
+              747.567,
+              329.7933
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              168.0679,
+              400.9597
+            ],
+            [
+              382.8475,
+              419.7505
+            ],
+            [
+              617.1525,
+              440.2495
+            ],
+            [
+              831.9321,
+              459.0403
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              423.0009
+            ],
+            [
+              398.0911,
+              607.2676
+            ],
+            [
+              344.9221,
+              805.5447
+            ],
+            [
+              258.4412,
+              818.0544
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              437.4365
+            ],
+            [
+              562.6133,
+              580.9921
+            ],
+            [
+              549.8014,
+              739.9962
+            ],
+            [
+              481.0311,
+              795.0515
+            ]
+          ],
+          "outer-left": [
+            [
+              255.0,
+              550.0
+            ],
+            [
+              264.8227,
+              614.2662
+            ],
+            [
+              250.3162,
+              673.8192
+            ],
+            [
+              228.5417,
+              713.4037
+            ]
+          ],
+          "outer-right": [
+            [
+              730.0,
+              570.0
+            ],
+            [
+              751.7301,
+              619.5258
+            ],
+            [
+              770.8554,
+              683.8237
+            ],
+            [
+              775.2086,
+              745.5169
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            93.1392,
+            60.9638,
+            60.9638,
+            71.9712,
+            105.84
+          ],
+          "top-stem": [
+            95.04,
+            82.08,
+            86.4,
+            86.4,
+            86.4
+          ],
+          "main-bar": [
+            101.6064,
+            76.2048,
+            74.5114,
+            79.5917,
+            114.3072
+          ],
+          "inner-left": [
+            88.128,
+            96.3567,
+            105.5912,
+            57.0872,
+            0.0
+          ],
+          "inner-right": [
+            84.672,
+            86.076,
+            90.2102,
+            104.355,
+            109.6416
+          ],
+          "outer-left": [
+            0.0,
+            49.9711,
+            92.49,
+            109.898,
+            97.3092
+          ],
+          "outer-right": [
+            0.0,
+            50.0024,
+            92.7239,
+            110.5322,
+            98.3281
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 19.8555,
+          "outer-right": 74.1621,
+          "outer-pair": 436.7435,
+          "upper-bars": 23.6208
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "gothic",
+      "pattern": "compact",
+      "asset": "gothic-compact.svg",
+      "dna_asset": "dna/compact.json",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+        },
+        "dna_sha256": "4832e1d4488fbc4308dad539299039fb22c28a78d4c6e19cc8a41cf5d3c57314",
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              320.0,
+              285.0
+            ],
+            [
+              438.8,
+              285.0
+            ],
+            [
+              561.2,
+              285.0
+            ],
+            [
+              680.0,
+              285.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              330.0
+            ],
+            [
+              500.0,
+              420.0
+            ]
+          ],
+          "main-bar": [
+            [
+              255.2,
+              420.0
+            ],
+            [
+              413.6,
+              420.0
+            ],
+            [
+              586.4,
+              420.0
+            ],
+            [
+              744.8,
+              420.0
+            ]
+          ],
+          "inner-left": [
+            [
+              440.0,
+              420.0
+            ],
+            [
+              461.6053,
+              580.1188
+            ],
+            [
+              453.3069,
+              786.2561
+            ],
+            [
+              375.5522,
+              791.1052
+            ]
+          ],
+          "inner-right": [
+            [
+              565.0,
+              420.0
+            ],
+            [
+              574.9403,
+              562.1529
+            ],
+            [
+              584.8806,
+              734.3058
+            ],
+            [
+              517.7803,
+              796.1371
+            ]
+          ],
+          "outer-left": [
+            [
+              310.0,
+              550.0
+            ],
+            [
+              296.5,
+              617.5
+            ],
+            [
+              260.5,
+              671.5
+            ],
+            [
+              224.5,
+              703.0
+            ]
+          ],
+          "outer-right": [
+            [
+              685.0,
+              550.0
+            ],
+            [
+              712.0,
+              590.5
+            ],
+            [
+              739.0,
+              644.5
+            ],
+            [
+              752.5,
+              698.5
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            93.1392,
+            60.9638,
+            60.9638,
+            71.9712,
+            105.84
+          ],
+          "top-stem": [
+            95.04,
+            82.08,
+            86.4,
+            86.4,
+            86.4
+          ],
+          "main-bar": [
+            101.6064,
+            76.2048,
+            74.5114,
+            79.5917,
+            114.3072
+          ],
+          "inner-left": [
+            88.128,
+            96.3567,
+            105.5912,
+            57.0872,
+            0.0
+          ],
+          "inner-right": [
+            84.672,
+            86.076,
+            90.2102,
+            104.355,
+            109.6416
+          ],
+          "outer-left": [
+            0.0,
+            49.9711,
+            92.49,
+            109.898,
+            97.3092
+          ],
+          "outer-right": [
+            0.0,
+            50.0024,
+            92.7239,
+            110.5322,
+            98.3281
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 83.5827,
+          "outer-right": 69.8798,
+          "outer-pair": 372.6408,
+          "upper-bars": 35.8009
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "gothic",
+      "pattern": "fan",
+      "asset": "gothic-fan.svg",
+      "dna_asset": "dna/fan.json",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+        },
+        "dna_sha256": "8b19ec876090458b5c46b2a5109dfdb02c0db87f93c8a77a66821893b0d5d026",
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              245.1553,
+              293.8994
+            ],
+            [
+              413.3528,
+              288.0258
+            ],
+            [
+              586.6472,
+              281.9742
+            ],
+            [
+              754.8447,
+              276.1006
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              146.4539,
+              436.1712
+            ],
+            [
+              375.219,
+              432.1781
+            ],
+            [
+              624.781,
+              427.8219
+            ],
+            [
+              853.5461,
+              423.8288
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              431.3964
+            ],
+            [
+              327.5378,
+              644.2899
+            ],
+            [
+              215.3331,
+              837.7624
+            ],
+            [
+              114.2753,
+              860.1724
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              428.5163
+            ],
+            [
+              650.4229,
+              581.3347
+            ],
+            [
+              685.8527,
+              756.2817
+            ],
+            [
+              593.2999,
+              836.0268
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              770.0,
+              545.0
+            ],
+            [
+              806.5622,
+              577.1319
+            ],
+            [
+              846.6184,
+              622.3038
+            ],
+            [
+              873.6346,
+              670.9697
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            93.1392,
+            60.9638,
+            60.9638,
+            71.9712,
+            105.84
+          ],
+          "top-stem": [
+            95.04,
+            82.08,
+            86.4,
+            86.4,
+            86.4
+          ],
+          "main-bar": [
+            101.6064,
+            76.2048,
+            74.5114,
+            79.5917,
+            114.3072
+          ],
+          "inner-left": [
+            88.128,
+            96.3567,
+            105.5912,
+            57.0872,
+            0.0
+          ],
+          "inner-right": [
+            84.672,
+            86.076,
+            90.2102,
+            104.355,
+            109.6416
+          ],
+          "outer-left": [
+            0.0,
+            49.9711,
+            92.49,
+            109.898,
+            97.3092
+          ],
+          "outer-right": [
+            0.0,
+            50.0024,
+            92.7239,
+            110.5322,
+            98.3281
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 23.3697,
+          "outer-right": 71.6013,
+          "outer-pair": 548.0148,
+          "upper-bars": 51.1915
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "gothic",
+      "pattern": "offset",
+      "asset": "gothic-offset.svg",
+      "dna_asset": "dna/offset.json",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+        },
+        "dna_sha256": "fd7e2e8228566cf299dfb553a0cdc4acc153bf74361de3d0cc973722aa10b7d1",
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              307.1897,
+              321.3139
+            ],
+            [
+              454.2445,
+              300.6467
+            ],
+            [
+              605.7555,
+              279.3533
+            ],
+            [
+              752.8103,
+              258.6861
+            ]
+          ],
+          "top-stem": [
+            [
+              526.7519,
+              132.9196
+            ],
+            [
+              512.8346,
+              231.9464
+            ],
+            [
+              497.5256,
+              340.6139
+            ],
+            [
+              485.0,
+              429.738
+            ]
+          ],
+          "main-bar": [
+            [
+              150.466,
+              412.2058
+            ],
+            [
+              370.1645,
+              423.7197
+            ],
+            [
+              609.8355,
+              436.2803
+            ],
+            [
+              829.534,
+              447.7942
+            ]
+          ],
+          "inner-left": [
+            [
+              405.0,
+              425.5453
+            ],
+            [
+              348.6579,
+              602.6169
+            ],
+            [
+              282.4431,
+              784.4151
+            ],
+            [
+              206.7137,
+              812.1887
+            ]
+          ],
+          "inner-right": [
+            [
+              600.0,
+              435.7648
+            ],
+            [
+              603.9279,
+              604.6008
+            ],
+            [
+              584.185,
+              779.6285
+            ],
+            [
+              472.221,
+              826.0305
+            ]
+          ],
+          "outer-left": [
+            [
+              210.0,
+              540.0
+            ],
+            [
+              219.8227,
+              604.2662
+            ],
+            [
+              205.3162,
+              663.8192
+            ],
+            [
+              183.5417,
+              703.4037
+            ]
+          ],
+          "outer-right": [
+            [
+              735.0,
+              565.0
+            ],
+            [
+              749.7313,
+              608.5465
+            ],
+            [
+              761.1626,
+              664.4087
+            ],
+            [
+              760.2784,
+              716.9708
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            93.1392,
+            60.9638,
+            60.9638,
+            71.9712,
+            105.84
+          ],
+          "top-stem": [
+            95.04,
+            82.08,
+            86.4,
+            86.4,
+            86.4
+          ],
+          "main-bar": [
+            101.6064,
+            76.2048,
+            74.5114,
+            79.5917,
+            114.3072
+          ],
+          "inner-left": [
+            88.128,
+            96.3567,
+            105.5912,
+            57.0872,
+            0.0
+          ],
+          "inner-right": [
+            84.672,
+            86.076,
+            90.2102,
+            104.355,
+            109.6416
+          ],
+          "outer-left": [
+            0.0,
+            49.9711,
+            92.49,
+            109.898,
+            97.3092
+          ],
+          "outer-right": [
+            0.0,
+            50.0024,
+            92.7239,
+            110.5322,
+            98.3281
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 12.4499,
+          "outer-right": 76.1268,
+          "outer-pair": 473.8373,
+          "upper-bars": 13.9854
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "mincho",
+      "pattern": "upright",
+      "asset": "mincho-upright.svg",
+      "dna_asset": "dna/upright.json",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+        },
+        "dna_sha256": "5ffaf2dfbde4a8ccf10bc055a87cfdaae6e176f173a2f4bec182d574696c64b6",
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              274.6,
+              290.0
+            ],
+            [
+              421.6,
+              290.0
+            ],
+            [
+              578.4,
+              290.0
+            ],
+            [
+              725.4,
+              290.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              125.0
+            ],
+            [
+              502.0,
+              230.0
+            ],
+            [
+              500.0,
+              350.0
+            ],
+            [
+              500.0,
+              450.0
+            ]
+          ],
+          "main-bar": [
+            [
+              145.0,
+              450.0
+            ],
+            [
+              380.0,
+              450.0
+            ],
+            [
+              620.0,
+              450.0
+            ],
+            [
+              855.0,
+              450.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              450.0
+            ],
+            [
+              425.15,
+              604.5
+            ],
+            [
+              396.2314,
+              806.1146
+            ],
+            [
+              311.85,
+              809.9
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              450.0
+            ],
+            [
+              585.0,
+              580.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              275.0,
+              545.0
+            ],
+            [
+              273.4263,
+              613.8188
+            ],
+            [
+              247.3503,
+              673.2497
+            ],
+            [
+              217.3671,
+              710.5225
+            ]
+          ],
+          "outer-right": [
+            [
+              710.0,
+              545.0
+            ],
+            [
+              740.4271,
+              582.9927
+            ],
+            [
+              772.0307,
+              634.434
+            ],
+            [
+              790.1858,
+              687.0519
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            86.3808,
+            56.5402,
+            56.5402,
+            66.7488,
+            98.16
+          ],
+          "top-stem": [
+            100.32,
+            86.64,
+            91.2,
+            91.2,
+            91.2
+          ],
+          "main-bar": [
+            94.2336,
+            70.6752,
+            69.1046,
+            73.8163,
+            106.0128
+          ],
+          "inner-left": [
+            93.024,
+            101.6384,
+            111.1399,
+            59.8639,
+            0.0
+          ],
+          "inner-right": [
+            89.376,
+            90.7782,
+            94.8836,
+            109.2548,
+            114.0091
+          ],
+          "outer-left": [
+            0.0,
+            51.9276,
+            95.8095,
+            113.2306,
+            99.475
+          ],
+          "outer-right": [
+            0.0,
+            51.9504,
+            95.9798,
+            113.6924,
+            100.2169
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 56.7818,
+          "outer-right": 56.7221,
+          "outer-pair": 424.4386,
+          "upper-bars": 71.6061
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "mincho",
+      "pattern": "rising",
+      "asset": "mincho-rising.svg",
+      "dna_asset": "dna/rising.json",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+        },
+        "dna_sha256": "75b0832add9d2279398d68704dffa1445d9ee941bfc87cb2df85bfe0b33b5490",
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              275.4577,
+              324.6449
+            ],
+            [
+              421.8983,
+              311.833
+            ],
+            [
+              578.1017,
+              298.167
+            ],
+            [
+              724.5423,
+              285.3551
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              108.75
+            ],
+            [
+              502.1,
+              219.0
+            ],
+            [
+              500.0,
+              335.0
+            ],
+            [
+              500.0,
+              440.0
+            ]
+          ],
+          "main-bar": [
+            [
+              159.6671,
+              457.8361
+            ],
+            [
+              384.9579,
+              446.0291
+            ],
+            [
+              615.0421,
+              433.9709
+            ],
+            [
+              840.3329,
+              422.1639
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              444.1926
+            ],
+            [
+              339.6652,
+              623.3506
+            ],
+            [
+              231.6787,
+              817.7015
+            ],
+            [
+              134.4286,
+              840.1517
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              435.5453
+            ],
+            [
+              606.586,
+              570.2306
+            ],
+            [
+              620.0515,
+              758.5974
+            ],
+            [
+              538.5659,
+              825.6002
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              722.0,
+              540.0
+            ],
+            [
+              754.3737,
+              576.3482
+            ],
+            [
+              788.6263,
+              626.065
+            ],
+            [
+              809.5103,
+              677.6606
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            86.3808,
+            56.5402,
+            56.5402,
+            66.7488,
+            98.16
+          ],
+          "top-stem": [
+            100.32,
+            86.64,
+            91.2,
+            91.2,
+            91.2
+          ],
+          "main-bar": [
+            94.2336,
+            70.6752,
+            69.1046,
+            73.8163,
+            106.0128
+          ],
+          "inner-left": [
+            93.024,
+            101.6384,
+            111.1399,
+            59.8639,
+            0.0
+          ],
+          "inner-right": [
+            89.376,
+            90.7782,
+            94.8836,
+            109.2548,
+            114.0091
+          ],
+          "outer-left": [
+            0.0,
+            51.9276,
+            95.8095,
+            113.2306,
+            99.475
+          ],
+          "outer-right": [
+            0.0,
+            51.9504,
+            95.9798,
+            113.6924,
+            100.2169
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 20.6674,
+          "outer-right": 72.1488,
+          "outer-pair": 499.755,
+          "upper-bars": 46.9883
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "mincho",
+      "pattern": "falling",
+      "asset": "mincho-falling.svg",
+      "dna_asset": "dna/falling.json",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+        },
+        "dna_sha256": "2c3e694807719a23e52b894dd9d5e353ef13c635410e5a9730a68198d0de9cd4",
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              272.2383,
+              277.9902
+            ],
+            [
+              420.7786,
+              298.8662
+            ],
+            [
+              579.2214,
+              321.1338
+            ],
+            [
+              727.7617,
+              342.0098
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              125.0
+            ],
+            [
+              502.0,
+              230.0
+            ],
+            [
+              500.0,
+              350.0
+            ],
+            [
+              500.0,
+              450.0
+            ]
+          ],
+          "main-bar": [
+            [
+              153.4239,
+              419.6785
+            ],
+            [
+              382.8475,
+              439.7505
+            ],
+            [
+              617.1525,
+              460.2495
+            ],
+            [
+              846.5761,
+              480.3215
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              443.0009
+            ],
+            [
+              400.8062,
+              605.3559
+            ],
+            [
+              347.6661,
+              803.6545
+            ],
+            [
+              261.1223,
+              816.2183
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              457.4365
+            ],
+            [
+              564.356,
+              581.3547
+            ],
+            [
+              551.5441,
+              740.3588
+            ],
+            [
+              482.7394,
+              795.5261
+            ]
+          ],
+          "outer-left": [
+            [
+              255.0,
+              550.0
+            ],
+            [
+              264.8227,
+              614.2662
+            ],
+            [
+              250.3162,
+              673.8192
+            ],
+            [
+              228.5417,
+              713.4037
+            ]
+          ],
+          "outer-right": [
+            [
+              730.0,
+              570.0
+            ],
+            [
+              751.7301,
+              619.5258
+            ],
+            [
+              770.8554,
+              683.8237
+            ],
+            [
+              775.2086,
+              745.5169
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            86.3808,
+            56.5402,
+            56.5402,
+            66.7488,
+            98.16
+          ],
+          "top-stem": [
+            100.32,
+            86.64,
+            91.2,
+            91.2,
+            91.2
+          ],
+          "main-bar": [
+            94.2336,
+            70.6752,
+            69.1046,
+            73.8163,
+            106.0128
+          ],
+          "inner-left": [
+            93.024,
+            101.6384,
+            111.1399,
+            59.8639,
+            0.0
+          ],
+          "inner-right": [
+            89.376,
+            90.7782,
+            94.8836,
+            109.2548,
+            114.0091
+          ],
+          "outer-left": [
+            0.0,
+            51.9276,
+            95.8095,
+            113.2306,
+            99.475
+          ],
+          "outer-right": [
+            0.0,
+            51.9504,
+            95.9798,
+            113.6924,
+            100.2169
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 18.3031,
+          "outer-right": 58.6835,
+          "outer-pair": 434.3233,
+          "upper-bars": 39.3562
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "mincho",
+      "pattern": "compact",
+      "asset": "mincho-compact.svg",
+      "dna_asset": "dna/compact.json",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+        },
+        "dna_sha256": "4832e1d4488fbc4308dad539299039fb22c28a78d4c6e19cc8a41cf5d3c57314",
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              334.4,
+              300.0
+            ],
+            [
+              442.4,
+              300.0
+            ],
+            [
+              557.6,
+              300.0
+            ],
+            [
+              665.6,
+              300.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              125.0
+            ],
+            [
+              502.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              440.0
+            ]
+          ],
+          "main-bar": [
+            [
+              244.4,
+              440.0
+            ],
+            [
+              413.6,
+              440.0
+            ],
+            [
+              586.4,
+              440.0
+            ],
+            [
+              755.6,
+              440.0
+            ]
+          ],
+          "inner-left": [
+            [
+              440.0,
+              440.0
+            ],
+            [
+              459.6193,
+              581.2229
+            ],
+            [
+              451.3208,
+              787.3602
+            ],
+            [
+              373.5661,
+              792.2093
+            ]
+          ],
+          "inner-right": [
+            [
+              565.0,
+              440.0
+            ],
+            [
+              573.6149,
+              563.1992
+            ],
+            [
+              583.5552,
+              735.352
+            ],
+            [
+              516.4549,
+              797.1833
+            ]
+          ],
+          "outer-left": [
+            [
+              310.0,
+              550.0
+            ],
+            [
+              296.5,
+              617.5
+            ],
+            [
+              260.5,
+              671.5
+            ],
+            [
+              224.5,
+              703.0
+            ]
+          ],
+          "outer-right": [
+            [
+              685.0,
+              550.0
+            ],
+            [
+              712.0,
+              590.5
+            ],
+            [
+              739.0,
+              644.5
+            ],
+            [
+              752.5,
+              698.5
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            86.3808,
+            56.5402,
+            56.5402,
+            66.7488,
+            98.16
+          ],
+          "top-stem": [
+            100.32,
+            86.64,
+            91.2,
+            91.2,
+            91.2
+          ],
+          "main-bar": [
+            94.2336,
+            70.6752,
+            69.1046,
+            73.8163,
+            106.0128
+          ],
+          "inner-left": [
+            93.024,
+            101.6384,
+            111.1399,
+            59.8639,
+            0.0
+          ],
+          "inner-right": [
+            89.376,
+            90.7782,
+            94.8836,
+            109.2548,
+            114.0091
+          ],
+          "outer-left": [
+            0.0,
+            51.9276,
+            95.8095,
+            113.2306,
+            99.475
+          ],
+          "outer-right": [
+            0.0,
+            51.9504,
+            95.9798,
+            113.6924,
+            100.2169
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 70.5733,
+          "outer-right": 67.7179,
+          "outer-pair": 372.2277,
+          "upper-bars": 51.0069
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "mincho",
+      "pattern": "fan",
+      "asset": "mincho-fan.svg",
+      "dna_asset": "dna/fan.json",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+        },
+        "dna_sha256": "8b19ec876090458b5c46b2a5109dfdb02c0db87f93c8a77a66821893b0d5d026",
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              265.5429,
+              308.1874
+            ],
+            [
+              418.4497,
+              302.8478
+            ],
+            [
+              581.5503,
+              297.1522
+            ],
+            [
+              734.4571,
+              291.8126
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              125.0
+            ],
+            [
+              502.0,
+              230.0
+            ],
+            [
+              500.0,
+              350.0
+            ],
+            [
+              500.0,
+              450.0
+            ]
+          ],
+          "main-bar": [
+            [
+              130.8562,
+              456.4434
+            ],
+            [
+              375.219,
+              452.1781
+            ],
+            [
+              624.781,
+              447.8219
+            ],
+            [
+              869.1438,
+              443.5566
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              451.3964
+            ],
+            [
+              337.335,
+              637.6876
+            ],
+            [
+              225.1981,
+              831.227
+            ],
+            [
+              123.8519,
+              853.861
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              448.5163
+            ],
+            [
+              645.7044,
+              581.2244
+            ],
+            [
+              681.1342,
+              756.1714
+            ],
+            [
+              588.5759,
+              835.565
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              770.0,
+              545.0
+            ],
+            [
+              806.5622,
+              577.1319
+            ],
+            [
+              846.6184,
+              622.3038
+            ],
+            [
+              873.6346,
+              670.9697
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            86.3808,
+            56.5402,
+            56.5402,
+            66.7488,
+            98.16
+          ],
+          "top-stem": [
+            100.32,
+            86.64,
+            91.2,
+            91.2,
+            91.2
+          ],
+          "main-bar": [
+            94.2336,
+            70.6752,
+            69.1046,
+            73.8163,
+            106.0128
+          ],
+          "inner-left": [
+            93.024,
+            101.6384,
+            111.1399,
+            59.8639,
+            0.0
+          ],
+          "inner-right": [
+            89.376,
+            90.7782,
+            94.8836,
+            109.2548,
+            114.0091
+          ],
+          "outer-left": [
+            0.0,
+            51.9276,
+            95.8095,
+            113.2306,
+            99.475
+          ],
+          "outer-right": [
+            0.0,
+            51.9504,
+            95.9798,
+            113.6924,
+            100.2169
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 23.6187,
+          "outer-right": 56.122,
+          "outer-pair": 546.9155,
+          "upper-bars": 65.4542
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "mincho",
+      "pattern": "offset",
+      "asset": "mincho-offset.svg",
+      "dna_asset": "dna/offset.json",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+        },
+        "dna_sha256": "fd7e2e8228566cf299dfb553a0cdc4acc153bf74361de3d0cc973722aa10b7d1",
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              325.0145,
+              333.8088
+            ],
+            [
+              458.7007,
+              315.0205
+            ],
+            [
+              601.2993,
+              294.9795
+            ],
+            [
+              734.9855,
+              276.1912
+            ]
+          ],
+          "top-stem": [
+            [
+              530.2313,
+              128.1629
+            ],
+            [
+              517.5986,
+              232.4194
+            ],
+            [
+              498.9173,
+              350.7112
+            ],
+            [
+              485.0,
+              449.738
+            ]
+          ],
+          "main-bar": [
+            [
+              135.4865,
+              431.4207
+            ],
+            [
+              370.1645,
+              443.7197
+            ],
+            [
+              609.8355,
+              456.2803
+            ],
+            [
+              844.5135,
+              468.5793
+            ]
+          ],
+          "inner-left": [
+            [
+              405.0,
+              445.5453
+            ],
+            [
+              353.5589,
+              600.1485
+            ],
+            [
+              287.4558,
+              782.0377
+            ],
+            [
+              211.4125,
+              810.0825
+            ]
+          ],
+          "inner-right": [
+            [
+              600.0,
+              455.7649
+            ],
+            [
+              606.4644,
+              603.4387
+            ],
+            [
+              586.7215,
+              778.4663
+            ],
+            [
+              474.8533,
+              824.5915
+            ]
+          ],
+          "outer-left": [
+            [
+              210.0,
+              540.0
+            ],
+            [
+              219.8227,
+              604.2662
+            ],
+            [
+              205.3162,
+              663.8192
+            ],
+            [
+              183.5417,
+              703.4037
+            ]
+          ],
+          "outer-right": [
+            [
+              735.0,
+              565.0
+            ],
+            [
+              749.7313,
+              608.5465
+            ],
+            [
+              761.1626,
+              664.4087
+            ],
+            [
+              760.2784,
+              716.9708
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            86.3808,
+            56.5402,
+            56.5402,
+            66.7488,
+            98.16
+          ],
+          "top-stem": [
+            100.32,
+            86.64,
+            91.2,
+            91.2,
+            91.2
+          ],
+          "main-bar": [
+            94.2336,
+            70.6752,
+            69.1046,
+            73.8163,
+            106.0128
+          ],
+          "inner-left": [
+            93.024,
+            101.6384,
+            111.1399,
+            59.8639,
+            0.0
+          ],
+          "inner-right": [
+            89.376,
+            90.7782,
+            94.8836,
+            109.2548,
+            114.0091
+          ],
+          "outer-left": [
+            0.0,
+            51.9276,
+            95.8095,
+            113.2306,
+            99.475
+          ],
+          "outer-right": [
+            0.0,
+            51.9504,
+            95.9798,
+            113.6924,
+            100.2169
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 12.7447,
+          "outer-right": 60.6654,
+          "outer-pair": 471.2751,
+          "upper-bars": 28.9266
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    }
+  ],
+  "sheets": {
+    "gothic": [
+      "gothic-comparison.svg",
+      "gothic-bones.svg"
+    ],
+    "mincho": [
+      "mincho-comparison.svg",
+      "mincho-bones.svg"
+    ]
+  },
+  "visual_review": "required",
+  "limits": [
+    "Only manually authored 赤 maps; no font decomposition or other-character coverage.",
+    "Several bone parameters change per pattern; not a single-variable causal experiment.",
+    "Ink settings and local width samples are fixed; occupied area and apparent weight can change.",
+    "Clearances reject invalid layouts; no optical automatic correction or aesthetic ranking."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "kind": "lyric-performances-1",
+  "performances": [
+    {"id": "tender", "title": "01 / TENDER", "skeleton": "open", "dna": "ribbon", "stroke": "gentle", "background": "#F4EDE0", "ink": "#294E49", "accent": "#BC6E52"},
+    {"id": "surge", "title": "02 / SURGE", "skeleton": "tall", "dna": "ribbon", "stroke": "energetic", "background": "#15282E", "ink": "#F6E5BC", "accent": "#F17355"},
+    {"id": "playful", "title": "03 / PLAYFUL", "skeleton": "compact", "dna": "soft", "stroke": "cute", "background": "#F8E8EC", "ink": "#723B61", "accent": "#C5536D"}
+  ]
+}

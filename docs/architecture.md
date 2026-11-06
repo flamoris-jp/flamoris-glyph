@@ -17,9 +17,18 @@
 - `cli.py` → inventory / generate / validate / preview
 
 Core has no network, UI, service configuration, model host, subprocess, or platform graphics API.
-The only runtime dependency is fontTools. Its documented TTFont / Pen interfaces supply outline decomposition and SVG path operations:
+The legacy runtime dependency is fontTools. Experimental [Pattern DNA](pattern-dna.md)
+adds an optional, versioned Shapely geometry pass and static comparison lab.
+Neither path owns a playback clock or renderer. fontTools' documented TTFont / Pen interfaces supply outline decomposition and SVG path operations:
 [TTFont](https://fonttools.readthedocs.io/en/latest/ttLib/ttFont.html),
 [SVGPathPen](https://fonttools.readthedocs.io/en/latest/pens/svgPathPen.html).
+
+The separate [authored structure study](authored-structure.md) has an explicit
+seven-role map for 赤. Source geometry, family widths and base terminals are
+distinct from versioned Structure DNA. `compile_bundle(..., structure=...)`
+requires that source type and records engine/landmarks separately. Ordinary
+font outlines do not enter this path without a future explicit correspondence
+map. The demonstration has no font decomposition, image tracing or fitting.
 
 ### Cue / occurrence identity
 
@@ -85,3 +94,4 @@ Cross-platform Python 3.11 / 3.12 CI runs the full unit/integration suite and a 
 ## Scene actor integration reconciliation (2026-11-01)
 
 [Issue #3](https://github.com/flamoris-jp/flamoris-glyph/issues/3) separates the existing Glyph shape contract from the future CG consumer adapter. See [scope and dependencies](scene-actor-integration.md). Generation/validation do not wait on an engine-wide schema. CG's minimum conversion/subset still needs bilateral agreement; collision proxies remain CG research. Cinema's historical adapter is prior work to compare and Cinema stays paused. No bundle schema, CLI or geometry changes here.
+

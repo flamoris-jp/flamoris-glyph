@@ -19,7 +19,7 @@ from fontTools.svgLib.path import parse_path
 
 from .inventory import build_manifest
 from .lyrics import Cue, cue_dicts, occurrences
-from .style import StyleDNA, digest, variation_parameters
+from .style import StyleDNA, digest, variation_parameters, number
 
 SVG_NS = "http://www.w3.org/2000/svg"
 MAX_OCCURRENCES = 5000
@@ -31,9 +31,16 @@ def _sha(data: str) -> str:
     return hashlib.sha256(data.encode("utf-8")).hexdigest()
 
 
-def _variant_id(char: str, key: str, seed: int, source: dict, style: StyleDNA, version: str) -> str:
-    return "g" + digest({"character": char, "key": key, "seed": seed,
-                         "source": source, "style": style.to_dict(), "generator": version})[:24]
+def _variant_id(char: str, key: str, seed: int, source: dict, style: StyleDNA, version: str,
+                pattern: dict | None = None, engine: dict | None = None,
+                structure: dict | None = None, structure_engine: dict | None = None) -> str:
+    identity = {"character": char, "key": key, "seed": seed,
+                "source": source, "style": style.to_dict(), "generator": version}
+    if pattern is not None:
+        identity.update(pattern=pattern, pattern_engine=engine)
+    if structure is not None:
+        identity.update(structure=structure, structure_engine=structure_engine)
+    return "g" + digest(identity)[:24]
 
 
 def path_bounds(paths: list[dict]) -> list[float]:
@@ -56,7 +63,8 @@ def _svg(shape: dict, params: dict) -> str:
 
 
 def compile_bundle(cues: list[Cue], source, *, song: str, style: StyleDNA | None = None,
-                   title: str = "", seed: int = 0, reuse: str = "occurrence") -> tuple[dict, dict[str, str]]:
+                   title: str = "", seed: int = 0, reuse: str = "occurrence",
+                   pattern=None, structure=None) -> tuple[dict, dict[str, str]]:
     """Compile in memory. source implements render/close/provenance, no transport."""
     if not isinstance(song, str) or not song.strip():
         raise ValueError("song must not be empty")
@@ -73,6 +81,23 @@ def compile_bundle(cues: list[Cue], source, *, song: str, style: StyleDNA | None
                                       or not 0 <= c.start_ms < c.end_ms)) for c in cues):
         raise ValueError("Cue timing must be null or a nonnegative increasing integer interval")
     style = style or StyleDNA()
+    pattern_data, engine = None, None
+    version = "0.2.0"
+    structure_data, structure_meta = None, None
+    if structure is not None:
+        from .structure import AuthoredStructureSource, StructureDNA, structure_engine
+        if pattern is not None:
+            raise ValueError("Choose outline pattern or authored structure DNA, not both")
+        if not isinstance(structure, StructureDNA) or not isinstance(source, AuthoredStructureSource):
+            raise ValueError("Structure DNA requires an explicit AuthoredStructureSource")
+        structure_data, structure_meta = structure.to_dict(), structure_engine()
+        version = "0.2.0+structure.1"
+    if pattern is not None:
+        from .pattern import PatternDNA, engine_metadata
+        if not isinstance(pattern, PatternDNA):
+            raise ValueError("pattern must be a PatternDNA")
+        pattern_data, engine = pattern.to_dict(), engine_metadata()
+        version = "0.2.0+pattern.1"
     # Title is a separate cue namespace, with no timing; not silently deduplicated.
     lyric_cues = cues
     if title:
@@ -91,9 +116,18 @@ def compile_bundle(cues: list[Cue], source, *, song: str, style: StyleDNA | None
     for occurrence in instances:
         key = occurrence.occurrence_id if reuse == "occurrence" else occurrence.character
         params = variation_parameters(style, key, seed)
-        variant_id = _variant_id(occurrence.character, key, seed, source.provenance, style, "0.2.0")
+        variant_id = _variant_id(occurrence.character, key, seed, source.provenance, style, version,
+                                 pattern_data, engine, structure_data, structure_meta)
         if variant_id not in glyphs:
-            shape = source.render(occurrence.character, params, style)
+            structure_qa = None
+            if structure is not None:
+                shape, structure_qa = source.render_structured(occurrence.character, params, style, structure, key, seed)
+            else:
+                shape = source.render(occurrence.character, params, style)
+            pattern_qa = None
+            if pattern is not None:
+                from .pattern import transform_shape
+                shape, pattern_qa = transform_shape(shape, pattern, key, seed)
             bounds = path_bounds(shape["paths"])
             svg = _svg(shape, params)
             validate_svg(svg)
@@ -111,15 +145,23 @@ def compile_bundle(cues: list[Cue], source, *, song: str, style: StyleDNA | None
                 "strokes": [{"element_id": f"stroke{i:03d}", "source_id": p["id"], "terminal": p["terminal"]}
                             for i, p in enumerate(shape["paths"], 1)],
             }
+            if pattern_qa is not None:
+                glyphs[variant_id]["pattern_qa"] = pattern_qa
+            if structure_qa is not None:
+                glyphs[variant_id]["structure_qa"] = structure_qa
         mapping.append({**asdict(occurrence), "glyph_variant_id": variant_id})
     lyrics_text = "\n".join(c.text for c in lyric_cues)
     manifest = {
         "schema_version": 2, "kind": "flamoris-glyph-bundle", "song": song, "title": title,
-        "generator": {"name": "flamoris-glyph", "version": "0.2.0", "fonttools": fontTools.__version__},
+        "generator": {"name": "flamoris-glyph", "version": version, "fonttools": fontTools.__version__},
         "seed": seed, "reuse": reuse, "style": style.to_dict(), "source": dict(source.provenance),
         "cues": cue_dicts(cues), "occurrences": mapping, "glyphs": list(glyphs.values()),
         "inventory": build_manifest(lyrics_text, song=song, title=title)["glyphs"],
     }
+    if pattern is not None:
+        manifest.update(pattern=pattern_data, pattern_engine=engine)
+    if structure is not None:
+        manifest.update(structure=structure_data, structure_engine=structure_meta)
     return manifest, assets
 
 
@@ -194,6 +236,37 @@ def _validate_bundle(directory: Path) -> dict:
     if not isinstance(manifest, dict) or type(manifest.get("schema_version")) is not int or manifest["schema_version"] != 2 or manifest.get("kind") != "flamoris-glyph-bundle":
         raise ValueError("Unsupported bundle format")
     style = StyleDNA.from_dict(manifest["style"])
+    structure = None
+    structure_meta = manifest.get("structure_engine")
+    if "structure" in manifest:
+        from .structure import StructureDNA, ENGINE_VERSION as STRUCTURE_VERSION
+        structure = StructureDNA.from_dict(manifest["structure"])
+        if ("pattern" in manifest or not isinstance(structure_meta, dict)
+                or set(structure_meta) != {"version", "shapely", "geos", "samples_per_stroke", "coordinate_grid",
+                                         "sample_precision", "circle_points", "canonical_tolerance"}
+                or structure_meta["version"] != STRUCTURE_VERSION or structure_meta["shapely"] != "2.1.2"
+                or not isinstance(structure_meta["geos"], str) or not structure_meta["geos"]
+                or structure_meta["samples_per_stroke"] != 65 or structure_meta["coordinate_grid"] != .01
+                or structure_meta["sample_precision"] != 4 or structure_meta["circle_points"] != 32
+                or structure_meta["canonical_tolerance"] != .01
+                or manifest["generator"]["version"] != "0.2.0+structure.1"
+                or manifest["source"]["kind"] != "authored-skeleton"):
+            raise ValueError("Invalid authored structure engine contract")
+    elif structure_meta is not None or manifest["generator"]["version"] == "0.2.0+structure.1":
+        raise ValueError("Structure DNA and engine metadata must be supplied together")
+    pattern = None
+    engine = manifest.get("pattern_engine")
+    if "pattern" in manifest:
+        from .pattern import PatternDNA, ENGINE_VERSION
+        pattern = PatternDNA.from_dict(manifest["pattern"])
+        if (not isinstance(engine, dict) or set(engine) != {"version", "shapely", "geos", "flatten_tolerance"}
+                or engine["version"] != ENGINE_VERSION or engine["shapely"] != "2.1.2"
+                or not isinstance(engine["geos"], str) or not engine["geos"]
+                or engine["flatten_tolerance"] != 0.35
+                or manifest["generator"]["version"] != "0.2.0+pattern.1"):
+            raise ValueError("Invalid or unsupported pattern engine")
+    elif engine is not None or manifest["generator"]["version"] == "0.2.0+pattern.1":
+        raise ValueError("Pattern engine and Pattern DNA must be supplied together")
     if (not isinstance(manifest["song"], str) or not manifest["song"].strip()
             or not isinstance(manifest["title"], str)
             or manifest["generator"]["name"] != "flamoris-glyph"
@@ -274,7 +347,37 @@ def _validate_bundle(directory: Path) -> dict:
         key = occurrence.occurrence_id if manifest["reuse"] == "occurrence" else occurrence.character
         if g["parameters"] != variation_parameters(style, key, manifest["seed"]):
             raise ValueError("Glyph parameters do not match Style DNA/seed")
-        if g["variant_id"] != _variant_id(occurrence.character, key, manifest["seed"], source, style, manifest["generator"]["version"]):
+        if pattern is not None:
+            qa = g["pattern_qa"]
+            if (not isinstance(qa, dict) or set(qa) != {"parameters", "applied_strength", "warnings", "components", "holes", "review_required"}
+                    or qa["parameters"] != pattern.parameters(key, manifest["seed"])
+                    or isinstance(qa["applied_strength"], bool) or qa["applied_strength"] not in {0, *(0.5**i for i in range(9))}
+                    or not isinstance(qa["warnings"], list) or any(not isinstance(w, str) for w in qa["warnings"])
+                    or type(qa["components"]) is not int or qa["components"] < 1
+                    or type(qa["holes"]) is not int or qa["holes"] < 0 or qa["review_required"] is not True):
+                raise ValueError("Invalid Pattern DNA diagnostics or seed parameters")
+        if structure is not None:
+            from .structure import ROLES
+            qa = g["structure_qa"]
+            if (g["character"] != "赤" or g["stroke_model"] != "authored"
+                    or [s["source_id"] for s in g["strokes"]] != list(ROLES)
+                    or set(qa) != {"parameters", "source_family", "landmarks", "stroke_widths", "review_required"}
+                    or qa["parameters"] != structure.parameters(key, manifest["seed"])
+                    or qa["source_family"] not in {"gothic", "mincho"} or qa["review_required"] is not True
+                    or set(qa["landmarks"]) != set(ROLES) or set(qa["stroke_widths"]) != set(ROLES)):
+                raise ValueError("Invalid authored structure diagnostics")
+            for role in ROLES:
+                points, widths = qa["landmarks"][role], qa["stroke_widths"][role]
+                if (not isinstance(points, list) or len(points) != 4 or not isinstance(widths, list) or len(widths) != 3
+                        or any(not isinstance(p, list) or len(p) != 2 for p in points)):
+                    raise ValueError("Invalid structural landmark dimensions")
+                for v in [v for p in points for v in p]:
+                    number(v, "structural landmark", 0, 1000)
+                for v in widths:
+                    number(v, "structural stroke width", .01, 400)
+        if g["variant_id"] != _variant_id(occurrence.character, key, manifest["seed"], source, style, manifest["generator"]["version"],
+                                         pattern.to_dict() if pattern else None, engine,
+                                         structure.to_dict() if structure else None, structure_meta):
             raise ValueError("Variant identity does not match source/style/seed")
         used.add(g["variant_id"])
     if used != set(by_id):
@@ -299,3 +402,4 @@ def preview_bundle(directory: Path, *, columns: int = 3, limit: int = 96) -> str
         for p in asset_root:
             ET.SubElement(group, "path", {k: v for k, v in p.attrib.items() if k != "id"})
     return ET.tostring(root, encoding="unicode") + "\n"
+

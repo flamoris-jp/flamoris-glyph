@@ -1,0 +1,5239 @@
+{
+  "schema_version": 1,
+  "kind": "role-anatomy-study-1",
+  "source_sha256": "3db13564ac25177d85915bd67e25729d75ef4cb61028b4154460d7fda3d6ca91",
+  "dna": {
+    "schema_version": 1,
+    "kind": "role-anatomy-study-1",
+    "weight": 1.6,
+    "source_width_mix": 0.18,
+    "source_taper_mix": 0.1,
+    "minimum_gap": 6,
+    "roles": {
+      "top-bar": {
+        "bone": {
+          "length": 0.98,
+          "angle": -5,
+          "end_turn": 0,
+          "bend": 0,
+          "dx": 0,
+          "dy": 25,
+          "anchor": 0.5
+        },
+        "ink": {
+          "widths": [
+            1.1,
+            0.72,
+            0.72,
+            0.85,
+            1.25
+          ],
+          "stations": [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "width_ratio": 1,
+          "bias": 0,
+          "start_cap": "round",
+          "end_cap": "round"
+        }
+      },
+      "top-stem": {
+        "bone": {
+          "length": 1.05,
+          "angle": 0,
+          "end_turn": 0,
+          "bend": 0,
+          "dx": 0,
+          "dy": 0,
+          "anchor": 1
+        },
+        "ink": {
+          "widths": [
+            1.1,
+            0.95,
+            1,
+            1,
+            1
+          ],
+          "stations": [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "width_ratio": 1,
+          "bias": 0,
+          "start_cap": "round",
+          "end_cap": "flat"
+        }
+      },
+      "main-bar": {
+        "bone": {
+          "length": 0.96,
+          "angle": -3,
+          "end_turn": 0,
+          "bend": 0,
+          "dx": 0,
+          "dy": -10,
+          "anchor": 0.5
+        },
+        "ink": {
+          "widths": [
+            1.2,
+            0.9,
+            0.88,
+            0.94,
+            1.35
+          ],
+          "stations": [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "width_ratio": 1,
+          "bias": 0,
+          "start_cap": "round",
+          "end_cap": "round"
+        }
+      },
+      "inner-left": {
+        "bone": {
+          "length": 1.35,
+          "angle": 20,
+          "end_turn": 15,
+          "bend": 22,
+          "dx": 0,
+          "dy": 0,
+          "anchor": 0
+        },
+        "ink": {
+          "widths": [
+            1.02,
+            1.12,
+            1.25,
+            0.45,
+            0
+          ],
+          "stations": [
+            0,
+            0.25,
+            0.55,
+            0.82,
+            1
+          ],
+          "width_ratio": 1,
+          "bias": 0,
+          "start_cap": "flat",
+          "end_cap": "point"
+        }
+      },
+      "inner-right": {
+        "bone": {
+          "length": 1.03,
+          "angle": -5,
+          "end_turn": 0,
+          "bend": -10,
+          "dx": 0,
+          "dy": 0,
+          "anchor": 0
+        },
+        "ink": {
+          "widths": [
+            0.98,
+            1.0,
+            1.06,
+            1.25,
+            1.35
+          ],
+          "stations": [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "width_ratio": 1,
+          "bias": 0,
+          "start_cap": "flat",
+          "end_cap": "round"
+        }
+      },
+      "outer-left": {
+        "bone": {
+          "length": 0.8,
+          "angle": -15,
+          "end_turn": 0,
+          "bend": 0,
+          "dx": -100,
+          "dy": -20,
+          "anchor": 0
+        },
+        "ink": {
+          "widths": [
+            0,
+            0.6,
+            1.12,
+            1.35,
+            1.22
+          ],
+          "stations": [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "width_ratio": 1,
+          "bias": 0.12,
+          "start_cap": "point",
+          "end_cap": "round"
+        }
+      },
+      "outer-right": {
+        "bone": {
+          "length": 0.9,
+          "angle": -8,
+          "end_turn": 0,
+          "bend": 0,
+          "dx": 22,
+          "dy": -5,
+          "anchor": 0
+        },
+        "ink": {
+          "widths": [
+            0,
+            0.6,
+            1.12,
+            1.35,
+            1.22
+          ],
+          "stations": [
+            0,
+            0.25,
+            0.5,
+            0.75,
+            1
+          ],
+          "width_ratio": 1,
+          "bias": -0.12,
+          "start_cap": "point",
+          "end_cap": "round"
+        }
+      }
+    }
+  },
+  "cells": [
+    {
+      "family": "gothic",
+      "stage": "source",
+      "asset": "gothic-source.svg",
+      "dna": {
+        "schema_version": 1,
+        "kind": "role-anatomy-study-1",
+        "weight": 1,
+        "source_width_mix": 1,
+        "source_taper_mix": 1,
+        "minimum_gap": 6,
+        "roles": {
+          "top-bar": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "top-stem": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "main-bar": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "inner-left": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "inner-right": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "outer-left": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "outer-right": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          }
+        }
+      },
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+        },
+        "dna_sha256": "9523387e0547f5b314f7840b084a1efeff1fbc4fdf790f629c4855aa13d27883",
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              250.0,
+              265.0
+            ],
+            [
+              415.0,
+              265.0
+            ],
+            [
+              585.0,
+              265.0
+            ],
+            [
+              750.0,
+              265.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              160.0,
+              430.0
+            ],
+            [
+              380.0,
+              430.0
+            ],
+            [
+              620.0,
+              430.0
+            ],
+            [
+              840.0,
+              430.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              430.0
+            ],
+            [
+              425.0,
+              600.0
+            ],
+            [
+              380.0,
+              750.0
+            ],
+            [
+              315.0,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              430.0
+            ],
+            [
+              585.0,
+              580.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              300.0,
+              540.0
+            ],
+            [
+              285.0,
+              615.0
+            ],
+            [
+              245.0,
+              675.0
+            ],
+            [
+              205.0,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              700.0,
+              545.0
+            ],
+            [
+              730.0,
+              590.0
+            ],
+            [
+              760.0,
+              650.0
+            ],
+            [
+              775.0,
+              710.0
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            48.0,
+            48.0,
+            48.0,
+            48.0,
+            48.0
+          ],
+          "top-stem": [
+            54.0,
+            54.0,
+            54.0,
+            54.0,
+            54.0
+          ],
+          "main-bar": [
+            48.0,
+            48.0,
+            48.0,
+            48.0,
+            48.0
+          ],
+          "inner-left": [
+            54.0,
+            51.705,
+            44.82,
+            33.345,
+            17.28
+          ],
+          "inner-right": [
+            54.0,
+            51.975,
+            45.9,
+            35.775,
+            21.6
+          ],
+          "outer-left": [
+            44.0,
+            42.7625,
+            39.05,
+            32.8625,
+            24.2
+          ],
+          "outer-right": [
+            44.0,
+            43.0375,
+            40.15,
+            35.3375,
+            28.6
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 67.7828,
+          "outer-right": 72.4046,
+          "outer-pair": 360.3478,
+          "upper-bars": 117.0
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "gothic",
+      "stage": "bones",
+      "asset": "gothic-bones.svg",
+      "dna": {
+        "schema_version": 1,
+        "kind": "role-anatomy-study-1",
+        "weight": 1,
+        "source_width_mix": 1,
+        "source_taper_mix": 1,
+        "minimum_gap": 6,
+        "roles": {
+          "top-bar": {
+            "bone": {
+              "length": 0.98,
+              "angle": -5,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 25,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "top-stem": {
+            "bone": {
+              "length": 1.05,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 1
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "main-bar": {
+            "bone": {
+              "length": 0.96,
+              "angle": -3,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": -10,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "inner-left": {
+            "bone": {
+              "length": 1.35,
+              "angle": 20,
+              "end_turn": 15,
+              "bend": 22,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "inner-right": {
+            "bone": {
+              "length": 1.03,
+              "angle": -5,
+              "end_turn": 0,
+              "bend": -10,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "outer-left": {
+            "bone": {
+              "length": 0.8,
+              "angle": -15,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": -100,
+              "dy": -20,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "outer-right": {
+            "bone": {
+              "length": 0.9,
+              "angle": -8,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 22,
+              "dy": -5,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          }
+        }
+      },
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+        },
+        "dna_sha256": "45d9b31742dd8a9b5ec32b3eaf54edae21b34d1c197a21c101382c2035890c54",
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              255.9323,
+              311.3532
+            ],
+            [
+              417.017,
+              297.2601
+            ],
+            [
+              582.983,
+              282.7399
+            ],
+            [
+              744.0677,
+              268.6468
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              115.0
+            ],
+            [
+              500.0,
+              220.0
+            ],
+            [
+              500.0,
+              325.5
+            ],
+            [
+              500.0,
+              420.0
+            ]
+          ],
+          "main-bar": [
+            [
+              174.0473,
+              437.0825
+            ],
+            [
+              384.9579,
+              426.0291
+            ],
+            [
+              615.0421,
+              413.9709
+            ],
+            [
+              825.9527,
+              402.9175
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              424.1926
+            ],
+            [
+              330.2101,
+              629.0132
+            ],
+            [
+              222.1557,
+              823.2971
+            ],
+            [
+              125.1941,
+              845.5234
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              415.5453
+            ],
+            [
+              608.3959,
+              570.6359
+            ],
+            [
+              621.8614,
+              759.0027
+            ],
+            [
+              540.3613,
+              826.1218
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              722.0,
+              540.0
+            ],
+            [
+              754.3737,
+              576.3482
+            ],
+            [
+              788.6263,
+              626.065
+            ],
+            [
+              809.5103,
+              677.6606
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            48.0,
+            48.0,
+            48.0,
+            48.0,
+            48.0
+          ],
+          "top-stem": [
+            54.0,
+            54.0,
+            54.0,
+            54.0,
+            54.0
+          ],
+          "main-bar": [
+            48.0,
+            48.0,
+            48.0,
+            48.0,
+            48.0
+          ],
+          "inner-left": [
+            54.0,
+            51.705,
+            44.82,
+            33.345,
+            17.28
+          ],
+          "inner-right": [
+            54.0,
+            51.975,
+            45.9,
+            35.775,
+            21.6
+          ],
+          "outer-left": [
+            44.0,
+            42.7625,
+            39.05,
+            32.8625,
+            24.2
+          ],
+          "outer-right": [
+            44.0,
+            43.0375,
+            40.15,
+            35.3375,
+            28.6
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 59.9634,
+          "outer-right": 79.067,
+          "outer-pair": 483.3757,
+          "upper-bars": 73.292
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "gothic",
+      "stage": "ink",
+      "asset": "gothic-ink.svg",
+      "dna": {
+        "schema_version": 1,
+        "kind": "role-anatomy-study-1",
+        "weight": 1.6,
+        "source_width_mix": 0.18,
+        "source_taper_mix": 0.1,
+        "minimum_gap": 6,
+        "roles": {
+          "top-bar": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1.1,
+                0.72,
+                0.72,
+                0.85,
+                1.25
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "round",
+              "end_cap": "round"
+            }
+          },
+          "top-stem": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1.1,
+                0.95,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "round",
+              "end_cap": "flat"
+            }
+          },
+          "main-bar": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1.2,
+                0.9,
+                0.88,
+                0.94,
+                1.35
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "round",
+              "end_cap": "round"
+            }
+          },
+          "inner-left": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1.02,
+                1.12,
+                1.25,
+                0.45,
+                0
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.55,
+                0.82,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "point"
+            }
+          },
+          "inner-right": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                0.98,
+                1.0,
+                1.06,
+                1.25,
+                1.35
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "round"
+            }
+          },
+          "outer-left": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                0,
+                0.6,
+                1.12,
+                1.35,
+                1.22
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0.12,
+              "start_cap": "point",
+              "end_cap": "round"
+            }
+          },
+          "outer-right": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                0,
+                0.6,
+                1.12,
+                1.35,
+                1.22
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": -0.12,
+              "start_cap": "point",
+              "end_cap": "round"
+            }
+          }
+        }
+      },
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+        },
+        "dna_sha256": "0d7e46a2cb6085b13267797a33e85d1189ca52d285d1eb3759ed90d289e7e31d",
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              250.0,
+              265.0
+            ],
+            [
+              415.0,
+              265.0
+            ],
+            [
+              585.0,
+              265.0
+            ],
+            [
+              750.0,
+              265.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              160.0,
+              430.0
+            ],
+            [
+              380.0,
+              430.0
+            ],
+            [
+              620.0,
+              430.0
+            ],
+            [
+              840.0,
+              430.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              430.0
+            ],
+            [
+              425.0,
+              600.0
+            ],
+            [
+              380.0,
+              750.0
+            ],
+            [
+              315.0,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              430.0
+            ],
+            [
+              585.0,
+              580.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              300.0,
+              540.0
+            ],
+            [
+              285.0,
+              615.0
+            ],
+            [
+              245.0,
+              675.0
+            ],
+            [
+              205.0,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              700.0,
+              545.0
+            ],
+            [
+              730.0,
+              590.0
+            ],
+            [
+              760.0,
+              650.0
+            ],
+            [
+              775.0,
+              710.0
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            93.1392,
+            60.9638,
+            60.9638,
+            71.9712,
+            105.84
+          ],
+          "top-stem": [
+            95.04,
+            82.08,
+            86.4,
+            86.4,
+            86.4
+          ],
+          "main-bar": [
+            101.6064,
+            76.2048,
+            74.5114,
+            79.5917,
+            114.3072
+          ],
+          "inner-left": [
+            88.128,
+            96.3567,
+            105.5912,
+            57.0872,
+            0.0
+          ],
+          "inner-right": [
+            84.672,
+            86.076,
+            90.2102,
+            104.355,
+            109.6416
+          ],
+          "outer-left": [
+            0.0,
+            49.9711,
+            92.49,
+            109.898,
+            97.3092
+          ],
+          "outer-right": [
+            0.0,
+            50.0024,
+            92.7239,
+            110.5322,
+            98.3281
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 44.6243,
+          "outer-right": 73.1233,
+          "outer-pair": 398.0357,
+          "upper-bars": 66.3015
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "gothic",
+      "stage": "full",
+      "asset": "gothic-full.svg",
+      "dna": {
+        "schema_version": 1,
+        "kind": "role-anatomy-study-1",
+        "weight": 1.6,
+        "source_width_mix": 0.18,
+        "source_taper_mix": 0.1,
+        "minimum_gap": 6,
+        "roles": {
+          "top-bar": {
+            "bone": {
+              "length": 0.98,
+              "angle": -5,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 25,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1.1,
+                0.72,
+                0.72,
+                0.85,
+                1.25
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "round",
+              "end_cap": "round"
+            }
+          },
+          "top-stem": {
+            "bone": {
+              "length": 1.05,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 1
+            },
+            "ink": {
+              "widths": [
+                1.1,
+                0.95,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "round",
+              "end_cap": "flat"
+            }
+          },
+          "main-bar": {
+            "bone": {
+              "length": 0.96,
+              "angle": -3,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": -10,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1.2,
+                0.9,
+                0.88,
+                0.94,
+                1.35
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "round",
+              "end_cap": "round"
+            }
+          },
+          "inner-left": {
+            "bone": {
+              "length": 1.35,
+              "angle": 20,
+              "end_turn": 15,
+              "bend": 22,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                1.02,
+                1.12,
+                1.25,
+                0.45,
+                0
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.55,
+                0.82,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "point"
+            }
+          },
+          "inner-right": {
+            "bone": {
+              "length": 1.03,
+              "angle": -5,
+              "end_turn": 0,
+              "bend": -10,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                0.98,
+                1.0,
+                1.06,
+                1.25,
+                1.35
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "round"
+            }
+          },
+          "outer-left": {
+            "bone": {
+              "length": 0.8,
+              "angle": -15,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": -100,
+              "dy": -20,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                0,
+                0.6,
+                1.12,
+                1.35,
+                1.22
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0.12,
+              "start_cap": "point",
+              "end_cap": "round"
+            }
+          },
+          "outer-right": {
+            "bone": {
+              "length": 0.9,
+              "angle": -8,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 22,
+              "dy": -5,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                0,
+                0.6,
+                1.12,
+                1.35,
+                1.22
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": -0.12,
+              "start_cap": "point",
+              "end_cap": "round"
+            }
+          }
+        }
+      },
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+        },
+        "dna_sha256": "75b0832add9d2279398d68704dffa1445d9ee941bfc87cb2df85bfe0b33b5490",
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              255.9323,
+              311.3532
+            ],
+            [
+              417.017,
+              297.2601
+            ],
+            [
+              582.983,
+              282.7399
+            ],
+            [
+              744.0677,
+              268.6468
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              115.0
+            ],
+            [
+              500.0,
+              220.0
+            ],
+            [
+              500.0,
+              325.5
+            ],
+            [
+              500.0,
+              420.0
+            ]
+          ],
+          "main-bar": [
+            [
+              174.0473,
+              437.0825
+            ],
+            [
+              384.9579,
+              426.0291
+            ],
+            [
+              615.0421,
+              413.9709
+            ],
+            [
+              825.9527,
+              402.9175
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              424.1926
+            ],
+            [
+              330.2101,
+              629.0132
+            ],
+            [
+              222.1557,
+              823.2971
+            ],
+            [
+              125.1941,
+              845.5234
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              415.5453
+            ],
+            [
+              608.3959,
+              570.6359
+            ],
+            [
+              621.8614,
+              759.0027
+            ],
+            [
+              540.3613,
+              826.1218
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              722.0,
+              540.0
+            ],
+            [
+              754.3737,
+              576.3482
+            ],
+            [
+              788.6263,
+              626.065
+            ],
+            [
+              809.5103,
+              677.6606
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            93.1392,
+            60.9638,
+            60.9638,
+            71.9712,
+            105.84
+          ],
+          "top-stem": [
+            95.04,
+            82.08,
+            86.4,
+            86.4,
+            86.4
+          ],
+          "main-bar": [
+            101.6064,
+            76.2048,
+            74.5114,
+            79.5917,
+            114.3072
+          ],
+          "inner-left": [
+            88.128,
+            96.3567,
+            105.5912,
+            57.0872,
+            0.0
+          ],
+          "inner-right": [
+            84.672,
+            86.076,
+            90.2102,
+            104.355,
+            109.6416
+          ],
+          "outer-left": [
+            0.0,
+            49.9711,
+            92.49,
+            109.898,
+            97.3092
+          ],
+          "outer-right": [
+            0.0,
+            50.0024,
+            92.7239,
+            110.5322,
+            98.3281
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 19.6659,
+          "outer-right": 78.8147,
+          "outer-pair": 500.8482,
+          "upper-bars": 32.9275
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "mincho",
+      "stage": "source",
+      "asset": "mincho-source.svg",
+      "dna": {
+        "schema_version": 1,
+        "kind": "role-anatomy-study-1",
+        "weight": 1,
+        "source_width_mix": 1,
+        "source_taper_mix": 1,
+        "minimum_gap": 6,
+        "roles": {
+          "top-bar": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "top-stem": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "main-bar": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "inner-left": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "inner-right": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "outer-left": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "outer-right": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          }
+        }
+      },
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+        },
+        "dna_sha256": "9523387e0547f5b314f7840b084a1efeff1fbc4fdf790f629c4855aa13d27883",
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              270.0,
+              280.0
+            ],
+            [
+              420.0,
+              280.0
+            ],
+            [
+              580.0,
+              280.0
+            ],
+            [
+              730.0,
+              280.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              125.0
+            ],
+            [
+              502.0,
+              230.0
+            ],
+            [
+              500.0,
+              350.0
+            ],
+            [
+              500.0,
+              450.0
+            ]
+          ],
+          "main-bar": [
+            [
+              145.0,
+              450.0
+            ],
+            [
+              380.0,
+              450.0
+            ],
+            [
+              620.0,
+              450.0
+            ],
+            [
+              855.0,
+              450.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              450.0
+            ],
+            [
+              425.0,
+              600.0
+            ],
+            [
+              380.0,
+              750.0
+            ],
+            [
+              315.0,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              450.0
+            ],
+            [
+              585.0,
+              580.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              300.0,
+              540.0
+            ],
+            [
+              285.0,
+              615.0
+            ],
+            [
+              245.0,
+              675.0
+            ],
+            [
+              205.0,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              700.0,
+              545.0
+            ],
+            [
+              730.0,
+              590.0
+            ],
+            [
+              760.0,
+              650.0
+            ],
+            [
+              775.0,
+              710.0
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            13.0,
+            13.0,
+            13.0,
+            13.0,
+            13.0
+          ],
+          "top-stem": [
+            57.0,
+            57.0,
+            57.0,
+            57.0,
+            57.0
+          ],
+          "main-bar": [
+            13.0,
+            13.0,
+            13.0,
+            13.0,
+            13.0
+          ],
+          "inner-left": [
+            57.0,
+            54.1785,
+            45.714,
+            31.6065,
+            11.856
+          ],
+          "inner-right": [
+            57.0,
+            54.3637,
+            46.455,
+            33.2737,
+            14.82
+          ],
+          "outer-left": [
+            42.0,
+            40.3856,
+            35.5425,
+            27.4706,
+            16.17
+          ],
+          "outer-right": [
+            42.0,
+            40.5694,
+            36.2775,
+            29.1244,
+            19.11
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 68.3402,
+          "outer-right": 71.5831,
+          "outer-pair": 362.1441,
+          "upper-bars": 157.0
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "mincho",
+      "stage": "bones",
+      "asset": "mincho-bones.svg",
+      "dna": {
+        "schema_version": 1,
+        "kind": "role-anatomy-study-1",
+        "weight": 1,
+        "source_width_mix": 1,
+        "source_taper_mix": 1,
+        "minimum_gap": 6,
+        "roles": {
+          "top-bar": {
+            "bone": {
+              "length": 0.98,
+              "angle": -5,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 25,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "top-stem": {
+            "bone": {
+              "length": 1.05,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 1
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "main-bar": {
+            "bone": {
+              "length": 0.96,
+              "angle": -3,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": -10,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "inner-left": {
+            "bone": {
+              "length": 1.35,
+              "angle": 20,
+              "end_turn": 15,
+              "bend": 22,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "inner-right": {
+            "bone": {
+              "length": 1.03,
+              "angle": -5,
+              "end_turn": 0,
+              "bend": -10,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "outer-left": {
+            "bone": {
+              "length": 0.8,
+              "angle": -15,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": -100,
+              "dy": -20,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          },
+          "outer-right": {
+            "bone": {
+              "length": 0.9,
+              "angle": -8,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 22,
+              "dy": -5,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "flat"
+            }
+          }
+        }
+      },
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+        },
+        "dna_sha256": "45d9b31742dd8a9b5ec32b3eaf54edae21b34d1c197a21c101382c2035890c54",
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              275.4577,
+              324.6449
+            ],
+            [
+              421.8983,
+              311.833
+            ],
+            [
+              578.1017,
+              298.167
+            ],
+            [
+              724.5423,
+              285.3551
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              108.75
+            ],
+            [
+              502.1,
+              219.0
+            ],
+            [
+              500.0,
+              335.0
+            ],
+            [
+              500.0,
+              440.0
+            ]
+          ],
+          "main-bar": [
+            [
+              159.6671,
+              457.8361
+            ],
+            [
+              384.9579,
+              446.0291
+            ],
+            [
+              615.0421,
+              433.9709
+            ],
+            [
+              840.3329,
+              422.1639
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              444.1926
+            ],
+            [
+              339.6652,
+              623.3506
+            ],
+            [
+              231.6787,
+              817.7015
+            ],
+            [
+              134.4286,
+              840.1517
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              435.5453
+            ],
+            [
+              606.586,
+              570.2306
+            ],
+            [
+              620.0515,
+              758.5974
+            ],
+            [
+              538.5659,
+              825.6002
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              722.0,
+              540.0
+            ],
+            [
+              754.3737,
+              576.3482
+            ],
+            [
+              788.6263,
+              626.065
+            ],
+            [
+              809.5103,
+              677.6606
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            13.0,
+            13.0,
+            13.0,
+            13.0,
+            13.0
+          ],
+          "top-stem": [
+            57.0,
+            57.0,
+            57.0,
+            57.0,
+            57.0
+          ],
+          "main-bar": [
+            13.0,
+            13.0,
+            13.0,
+            13.0,
+            13.0
+          ],
+          "inner-left": [
+            57.0,
+            54.1785,
+            45.714,
+            31.6065,
+            11.856
+          ],
+          "inner-right": [
+            57.0,
+            54.3637,
+            46.455,
+            33.2737,
+            14.82
+          ],
+          "outer-left": [
+            42.0,
+            40.3856,
+            35.5425,
+            27.4706,
+            16.17
+          ],
+          "outer-right": [
+            42.0,
+            40.5694,
+            36.2775,
+            29.1244,
+            19.11
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 57.496,
+          "outer-right": 80.1994,
+          "outer-pair": 485.1482,
+          "upper-bars": 113.9567
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "mincho",
+      "stage": "ink",
+      "asset": "mincho-ink.svg",
+      "dna": {
+        "schema_version": 1,
+        "kind": "role-anatomy-study-1",
+        "weight": 1.6,
+        "source_width_mix": 0.18,
+        "source_taper_mix": 0.1,
+        "minimum_gap": 6,
+        "roles": {
+          "top-bar": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1.1,
+                0.72,
+                0.72,
+                0.85,
+                1.25
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "round",
+              "end_cap": "round"
+            }
+          },
+          "top-stem": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1.1,
+                0.95,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "round",
+              "end_cap": "flat"
+            }
+          },
+          "main-bar": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1.2,
+                0.9,
+                0.88,
+                0.94,
+                1.35
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "round",
+              "end_cap": "round"
+            }
+          },
+          "inner-left": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1.02,
+                1.12,
+                1.25,
+                0.45,
+                0
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.55,
+                0.82,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "point"
+            }
+          },
+          "inner-right": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                0.98,
+                1.0,
+                1.06,
+                1.25,
+                1.35
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "round"
+            }
+          },
+          "outer-left": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                0,
+                0.6,
+                1.12,
+                1.35,
+                1.22
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0.12,
+              "start_cap": "point",
+              "end_cap": "round"
+            }
+          },
+          "outer-right": {
+            "bone": {
+              "length": 1,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                0,
+                0.6,
+                1.12,
+                1.35,
+                1.22
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": -0.12,
+              "start_cap": "point",
+              "end_cap": "round"
+            }
+          }
+        }
+      },
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+        },
+        "dna_sha256": "0d7e46a2cb6085b13267797a33e85d1189ca52d285d1eb3759ed90d289e7e31d",
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              270.0,
+              280.0
+            ],
+            [
+              420.0,
+              280.0
+            ],
+            [
+              580.0,
+              280.0
+            ],
+            [
+              730.0,
+              280.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              125.0
+            ],
+            [
+              502.0,
+              230.0
+            ],
+            [
+              500.0,
+              350.0
+            ],
+            [
+              500.0,
+              450.0
+            ]
+          ],
+          "main-bar": [
+            [
+              145.0,
+              450.0
+            ],
+            [
+              380.0,
+              450.0
+            ],
+            [
+              620.0,
+              450.0
+            ],
+            [
+              855.0,
+              450.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              450.0
+            ],
+            [
+              425.0,
+              600.0
+            ],
+            [
+              380.0,
+              750.0
+            ],
+            [
+              315.0,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              450.0
+            ],
+            [
+              585.0,
+              580.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              300.0,
+              540.0
+            ],
+            [
+              285.0,
+              615.0
+            ],
+            [
+              245.0,
+              675.0
+            ],
+            [
+              205.0,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              700.0,
+              545.0
+            ],
+            [
+              730.0,
+              590.0
+            ],
+            [
+              760.0,
+              650.0
+            ],
+            [
+              775.0,
+              710.0
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            86.3808,
+            56.5402,
+            56.5402,
+            66.7488,
+            98.16
+          ],
+          "top-stem": [
+            100.32,
+            86.64,
+            91.2,
+            91.2,
+            91.2
+          ],
+          "main-bar": [
+            94.2336,
+            70.6752,
+            69.1046,
+            73.8163,
+            106.0128
+          ],
+          "inner-left": [
+            93.024,
+            101.6384,
+            111.1399,
+            59.8639,
+            0.0
+          ],
+          "inner-right": [
+            89.376,
+            90.7782,
+            94.8836,
+            109.2548,
+            114.0091
+          ],
+          "outer-left": [
+            0.0,
+            51.9276,
+            95.8095,
+            113.2306,
+            99.475
+          ],
+          "outer-right": [
+            0.0,
+            51.9504,
+            95.9798,
+            113.6924,
+            100.2169
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 41.2218,
+          "outer-right": 57.2606,
+          "outer-pair": 397.7084,
+          "upper-bars": 81.2349
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "mincho",
+      "stage": "full",
+      "asset": "mincho-full.svg",
+      "dna": {
+        "schema_version": 1,
+        "kind": "role-anatomy-study-1",
+        "weight": 1.6,
+        "source_width_mix": 0.18,
+        "source_taper_mix": 0.1,
+        "minimum_gap": 6,
+        "roles": {
+          "top-bar": {
+            "bone": {
+              "length": 0.98,
+              "angle": -5,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 25,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1.1,
+                0.72,
+                0.72,
+                0.85,
+                1.25
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "round",
+              "end_cap": "round"
+            }
+          },
+          "top-stem": {
+            "bone": {
+              "length": 1.05,
+              "angle": 0,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 1
+            },
+            "ink": {
+              "widths": [
+                1.1,
+                0.95,
+                1,
+                1,
+                1
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "round",
+              "end_cap": "flat"
+            }
+          },
+          "main-bar": {
+            "bone": {
+              "length": 0.96,
+              "angle": -3,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 0,
+              "dy": -10,
+              "anchor": 0.5
+            },
+            "ink": {
+              "widths": [
+                1.2,
+                0.9,
+                0.88,
+                0.94,
+                1.35
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "round",
+              "end_cap": "round"
+            }
+          },
+          "inner-left": {
+            "bone": {
+              "length": 1.35,
+              "angle": 20,
+              "end_turn": 15,
+              "bend": 22,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                1.02,
+                1.12,
+                1.25,
+                0.45,
+                0
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.55,
+                0.82,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "point"
+            }
+          },
+          "inner-right": {
+            "bone": {
+              "length": 1.03,
+              "angle": -5,
+              "end_turn": 0,
+              "bend": -10,
+              "dx": 0,
+              "dy": 0,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                0.98,
+                1.0,
+                1.06,
+                1.25,
+                1.35
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0,
+              "start_cap": "flat",
+              "end_cap": "round"
+            }
+          },
+          "outer-left": {
+            "bone": {
+              "length": 0.8,
+              "angle": -15,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": -100,
+              "dy": -20,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                0,
+                0.6,
+                1.12,
+                1.35,
+                1.22
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": 0.12,
+              "start_cap": "point",
+              "end_cap": "round"
+            }
+          },
+          "outer-right": {
+            "bone": {
+              "length": 0.9,
+              "angle": -8,
+              "end_turn": 0,
+              "bend": 0,
+              "dx": 22,
+              "dy": -5,
+              "anchor": 0
+            },
+            "ink": {
+              "widths": [
+                0,
+                0.6,
+                1.12,
+                1.35,
+                1.22
+              ],
+              "stations": [
+                0,
+                0.25,
+                0.5,
+                0.75,
+                1
+              ],
+              "width_ratio": 1,
+              "bias": -0.12,
+              "start_cap": "point",
+              "end_cap": "round"
+            }
+          }
+        }
+      },
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+        },
+        "dna_sha256": "75b0832add9d2279398d68704dffa1445d9ee941bfc87cb2df85bfe0b33b5490",
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              275.4577,
+              324.6449
+            ],
+            [
+              421.8983,
+              311.833
+            ],
+            [
+              578.1017,
+              298.167
+            ],
+            [
+              724.5423,
+              285.3551
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              108.75
+            ],
+            [
+              502.1,
+              219.0
+            ],
+            [
+              500.0,
+              335.0
+            ],
+            [
+              500.0,
+              440.0
+            ]
+          ],
+          "main-bar": [
+            [
+              159.6671,
+              457.8361
+            ],
+            [
+              384.9579,
+              446.0291
+            ],
+            [
+              615.0421,
+              433.9709
+            ],
+            [
+              840.3329,
+              422.1639
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              444.1926
+            ],
+            [
+              339.6652,
+              623.3506
+            ],
+            [
+              231.6787,
+              817.7015
+            ],
+            [
+              134.4286,
+              840.1517
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              435.5453
+            ],
+            [
+              606.586,
+              570.2306
+            ],
+            [
+              620.0515,
+              758.5974
+            ],
+            [
+              538.5659,
+              825.6002
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              722.0,
+              540.0
+            ],
+            [
+              754.3737,
+              576.3482
+            ],
+            [
+              788.6263,
+              626.065
+            ],
+            [
+              809.5103,
+              677.6606
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            86.3808,
+            56.5402,
+            56.5402,
+            66.7488,
+            98.16
+          ],
+          "top-stem": [
+            100.32,
+            86.64,
+            91.2,
+            91.2,
+            91.2
+          ],
+          "main-bar": [
+            94.2336,
+            70.6752,
+            69.1046,
+            73.8163,
+            106.0128
+          ],
+          "inner-left": [
+            93.024,
+            101.6384,
+            111.1399,
+            59.8639,
+            0.0
+          ],
+          "inner-right": [
+            89.376,
+            90.7782,
+            94.8836,
+            109.2548,
+            114.0091
+          ],
+          "outer-left": [
+            0.0,
+            51.9276,
+            95.8095,
+            113.2306,
+            99.475
+          ],
+          "outer-right": [
+            0.0,
+            51.9504,
+            95.9798,
+            113.6924,
+            100.2169
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 20.6674,
+          "outer-right": 72.1488,
+          "outer-pair": 499.755,
+          "upper-bars": 46.9883
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    }
+  ],
+  "inheritance": [
+    {
+      "family": "gothic",
+      "mix": 0,
+      "asset": "gothic-inherit-0.svg",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+        },
+        "dna_sha256": "d4c98544146dc10946958e7deaecc1a14e0b8f1fef9c6d3cbd45f4ffdaa04d14",
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              255.9323,
+              311.3532
+            ],
+            [
+              417.017,
+              297.2601
+            ],
+            [
+              582.983,
+              282.7399
+            ],
+            [
+              744.0677,
+              268.6468
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              115.0
+            ],
+            [
+              500.0,
+              220.0
+            ],
+            [
+              500.0,
+              325.5
+            ],
+            [
+              500.0,
+              420.0
+            ]
+          ],
+          "main-bar": [
+            [
+              174.0473,
+              437.0825
+            ],
+            [
+              384.9579,
+              426.0291
+            ],
+            [
+              615.0421,
+              413.9709
+            ],
+            [
+              825.9527,
+              402.9175
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              424.1926
+            ],
+            [
+              330.2101,
+              629.0132
+            ],
+            [
+              222.1557,
+              823.2971
+            ],
+            [
+              125.1941,
+              845.5234
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              415.5453
+            ],
+            [
+              608.3959,
+              570.6359
+            ],
+            [
+              621.8614,
+              759.0027
+            ],
+            [
+              540.3613,
+              826.1218
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              722.0,
+              540.0
+            ],
+            [
+              754.3737,
+              576.3482
+            ],
+            [
+              788.6263,
+              626.065
+            ],
+            [
+              809.5103,
+              677.6606
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            95.04,
+            62.208,
+            62.208,
+            73.44,
+            108.0
+          ],
+          "top-stem": [
+            95.04,
+            82.08,
+            86.4,
+            86.4,
+            86.4
+          ],
+          "main-bar": [
+            103.68,
+            77.76,
+            76.032,
+            81.216,
+            116.64
+          ],
+          "inner-left": [
+            88.128,
+            96.768,
+            107.4173,
+            59.3576,
+            0.0
+          ],
+          "inner-right": [
+            84.672,
+            86.4,
+            91.584,
+            108.0,
+            116.64
+          ],
+          "outer-left": [
+            0.0,
+            51.84,
+            96.768,
+            116.64,
+            105.408
+          ],
+          "outer-right": [
+            0.0,
+            51.84,
+            96.768,
+            116.64,
+            105.408
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 15.7591,
+          "outer-right": 78.6126,
+          "outer-pair": 499.5924,
+          "upper-bars": 31.1228
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "mincho",
+      "mix": 0,
+      "asset": "mincho-inherit-0.svg",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+        },
+        "dna_sha256": "d4c98544146dc10946958e7deaecc1a14e0b8f1fef9c6d3cbd45f4ffdaa04d14",
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              275.4577,
+              324.6449
+            ],
+            [
+              421.8983,
+              311.833
+            ],
+            [
+              578.1017,
+              298.167
+            ],
+            [
+              724.5423,
+              285.3551
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              108.75
+            ],
+            [
+              502.1,
+              219.0
+            ],
+            [
+              500.0,
+              335.0
+            ],
+            [
+              500.0,
+              440.0
+            ]
+          ],
+          "main-bar": [
+            [
+              159.6671,
+              457.8361
+            ],
+            [
+              384.9579,
+              446.0291
+            ],
+            [
+              615.0421,
+              433.9709
+            ],
+            [
+              840.3329,
+              422.1639
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              444.1926
+            ],
+            [
+              339.6652,
+              623.3506
+            ],
+            [
+              231.6787,
+              817.7015
+            ],
+            [
+              134.4286,
+              840.1517
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              435.5453
+            ],
+            [
+              606.586,
+              570.2306
+            ],
+            [
+              620.0515,
+              758.5974
+            ],
+            [
+              538.5659,
+              825.6002
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              722.0,
+              540.0
+            ],
+            [
+              754.3737,
+              576.3482
+            ],
+            [
+              788.6263,
+              626.065
+            ],
+            [
+              809.5103,
+              677.6606
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            100.32,
+            65.664,
+            65.664,
+            77.52,
+            114.0
+          ],
+          "top-stem": [
+            100.32,
+            86.64,
+            91.2,
+            91.2,
+            91.2
+          ],
+          "main-bar": [
+            109.44,
+            82.08,
+            80.256,
+            85.728,
+            123.12
+          ],
+          "inner-left": [
+            93.024,
+            102.144,
+            113.3849,
+            62.6552,
+            0.0
+          ],
+          "inner-right": [
+            89.376,
+            91.2,
+            96.672,
+            114.0,
+            123.12
+          ],
+          "outer-left": [
+            0.0,
+            54.72,
+            102.144,
+            123.12,
+            111.264
+          ],
+          "outer-right": [
+            0.0,
+            54.72,
+            102.144,
+            123.12,
+            111.264
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 13.6684,
+          "outer-right": 65.7879,
+          "outer-pair": 497.8913,
+          "upper-bars": 34.0969
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "gothic",
+      "mix": 0.5,
+      "asset": "gothic-inherit-0.5.svg",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+        },
+        "dna_sha256": "614895905daa71d736ce5c29440fcaebcd801216ba18ca2a46310fe5abb8e0f2",
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              255.9323,
+              311.3532
+            ],
+            [
+              417.017,
+              297.2601
+            ],
+            [
+              582.983,
+              282.7399
+            ],
+            [
+              744.0677,
+              268.6468
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              115.0
+            ],
+            [
+              500.0,
+              220.0
+            ],
+            [
+              500.0,
+              325.5
+            ],
+            [
+              500.0,
+              420.0
+            ]
+          ],
+          "main-bar": [
+            [
+              174.0473,
+              437.0825
+            ],
+            [
+              384.9579,
+              426.0291
+            ],
+            [
+              615.0421,
+              413.9709
+            ],
+            [
+              825.9527,
+              402.9175
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              424.1926
+            ],
+            [
+              330.2101,
+              629.0132
+            ],
+            [
+              222.1557,
+              823.2971
+            ],
+            [
+              125.1941,
+              845.5234
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              415.5453
+            ],
+            [
+              608.3959,
+              570.6359
+            ],
+            [
+              621.8614,
+              759.0027
+            ],
+            [
+              540.3613,
+              826.1218
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              722.0,
+              540.0
+            ],
+            [
+              754.3737,
+              576.3482
+            ],
+            [
+              788.6263,
+              626.065
+            ],
+            [
+              809.5103,
+              677.6606
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            89.76,
+            58.752,
+            58.752,
+            69.36,
+            102.0
+          ],
+          "top-stem": [
+            95.04,
+            82.08,
+            86.4,
+            86.4,
+            86.4
+          ],
+          "main-bar": [
+            97.92,
+            73.44,
+            71.808,
+            76.704,
+            110.16
+          ],
+          "inner-left": [
+            88.128,
+            94.7117,
+            98.2868,
+            48.0055,
+            0.0
+          ],
+          "inner-right": [
+            84.672,
+            84.78,
+            84.7152,
+            89.775,
+            81.648
+          ],
+          "outer-left": [
+            0.0,
+            46.3785,
+            82.8688,
+            92.4446,
+            74.1272
+          ],
+          "outer-right": [
+            0.0,
+            46.5255,
+            83.9664,
+            95.4214,
+            78.9096
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 31.0624,
+          "outer-right": 79.6131,
+          "outer-pair": 503.3717,
+          "upper-bars": 36.1442
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "mincho",
+      "mix": 0.5,
+      "asset": "mincho-inherit-0.5.svg",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+        },
+        "dna_sha256": "614895905daa71d736ce5c29440fcaebcd801216ba18ca2a46310fe5abb8e0f2",
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              275.4577,
+              324.6449
+            ],
+            [
+              421.8983,
+              311.833
+            ],
+            [
+              578.1017,
+              298.167
+            ],
+            [
+              724.5423,
+              285.3551
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              108.75
+            ],
+            [
+              502.1,
+              219.0
+            ],
+            [
+              500.0,
+              335.0
+            ],
+            [
+              500.0,
+              440.0
+            ]
+          ],
+          "main-bar": [
+            [
+              159.6671,
+              457.8361
+            ],
+            [
+              384.9579,
+              446.0291
+            ],
+            [
+              615.0421,
+              433.9709
+            ],
+            [
+              840.3329,
+              422.1639
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              444.1926
+            ],
+            [
+              339.6652,
+              623.3506
+            ],
+            [
+              231.6787,
+              817.7015
+            ],
+            [
+              134.4286,
+              840.1517
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              435.5453
+            ],
+            [
+              606.586,
+              570.2306
+            ],
+            [
+              620.0515,
+              758.5974
+            ],
+            [
+              538.5659,
+              825.6002
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              722.0,
+              540.0
+            ],
+            [
+              754.3737,
+              576.3482
+            ],
+            [
+              788.6263,
+              626.065
+            ],
+            [
+              809.5103,
+              677.6606
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            61.6,
+            40.32,
+            40.32,
+            47.6,
+            70.0
+          ],
+          "top-stem": [
+            100.32,
+            86.64,
+            91.2,
+            91.2,
+            91.2
+          ],
+          "main-bar": [
+            67.2,
+            50.4,
+            49.28,
+            52.64,
+            75.6
+          ],
+          "inner-left": [
+            93.024,
+            99.6159,
+            102.1598,
+            48.6988,
+            0.0
+          ],
+          "inner-right": [
+            89.376,
+            89.091,
+            87.7298,
+            90.2737,
+            77.5656
+          ],
+          "outer-left": [
+            0.0,
+            46.6067,
+            81.8849,
+            88.4262,
+            66.9121
+          ],
+          "outer-right": [
+            0.0,
+            46.7107,
+            82.661,
+            90.5312,
+            70.294
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 33.1442,
+          "outer-right": 79.1094,
+          "outer-pair": 503.4444,
+          "upper-bars": 69.8981
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "gothic",
+      "mix": 1,
+      "asset": "gothic-inherit-1.svg",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+        },
+        "dna_sha256": "cf9007981e2af5580a943c8c7912a9631fb53aa8c01235a528d6cb052c4926e9",
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              255.9323,
+              311.3532
+            ],
+            [
+              417.017,
+              297.2601
+            ],
+            [
+              582.983,
+              282.7399
+            ],
+            [
+              744.0677,
+              268.6468
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              115.0
+            ],
+            [
+              500.0,
+              220.0
+            ],
+            [
+              500.0,
+              325.5
+            ],
+            [
+              500.0,
+              420.0
+            ]
+          ],
+          "main-bar": [
+            [
+              174.0473,
+              437.0825
+            ],
+            [
+              384.9579,
+              426.0291
+            ],
+            [
+              615.0421,
+              413.9709
+            ],
+            [
+              825.9527,
+              402.9175
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              424.1926
+            ],
+            [
+              330.2101,
+              629.0132
+            ],
+            [
+              222.1557,
+              823.2971
+            ],
+            [
+              125.1941,
+              845.5234
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              415.5453
+            ],
+            [
+              608.3959,
+              570.6359
+            ],
+            [
+              621.8614,
+              759.0027
+            ],
+            [
+              540.3613,
+              826.1218
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              722.0,
+              540.0
+            ],
+            [
+              754.3737,
+              576.3482
+            ],
+            [
+              788.6263,
+              626.065
+            ],
+            [
+              809.5103,
+              677.6606
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            84.48,
+            55.296,
+            55.296,
+            65.28,
+            96.0
+          ],
+          "top-stem": [
+            95.04,
+            82.08,
+            86.4,
+            86.4,
+            86.4
+          ],
+          "main-bar": [
+            92.16,
+            69.12,
+            67.584,
+            72.192,
+            103.68
+          ],
+          "inner-left": [
+            88.128,
+            92.6554,
+            89.1564,
+            36.6533,
+            0.0
+          ],
+          "inner-right": [
+            84.672,
+            83.16,
+            77.8464,
+            71.55,
+            46.656
+          ],
+          "outer-left": [
+            0.0,
+            41.052,
+            69.9776,
+            70.983,
+            47.2384
+          ],
+          "outer-right": [
+            0.0,
+            41.316,
+            71.9488,
+            76.329,
+            55.8272
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 40.1339,
+          "outer-right": 80.5993,
+          "outer-pair": 506.6069,
+          "upper-bars": 41.1871
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    },
+    {
+      "family": "mincho",
+      "mix": 1,
+      "asset": "mincho-inherit-1.svg",
+      "qa": {
+        "engine": "role-anatomy-study-1",
+        "geometry_engine": {
+          "version": "outline-pattern-1",
+          "shapely": "2.1.2",
+          "geos": "3.13.1",
+          "flatten_tolerance": 0.35
+        },
+        "source": {
+          "kind": "authored-skeleton",
+          "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+          "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+        },
+        "dna_sha256": "cf9007981e2af5580a943c8c7912a9631fb53aa8c01235a528d6cb052c4926e9",
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              275.4577,
+              324.6449
+            ],
+            [
+              421.8983,
+              311.833
+            ],
+            [
+              578.1017,
+              298.167
+            ],
+            [
+              724.5423,
+              285.3551
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              108.75
+            ],
+            [
+              502.1,
+              219.0
+            ],
+            [
+              500.0,
+              335.0
+            ],
+            [
+              500.0,
+              440.0
+            ]
+          ],
+          "main-bar": [
+            [
+              159.6671,
+              457.8361
+            ],
+            [
+              384.9579,
+              446.0291
+            ],
+            [
+              615.0421,
+              433.9709
+            ],
+            [
+              840.3329,
+              422.1639
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              444.1926
+            ],
+            [
+              339.6652,
+              623.3506
+            ],
+            [
+              231.6787,
+              817.7015
+            ],
+            [
+              134.4286,
+              840.1517
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              435.5453
+            ],
+            [
+              606.586,
+              570.2306
+            ],
+            [
+              620.0515,
+              758.5974
+            ],
+            [
+              538.5659,
+              825.6002
+            ]
+          ],
+          "outer-left": [
+            [
+              200.0,
+              520.0
+            ],
+            [
+              203.938,
+              581.0614
+            ],
+            [
+              185.4517,
+              635.708
+            ],
+            [
+              161.789,
+              671.0362
+            ]
+          ],
+          "outer-right": [
+            [
+              722.0,
+              540.0
+            ],
+            [
+              754.3737,
+              576.3482
+            ],
+            [
+              788.6263,
+              626.065
+            ],
+            [
+              809.5103,
+              677.6606
+            ]
+          ]
+        },
+        "width_stations": {
+          "top-bar": [
+            22.88,
+            14.976,
+            14.976,
+            17.68,
+            26.0
+          ],
+          "top-stem": [
+            100.32,
+            86.64,
+            91.2,
+            91.2,
+            91.2
+          ],
+          "main-bar": [
+            24.96,
+            18.72,
+            18.304,
+            19.552,
+            28.08
+          ],
+          "inner-left": [
+            93.024,
+            97.0879,
+            90.9347,
+            34.7423,
+            0.0
+          ],
+          "inner-right": [
+            89.376,
+            86.982,
+            78.7877,
+            66.5475,
+            32.0112
+          ],
+          "outer-left": [
+            0.0,
+            38.7702,
+            63.6922,
+            59.3366,
+            31.5638
+          ],
+          "outer-right": [
+            0.0,
+            38.9466,
+            65.0093,
+            62.9087,
+            37.3027
+          ]
+        },
+        "width_sample_t": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "clearances": {
+          "outer-left": 52.673,
+          "outer-right": 80.2438,
+          "outer-pair": 507.9509,
+          "upper-bars": 105.7663
+        },
+        "junctions": "explicit-main-bar-attachments",
+        "silhouettes": 3,
+        "semantic_roles": [
+          "top-bar",
+          "top-stem",
+          "main-bar",
+          "inner-left",
+          "inner-right",
+          "outer-left",
+          "outer-right"
+        ],
+        "visual_review": "required",
+        "source_serifs_reproduced": false,
+        "automatic_optical_correction": false
+      }
+    }
+  ],
+  "fixed_input_reproduction": true,
+  "review_status": "pending-human-visual-review",
+  "limits": [
+    "Only authored 赤; no automatic font/raster decomposition.",
+    "No image-fitting objective or proof of beauty/style generalization.",
+    "Explicit junction attachment; clearance violations reject rather than auto-correct.",
+    "Standalone SVG study; not a new occurrence bundle format.",
+    "Source serifs are not reproduced; width/taper inheritance only."
+  ]
+}

@@ -1,0 +1,1007 @@
+{
+  "schema_version": 1,
+  "kind": "stroke-program-study-1",
+  "width": 70,
+  "aspect": 0.5,
+  "cases": [
+    {
+      "id": "entry-direct",
+      "title": "01 / DIRECT PLANT",
+      "group": "entry",
+      "program": {
+        "schema_version": 1,
+        "kind": "stroke-program-1",
+        "phases": [
+          {
+            "action": "enter",
+            "points": [
+              [
+                250,
+                500
+              ],
+              [
+                250,
+                500
+              ],
+              [
+                250,
+                500
+              ],
+              [
+                250,
+                500
+              ]
+            ],
+            "pressure": [
+              0,
+              1
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          },
+          {
+            "action": "travel",
+            "points": [
+              [
+                250.0,
+                500.0
+              ],
+              [
+                416.66666666666663,
+                500.0
+              ],
+              [
+                583.3333333333333,
+                500.0
+              ],
+              [
+                750.0,
+                500.0
+              ]
+            ],
+            "pressure": [
+              1,
+              1
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 1
+          },
+          {
+            "action": "lift",
+            "points": [
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ]
+            ],
+            "pressure": [
+              1,
+              0
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "entry-angled",
+      "title": "02 / ANGLED ENTRY",
+      "group": "entry",
+      "program": {
+        "schema_version": 1,
+        "kind": "stroke-program-1",
+        "phases": [
+          {
+            "action": "enter",
+            "points": [
+              [
+                235,
+                470
+              ],
+              [
+                245,
+                475
+              ],
+              [
+                250,
+                490
+              ],
+              [
+                250,
+                500
+              ]
+            ],
+            "pressure": [
+              0,
+              1
+            ],
+            "angle": [
+              -45,
+              35
+            ],
+            "duration": 0.2
+          },
+          {
+            "action": "travel",
+            "points": [
+              [
+                250.0,
+                500.0
+              ],
+              [
+                416.66666666666663,
+                500.0
+              ],
+              [
+                583.3333333333333,
+                500.0
+              ],
+              [
+                750.0,
+                500.0
+              ]
+            ],
+            "pressure": [
+              1,
+              1
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 1
+          },
+          {
+            "action": "lift",
+            "points": [
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ]
+            ],
+            "pressure": [
+              1,
+              0
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "entry-return",
+      "title": "03 / RETURN ENTRY",
+      "group": "entry",
+      "program": {
+        "schema_version": 1,
+        "kind": "stroke-program-1",
+        "phases": [
+          {
+            "action": "enter",
+            "points": [
+              [
+                285,
+                480
+              ],
+              [
+                270,
+                475
+              ],
+              [
+                245,
+                480
+              ],
+              [
+                250,
+                500
+              ]
+            ],
+            "pressure": [
+              0,
+              1
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          },
+          {
+            "action": "travel",
+            "points": [
+              [
+                250.0,
+                500.0
+              ],
+              [
+                416.66666666666663,
+                500.0
+              ],
+              [
+                583.3333333333333,
+                500.0
+              ],
+              [
+                750.0,
+                500.0
+              ]
+            ],
+            "pressure": [
+              1,
+              1
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 1
+          },
+          {
+            "action": "lift",
+            "points": [
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ]
+            ],
+            "pressure": [
+              1,
+              0
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "travel-straight",
+      "title": "04 / STRAIGHT",
+      "group": "travel",
+      "program": {
+        "schema_version": 1,
+        "kind": "stroke-program-1",
+        "phases": [
+          {
+            "action": "enter",
+            "points": [
+              [
+                250,
+                500
+              ],
+              [
+                250,
+                500
+              ],
+              [
+                250,
+                500
+              ],
+              [
+                250,
+                500
+              ]
+            ],
+            "pressure": [
+              0,
+              1
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          },
+          {
+            "action": "travel",
+            "points": [
+              [
+                250.0,
+                500.0
+              ],
+              [
+                416.66666666666663,
+                500.0
+              ],
+              [
+                583.3333333333333,
+                500.0
+              ],
+              [
+                750.0,
+                500.0
+              ]
+            ],
+            "pressure": [
+              1,
+              1
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 1
+          },
+          {
+            "action": "lift",
+            "points": [
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ]
+            ],
+            "pressure": [
+              1,
+              0
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "travel-up",
+      "title": "05 / UPWARD BOW",
+      "group": "travel",
+      "program": {
+        "schema_version": 1,
+        "kind": "stroke-program-1",
+        "phases": [
+          {
+            "action": "enter",
+            "points": [
+              [
+                250,
+                500
+              ],
+              [
+                250,
+                500
+              ],
+              [
+                250,
+                500
+              ],
+              [
+                250,
+                500
+              ]
+            ],
+            "pressure": [
+              0,
+              1
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          },
+          {
+            "action": "travel",
+            "points": [
+              [
+                250,
+                500
+              ],
+              [
+                420,
+                450
+              ],
+              [
+                580,
+                450
+              ],
+              [
+                750,
+                500
+              ]
+            ],
+            "pressure": [
+              1,
+              1
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 1
+          },
+          {
+            "action": "lift",
+            "points": [
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ]
+            ],
+            "pressure": [
+              1,
+              0
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "travel-down",
+      "title": "06 / DOWNWARD BOW",
+      "group": "travel",
+      "program": {
+        "schema_version": 1,
+        "kind": "stroke-program-1",
+        "phases": [
+          {
+            "action": "enter",
+            "points": [
+              [
+                250,
+                500
+              ],
+              [
+                250,
+                500
+              ],
+              [
+                250,
+                500
+              ],
+              [
+                250,
+                500
+              ]
+            ],
+            "pressure": [
+              0,
+              1
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          },
+          {
+            "action": "travel",
+            "points": [
+              [
+                250,
+                500
+              ],
+              [
+                420,
+                550
+              ],
+              [
+                580,
+                550
+              ],
+              [
+                750,
+                500
+              ]
+            ],
+            "pressure": [
+              1,
+              1
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 1
+          },
+          {
+            "action": "lift",
+            "points": [
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ],
+              [
+                750,
+                500
+              ]
+            ],
+            "pressure": [
+              1,
+              0
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "finish-stop",
+      "title": "07 / STOP AND COLLECT",
+      "group": "finish",
+      "program": {
+        "schema_version": 1,
+        "kind": "stroke-program-1",
+        "phases": [
+          {
+            "action": "enter",
+            "points": [
+              [
+                500,
+                250
+              ],
+              [
+                500,
+                250
+              ],
+              [
+                500,
+                250
+              ],
+              [
+                500,
+                250
+              ]
+            ],
+            "pressure": [
+              0,
+              0.95
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          },
+          {
+            "action": "travel",
+            "points": [
+              [
+                500.0,
+                250.0
+              ],
+              [
+                500.0,
+                383.33333333333337
+              ],
+              [
+                500.0,
+                516.6666666666667
+              ],
+              [
+                500.0,
+                650.0
+              ]
+            ],
+            "pressure": [
+              0.95,
+              0.95
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 1
+          },
+          {
+            "action": "settle",
+            "points": [
+              [
+                500,
+                650
+              ],
+              [
+                500,
+                650
+              ],
+              [
+                500,
+                650
+              ],
+              [
+                500,
+                650
+              ]
+            ],
+            "pressure": [
+              0.95,
+              1.15
+            ],
+            "angle": [
+              35,
+              65
+            ],
+            "duration": 0.35
+          },
+          {
+            "action": "collect",
+            "points": [
+              [
+                500.0,
+                650.0
+              ],
+              [
+                497.6666666666667,
+                647.6666666666666
+              ],
+              [
+                495.3333333333333,
+                645.3333333333334
+              ],
+              [
+                493.0,
+                643.0
+              ]
+            ],
+            "pressure": [
+              1.15,
+              0.55
+            ],
+            "angle": [
+              65,
+              35
+            ],
+            "duration": 0.2
+          },
+          {
+            "action": "lift",
+            "points": [
+              [
+                493,
+                643
+              ],
+              [
+                493,
+                643
+              ],
+              [
+                493,
+                643
+              ],
+              [
+                493,
+                643
+              ]
+            ],
+            "pressure": [
+              0.55,
+              0
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "finish-sweep",
+      "title": "08 / EXTEND AND RELEASE",
+      "group": "finish",
+      "program": {
+        "schema_version": 1,
+        "kind": "stroke-program-1",
+        "phases": [
+          {
+            "action": "enter",
+            "points": [
+              [
+                500,
+                250
+              ],
+              [
+                500,
+                250
+              ],
+              [
+                500,
+                250
+              ],
+              [
+                500,
+                250
+              ]
+            ],
+            "pressure": [
+              0,
+              0.95
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          },
+          {
+            "action": "travel",
+            "points": [
+              [
+                500.0,
+                250.0
+              ],
+              [
+                500.0,
+                383.33333333333337
+              ],
+              [
+                500.0,
+                516.6666666666667
+              ],
+              [
+                500.0,
+                650.0
+              ]
+            ],
+            "pressure": [
+              0.95,
+              0.95
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 1
+          },
+          {
+            "action": "release",
+            "points": [
+              [
+                500.0,
+                650.0
+              ],
+              [
+                500.0,
+                686.6666666666666
+              ],
+              [
+                500.0,
+                723.3333333333334
+              ],
+              [
+                500.0,
+                760.0
+              ]
+            ],
+            "pressure": [
+              0.95,
+              0
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.4
+          }
+        ]
+      }
+    },
+    {
+      "id": "finish-hook",
+      "title": "09 / TURN AND FLICK",
+      "group": "finish",
+      "program": {
+        "schema_version": 1,
+        "kind": "stroke-program-1",
+        "phases": [
+          {
+            "action": "enter",
+            "points": [
+              [
+                500,
+                250
+              ],
+              [
+                500,
+                250
+              ],
+              [
+                500,
+                250
+              ],
+              [
+                500,
+                250
+              ]
+            ],
+            "pressure": [
+              0,
+              0.95
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 0.2
+          },
+          {
+            "action": "travel",
+            "points": [
+              [
+                500.0,
+                250.0
+              ],
+              [
+                500.0,
+                383.33333333333337
+              ],
+              [
+                500.0,
+                516.6666666666667
+              ],
+              [
+                500.0,
+                650.0
+              ]
+            ],
+            "pressure": [
+              0.95,
+              0.95
+            ],
+            "angle": [
+              35,
+              35
+            ],
+            "duration": 1
+          },
+          {
+            "action": "settle",
+            "points": [
+              [
+                500,
+                650
+              ],
+              [
+                500,
+                650
+              ],
+              [
+                500,
+                650
+              ],
+              [
+                500,
+                650
+              ]
+            ],
+            "pressure": [
+              0.95,
+              1.15
+            ],
+            "angle": [
+              35,
+              60
+            ],
+            "duration": 0.35
+          },
+          {
+            "action": "flick",
+            "points": [
+              [
+                500,
+                650
+              ],
+              [
+                515,
+                680
+              ],
+              [
+                450,
+                650
+              ],
+              [
+                430,
+                610
+              ]
+            ],
+            "pressure": [
+              1.15,
+              0
+            ],
+            "angle": [
+              60,
+              -20
+            ],
+            "duration": 0.45
+          }
+        ]
+      }
+    }
+  ]
+}

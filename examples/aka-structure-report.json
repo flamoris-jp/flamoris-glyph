@@ -1,0 +1,3757 @@
+{
+  "schema_version": 1,
+  "kind": "authored-aka-structure-study",
+  "engine": {
+    "version": "authored-structure-1",
+    "shapely": "2.1.2",
+    "geos": "3.13.1",
+    "samples_per_stroke": 65,
+    "coordinate_grid": 0.01,
+    "sample_precision": 4,
+    "circle_points": 32,
+    "canonical_tolerance": 0.01
+  },
+  "input_sha256": "ad0877cca00b625aea03044f1126a0683b6bb80dea3102f0af664002a94c44a4",
+  "fixed_seed_reproduction": true,
+  "cells": [
+    {
+      "base": "gothic",
+      "profile": "baseline",
+      "seed": 42,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "baseline",
+        "width": 1,
+        "bar_span": 1,
+        "junction_shift": 0,
+        "lower_spread": 1,
+        "curve_gain": 0,
+        "weight": 1,
+        "contrast": 0,
+        "terminal_style": "inherit",
+        "terminal_gain": 1,
+        "variation": 0
+      },
+      "sha256": "c47103c585ede611a7fc33fa66a9ddae918c7f566cb55307c0978d2972b20be6",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          160.0,
+          130.0,
+          840.0,
+          829.51
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "baseline",
+          "width": 1,
+          "bar_span": 1,
+          "junction_shift": 0,
+          "lower_spread": 1.0,
+          "curve_gain": 0.0,
+          "weight": 1.0,
+          "contrast": 0,
+          "terminal_style": "inherit",
+          "terminal_gain": 1,
+          "variation": 0
+        },
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              250.0,
+              265.0
+            ],
+            [
+              415.0,
+              265.0
+            ],
+            [
+              585.0,
+              265.0
+            ],
+            [
+              750.0,
+              265.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              160.0,
+              430.0
+            ],
+            [
+              380.0,
+              430.0
+            ],
+            [
+              620.0,
+              430.0
+            ],
+            [
+              840.0,
+              430.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              450.0
+            ],
+            [
+              425.0,
+              620.0
+            ],
+            [
+              380.0,
+              750.0
+            ],
+            [
+              315.0,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              450.0
+            ],
+            [
+              585.0,
+              600.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              300.0,
+              540.0
+            ],
+            [
+              285.0,
+              615.0
+            ],
+            [
+              245.0,
+              675.0
+            ],
+            [
+              205.0,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              700.0,
+              545.0
+            ],
+            [
+              730.0,
+              590.0
+            ],
+            [
+              760.0,
+              650.0
+            ],
+            [
+              775.0,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            48.0,
+            48.0,
+            48.0
+          ],
+          "top-stem": [
+            54.0,
+            54.0,
+            54.0
+          ],
+          "main-bar": [
+            48.0,
+            48.0,
+            48.0
+          ],
+          "inner-left": [
+            54.0,
+            53.082,
+            50.328
+          ],
+          "inner-right": [
+            54.0,
+            53.19,
+            50.76
+          ],
+          "outer-left": [
+            44.0,
+            43.505,
+            42.02
+          ],
+          "outer-right": [
+            44.0,
+            43.615,
+            42.46
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "gothic",
+      "profile": "baseline",
+      "seed": 43,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "baseline",
+        "width": 1,
+        "bar_span": 1,
+        "junction_shift": 0,
+        "lower_spread": 1,
+        "curve_gain": 0,
+        "weight": 1,
+        "contrast": 0,
+        "terminal_style": "inherit",
+        "terminal_gain": 1,
+        "variation": 0
+      },
+      "sha256": "c47103c585ede611a7fc33fa66a9ddae918c7f566cb55307c0978d2972b20be6",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          160.0,
+          130.0,
+          840.0,
+          829.51
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "baseline",
+          "width": 1,
+          "bar_span": 1,
+          "junction_shift": 0,
+          "lower_spread": 1.0,
+          "curve_gain": 0.0,
+          "weight": 1.0,
+          "contrast": 0,
+          "terminal_style": "inherit",
+          "terminal_gain": 1,
+          "variation": 0
+        },
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              250.0,
+              265.0
+            ],
+            [
+              415.0,
+              265.0
+            ],
+            [
+              585.0,
+              265.0
+            ],
+            [
+              750.0,
+              265.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              130.0
+            ],
+            [
+              500.0,
+              230.0
+            ],
+            [
+              500.0,
+              340.0
+            ],
+            [
+              500.0,
+              430.0
+            ]
+          ],
+          "main-bar": [
+            [
+              160.0,
+              430.0
+            ],
+            [
+              380.0,
+              430.0
+            ],
+            [
+              620.0,
+              430.0
+            ],
+            [
+              840.0,
+              430.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              450.0
+            ],
+            [
+              425.0,
+              620.0
+            ],
+            [
+              380.0,
+              750.0
+            ],
+            [
+              315.0,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              450.0
+            ],
+            [
+              585.0,
+              600.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              300.0,
+              540.0
+            ],
+            [
+              285.0,
+              615.0
+            ],
+            [
+              245.0,
+              675.0
+            ],
+            [
+              205.0,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              700.0,
+              545.0
+            ],
+            [
+              730.0,
+              590.0
+            ],
+            [
+              760.0,
+              650.0
+            ],
+            [
+              775.0,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            48.0,
+            48.0,
+            48.0
+          ],
+          "top-stem": [
+            54.0,
+            54.0,
+            54.0
+          ],
+          "main-bar": [
+            48.0,
+            48.0,
+            48.0
+          ],
+          "inner-left": [
+            54.0,
+            53.082,
+            50.328
+          ],
+          "inner-right": [
+            54.0,
+            53.19,
+            50.76
+          ],
+          "outer-left": [
+            44.0,
+            43.505,
+            42.02
+          ],
+          "outer-right": [
+            44.0,
+            43.615,
+            42.46
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "gothic",
+      "profile": "heavy-condensed-headline",
+      "seed": 42,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "heavy-condensed-headline",
+        "width": 0.76,
+        "bar_span": 0.82,
+        "junction_shift": -45,
+        "lower_spread": 0.84,
+        "curve_gain": -0.4,
+        "weight": 1.9,
+        "contrast": -0.9,
+        "terminal_style": "block",
+        "terminal_gain": 1,
+        "variation": 0.35
+      },
+      "sha256": "f209c2ca5080f96d1850411dfdc228947ebad9c4eeb9ecd137d4aaf5941d9a99",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          277.05,
+          118.75,
+          713.44,
+          837.88
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "heavy-condensed-headline",
+          "width": 0.76,
+          "bar_span": 0.82,
+          "junction_shift": -45,
+          "lower_spread": 0.836799,
+          "curve_gain": -0.375381,
+          "weight": 1.900461,
+          "contrast": -0.9,
+          "terminal_style": "block",
+          "terminal_gain": 1,
+          "variation": 0.35
+        },
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              344.2,
+              242.5
+            ],
+            [
+              447.028,
+              242.5
+            ],
+            [
+              552.972,
+              242.5
+            ],
+            [
+              655.8,
+              242.5
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              118.75
+            ],
+            [
+              500.0,
+              207.5
+            ],
+            [
+              500.0,
+              306.25
+            ],
+            [
+              500.0,
+              385.0
+            ]
+          ],
+          "main-bar": [
+            [
+              288.112,
+              385.0
+            ],
+            [
+              425.216,
+              385.0
+            ],
+            [
+              574.784,
+              385.0
+            ],
+            [
+              711.888,
+              385.0
+            ]
+          ],
+          "inner-left": [
+            [
+              439.2,
+              405.0
+            ],
+            [
+              453.7335,
+              583.2431
+            ],
+            [
+              425.1149,
+              739.5046
+            ],
+            [
+              390.3342,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              564.6,
+              405.0
+            ],
+            [
+              553.7287,
+              563.2431
+            ],
+            [
+              550.2145,
+              739.5046
+            ],
+            [
+              498.3716,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              348.0,
+              495.0
+            ],
+            [
+              346.41,
+              578.2431
+            ],
+            [
+              327.104,
+              664.5046
+            ],
+            [
+              315.8131,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              652.0,
+              500.0
+            ],
+            [
+              664.7833,
+              553.2431
+            ],
+            [
+              676.4204,
+              639.5046
+            ],
+            [
+              671.4675,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            101.4846,
+            101.4846,
+            101.4846
+          ],
+          "top-stem": [
+            102.6249,
+            102.6249,
+            102.6249
+          ],
+          "main-bar": [
+            101.4846,
+            101.4846,
+            101.4846
+          ],
+          "inner-left": [
+            102.6249,
+            100.8803,
+            95.6464
+          ],
+          "inner-right": [
+            102.6249,
+            101.0855,
+            96.4674
+          ],
+          "outer-left": [
+            83.6203,
+            82.6796,
+            79.8574
+          ],
+          "outer-right": [
+            83.6203,
+            82.8886,
+            80.6936
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "gothic",
+      "profile": "heavy-condensed-headline",
+      "seed": 43,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "heavy-condensed-headline",
+        "width": 0.76,
+        "bar_span": 0.82,
+        "junction_shift": -45,
+        "lower_spread": 0.84,
+        "curve_gain": -0.4,
+        "weight": 1.9,
+        "contrast": -0.9,
+        "terminal_style": "block",
+        "terminal_gain": 1,
+        "variation": 0.35
+      },
+      "sha256": "b22cce4ac340d61937aceaa2cf69829b03a1e68a8cbe8be157ed4c8b60673a40",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          277.92,
+          118.75,
+          712.5,
+          837.52
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "heavy-condensed-headline",
+          "width": 0.76,
+          "bar_span": 0.82,
+          "junction_shift": -45,
+          "lower_spread": 0.836764,
+          "curve_gain": -0.40279,
+          "weight": 1.873733,
+          "contrast": -0.9,
+          "terminal_style": "block",
+          "terminal_gain": 1,
+          "variation": 0.35
+        },
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              344.2,
+              242.5
+            ],
+            [
+              447.028,
+              242.5
+            ],
+            [
+              552.972,
+              242.5
+            ],
+            [
+              655.8,
+              242.5
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              118.75
+            ],
+            [
+              500.0,
+              207.5
+            ],
+            [
+              500.0,
+              306.25
+            ],
+            [
+              500.0,
+              385.0
+            ]
+          ],
+          "main-bar": [
+            [
+              288.112,
+              385.0
+            ],
+            [
+              425.216,
+              385.0
+            ],
+            [
+              574.784,
+              385.0
+            ],
+            [
+              711.888,
+              385.0
+            ]
+          ],
+          "inner-left": [
+            [
+              439.2,
+              405.0
+            ],
+            [
+              454.4419,
+              582.7498
+            ],
+            [
+              425.8246,
+              739.8335
+            ],
+            [
+              390.9224,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              564.6,
+              405.0
+            ],
+            [
+              553.0202,
+              562.7498
+            ],
+            [
+              549.5052,
+              739.8335
+            ],
+            [
+              497.788,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              348.0,
+              495.0
+            ],
+            [
+              346.9105,
+              577.7498
+            ],
+            [
+              327.607,
+              664.8335
+            ],
+            [
+              316.071,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              652.0,
+              500.0
+            ],
+            [
+              664.2827,
+              552.7498
+            ],
+            [
+              675.9174,
+              639.8335
+            ],
+            [
+              671.2102,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            100.0573,
+            100.0573,
+            100.0573
+          ],
+          "top-stem": [
+            101.1816,
+            101.1816,
+            101.1816
+          ],
+          "main-bar": [
+            100.0573,
+            100.0573,
+            100.0573
+          ],
+          "inner-left": [
+            101.1816,
+            99.4615,
+            94.3012
+          ],
+          "inner-right": [
+            101.1816,
+            99.6639,
+            95.1107
+          ],
+          "outer-left": [
+            82.4443,
+            81.5168,
+            78.7343
+          ],
+          "outer-right": [
+            82.4443,
+            81.7229,
+            79.5587
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "gothic",
+      "profile": "elegant-high-contrast-editorial",
+      "seed": 42,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "elegant-high-contrast-editorial",
+        "width": 0.98,
+        "bar_span": 1.06,
+        "junction_shift": 12,
+        "lower_spread": 1.28,
+        "curve_gain": 0.85,
+        "weight": 1.12,
+        "contrast": 0.85,
+        "terminal_style": "hairline",
+        "terminal_gain": 1.25,
+        "variation": 0.35
+      },
+      "sha256": "6081d94eaf6209fdde07cb04231f1207e1c95c368efc9f1f2f96077fc0635423",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          120.01,
+          128.0,
+          857.94,
+          812.65
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "elegant-high-contrast-editorial",
+          "width": 0.98,
+          "bar_span": 1.06,
+          "junction_shift": 12,
+          "lower_spread": 1.274332,
+          "curve_gain": 0.835324,
+          "weight": 1.11829,
+          "contrast": 0.85,
+          "terminal_style": "hairline",
+          "terminal_gain": 1.25,
+          "variation": 0.35
+        },
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              240.3,
+              271.0
+            ],
+            [
+              411.702,
+              271.0
+            ],
+            [
+              588.298,
+              271.0
+            ],
+            [
+              759.7,
+              271.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              133.0
+            ],
+            [
+              500.0,
+              236.0
+            ],
+            [
+              500.0,
+              349.0
+            ],
+            [
+              500.0,
+              442.0
+            ]
+          ],
+          "main-bar": [
+            [
+              146.808,
+              442.0
+            ],
+            [
+              375.344,
+              442.0
+            ],
+            [
+              624.656,
+              442.0
+            ],
+            [
+              853.192,
+              442.0
+            ]
+          ],
+          "inner-left": [
+            [
+              421.6,
+              462.0
+            ],
+            [
+              396.4266,
+              643.0358
+            ],
+            [
+              340.2286,
+              743.9761
+            ],
+            [
+              246.0423,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              583.3,
+              462.0
+            ],
+            [
+              613.6721,
+              623.0358
+            ],
+            [
+              621.2894,
+              743.9761
+            ],
+            [
+              535.4097,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              304.0,
+              552.0
+            ],
+            [
+              263.2308,
+              638.0358
+            ],
+            [
+              199.984,
+              668.9761
+            ],
+            [
+              121.7672,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              696.0,
+              557.0
+            ],
+            [
+              751.9173,
+              613.0358
+            ],
+            [
+              805.5134,
+              643.9761
+            ],
+            [
+              853.2559,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            14.7245,
+            14.7245,
+            14.7245
+          ],
+          "top-stem": [
+            60.3877,
+            60.3877,
+            60.3877
+          ],
+          "main-bar": [
+            14.7245,
+            14.7245,
+            14.7245
+          ],
+          "inner-left": [
+            60.3877,
+            46.6434,
+            5.4107
+          ],
+          "inner-right": [
+            60.3877,
+            46.9816,
+            6.7634
+          ],
+          "outer-left": [
+            49.2048,
+            38.798,
+            7.5775
+          ],
+          "outer-right": [
+            49.2048,
+            39.1424,
+            8.9553
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "gothic",
+      "profile": "elegant-high-contrast-editorial",
+      "seed": 43,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "elegant-high-contrast-editorial",
+        "width": 0.98,
+        "bar_span": 1.06,
+        "junction_shift": 12,
+        "lower_spread": 1.28,
+        "curve_gain": 0.85,
+        "weight": 1.12,
+        "contrast": 0.85,
+        "terminal_style": "hairline",
+        "terminal_gain": 1.25,
+        "variation": 0.35
+      },
+      "sha256": "a3e20198650ee216d633161f68b1b2e332844d09215ffee7b4a029132e21379b",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          120.08,
+          128.0,
+          857.94,
+          812.68
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "elegant-high-contrast-editorial",
+          "width": 0.98,
+          "bar_span": 1.06,
+          "junction_shift": 12,
+          "lower_spread": 1.272405,
+          "curve_gain": 0.872488,
+          "weight": 1.13239,
+          "contrast": 0.85,
+          "terminal_style": "hairline",
+          "terminal_gain": 1.25,
+          "variation": 0.35
+        },
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              240.3,
+              271.0
+            ],
+            [
+              411.702,
+              271.0
+            ],
+            [
+              588.298,
+              271.0
+            ],
+            [
+              759.7,
+              271.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              133.0
+            ],
+            [
+              500.0,
+              236.0
+            ],
+            [
+              500.0,
+              349.0
+            ],
+            [
+              500.0,
+              442.0
+            ]
+          ],
+          "main-bar": [
+            [
+              146.808,
+              442.0
+            ],
+            [
+              375.344,
+              442.0
+            ],
+            [
+              624.656,
+              442.0
+            ],
+            [
+              853.192,
+              442.0
+            ]
+          ],
+          "inner-left": [
+            [
+              421.6,
+              462.0
+            ],
+            [
+              395.2041,
+              643.7048
+            ],
+            [
+              339.091,
+              743.5301
+            ],
+            [
+              245.3719,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              583.3,
+              462.0
+            ],
+            [
+              614.8926,
+              623.7048
+            ],
+            [
+              622.4563,
+              743.5301
+            ],
+            [
+              536.4106,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              304.0,
+              552.0
+            ],
+            [
+              262.4018,
+              638.7048
+            ],
+            [
+              199.324,
+              668.5301
+            ],
+            [
+              121.8873,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              696.0,
+              557.0
+            ],
+            [
+              752.7431,
+              613.7048
+            ],
+            [
+              806.1693,
+              643.5301
+            ],
+            [
+              853.1736,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            14.9102,
+            14.9102,
+            14.9102
+          ],
+          "top-stem": [
+            61.1491,
+            61.1491,
+            61.1491
+          ],
+          "main-bar": [
+            14.9102,
+            14.9102,
+            14.9102
+          ],
+          "inner-left": [
+            61.1491,
+            47.2315,
+            5.479
+          ],
+          "inner-right": [
+            61.1491,
+            47.574,
+            6.8487
+          ],
+          "outer-left": [
+            49.8252,
+            39.2871,
+            7.6731
+          ],
+          "outer-right": [
+            49.8252,
+            39.6359,
+            9.0682
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "gothic",
+      "profile": "showa-retro-signboard",
+      "seed": 42,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "showa-retro-signboard",
+        "width": 1.06,
+        "bar_span": 1.03,
+        "junction_shift": -15,
+        "lower_spread": 1.25,
+        "curve_gain": 1.05,
+        "weight": 1.4,
+        "contrast": -0.65,
+        "terminal_style": "round",
+        "terminal_gain": 1.15,
+        "variation": 0.35
+      },
+      "sha256": "e57ae553c17050d9bd95aaf9ef6d8670825933a29482d3b478935021bdde152b",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          60.82,
+          88.26,
+          912.6,
+          859.64
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "showa-retro-signboard",
+          "width": 1.06,
+          "bar_span": 1.03,
+          "junction_shift": -15,
+          "lower_spread": 1.251305,
+          "curve_gain": 1.040211,
+          "weight": 1.406924,
+          "contrast": -0.65,
+          "terminal_style": "round",
+          "terminal_gain": 1.15,
+          "variation": 0.35
+        },
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              227.05,
+              257.5
+            ],
+            [
+              407.197,
+              257.5
+            ],
+            [
+              592.803,
+              257.5
+            ],
+            [
+              772.95,
+              257.5
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              126.25
+            ],
+            [
+              500.0,
+              222.5
+            ],
+            [
+              500.0,
+              328.75
+            ],
+            [
+              500.0,
+              415.0
+            ]
+          ],
+          "main-bar": [
+            [
+              128.788,
+              415.0
+            ],
+            [
+              368.984,
+              415.0
+            ],
+            [
+              631.016,
+              415.0
+            ],
+            [
+              871.212,
+              415.0
+            ]
+          ],
+          "inner-left": [
+            [
+              415.2,
+              435.0
+            ],
+            [
+              380.7909,
+              628.7238
+            ],
+            [
+              321.1037,
+              732.5175
+            ],
+            [
+              223.7456,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              590.1,
+              435.0
+            ],
+            [
+              630.105,
+              608.7238
+            ],
+            [
+              637.6526,
+              732.5175
+            ],
+            [
+              544.1373,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              288.0,
+              525.0
+            ],
+            [
+              239.2734,
+              623.7238
+            ],
+            [
+              173.0469,
+              657.5175
+            ],
+            [
+              95.4854,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              712.0,
+              530.0
+            ],
+            [
+              777.0705,
+              598.7238
+            ],
+            [
+              832.845,
+              632.5175
+            ],
+            [
+              877.9869,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            73.0194,
+            84.2351,
+            81.7817
+          ],
+          "top-stem": [
+            75.9739,
+            87.6435,
+            85.0908
+          ],
+          "main-bar": [
+            73.0194,
+            84.2351,
+            81.7817
+          ],
+          "inner-left": [
+            75.9739,
+            91.7066,
+            99.6018
+          ],
+          "inner-right": [
+            75.9739,
+            91.7066,
+            99.6018
+          ],
+          "outer-left": [
+            61.9047,
+            71.4132,
+            69.3332
+          ],
+          "outer-right": [
+            61.9047,
+            71.4132,
+            69.3332
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "gothic",
+      "profile": "showa-retro-signboard",
+      "seed": 43,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "d96f729405b9fa4399cf8c3ab04cb827b54f34b0b32d92cd43be1dd309f58249",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored gothic base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "showa-retro-signboard",
+        "width": 1.06,
+        "bar_span": 1.03,
+        "junction_shift": -15,
+        "lower_spread": 1.25,
+        "curve_gain": 1.05,
+        "weight": 1.4,
+        "contrast": -0.65,
+        "terminal_style": "round",
+        "terminal_gain": 1.15,
+        "variation": 0.35
+      },
+      "sha256": "04d9bfbdaab300cbf496a2a31084ecc228cb2c7c307a3cf64e2b7504bdd66ee4",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          60.39,
+          88.78,
+          912.99,
+          858.96
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "showa-retro-signboard",
+          "width": 1.06,
+          "bar_span": 1.03,
+          "junction_shift": -15,
+          "lower_spread": 1.253218,
+          "curve_gain": 1.064458,
+          "weight": 1.387711,
+          "contrast": -0.65,
+          "terminal_style": "round",
+          "terminal_gain": 1.15,
+          "variation": 0.35
+        },
+        "source_family": "gothic",
+        "landmarks": {
+          "top-bar": [
+            [
+              227.05,
+              257.5
+            ],
+            [
+              407.197,
+              257.5
+            ],
+            [
+              592.803,
+              257.5
+            ],
+            [
+              772.95,
+              257.5
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              126.25
+            ],
+            [
+              500.0,
+              222.5
+            ],
+            [
+              500.0,
+              328.75
+            ],
+            [
+              500.0,
+              415.0
+            ]
+          ],
+          "main-bar": [
+            [
+              128.788,
+              415.0
+            ],
+            [
+              368.984,
+              415.0
+            ],
+            [
+              631.016,
+              415.0
+            ],
+            [
+              871.212,
+              415.0
+            ]
+          ],
+          "inner-left": [
+            [
+              415.2,
+              435.0
+            ],
+            [
+              379.9002,
+              629.1602
+            ],
+            [
+              320.1217,
+              732.2265
+            ],
+            [
+              222.6508,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              590.1,
+              435.0
+            ],
+            [
+              630.9981,
+              609.1602
+            ],
+            [
+              638.603,
+              732.2265
+            ],
+            [
+              544.8772,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              288.0,
+              525.0
+            ],
+            [
+              238.6081,
+              624.1602
+            ],
+            [
+              172.2003,
+              657.2265
+            ],
+            [
+              94.5788,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              712.0,
+              530.0
+            ],
+            [
+              777.7392,
+              599.1602
+            ],
+            [
+              833.6962,
+              632.2265
+            ],
+            [
+              878.853,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            72.0222,
+            83.0848,
+            80.6649
+          ],
+          "top-stem": [
+            74.9364,
+            86.4466,
+            83.9288
+          ],
+          "main-bar": [
+            72.0222,
+            83.0848,
+            80.6649
+          ],
+          "inner-left": [
+            74.9364,
+            90.4542,
+            98.2416
+          ],
+          "inner-right": [
+            74.9364,
+            90.4542,
+            98.2416
+          ],
+          "outer-left": [
+            61.0593,
+            70.438,
+            68.3864
+          ],
+          "outer-right": [
+            61.0593,
+            70.438,
+            68.3864
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "mincho",
+      "profile": "baseline",
+      "seed": 42,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "baseline",
+        "width": 1,
+        "bar_span": 1,
+        "junction_shift": 0,
+        "lower_spread": 1,
+        "curve_gain": 0,
+        "weight": 1,
+        "contrast": 0,
+        "terminal_style": "inherit",
+        "terminal_gain": 1,
+        "variation": 0
+      },
+      "sha256": "7a2fffa496c57c51b490fff19dfe719bfe30c3d947f2ca70cd38b4bafea1dd87",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          145.0,
+          120.0,
+          859.4,
+          811.6
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "baseline",
+          "width": 1,
+          "bar_span": 1,
+          "junction_shift": 0,
+          "lower_spread": 1.0,
+          "curve_gain": 0.0,
+          "weight": 1.0,
+          "contrast": 0,
+          "terminal_style": "inherit",
+          "terminal_gain": 1,
+          "variation": 0
+        },
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              270.0,
+              280.0
+            ],
+            [
+              420.0,
+              280.0
+            ],
+            [
+              580.0,
+              280.0
+            ],
+            [
+              730.0,
+              280.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              125.0
+            ],
+            [
+              502.0,
+              230.0
+            ],
+            [
+              500.0,
+              350.0
+            ],
+            [
+              500.0,
+              450.0
+            ]
+          ],
+          "main-bar": [
+            [
+              145.0,
+              450.0
+            ],
+            [
+              380.0,
+              450.0
+            ],
+            [
+              620.0,
+              450.0
+            ],
+            [
+              855.0,
+              450.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              470.0
+            ],
+            [
+              425.0,
+              620.0
+            ],
+            [
+              380.0,
+              750.0
+            ],
+            [
+              315.0,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              470.0
+            ],
+            [
+              585.0,
+              600.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              300.0,
+              540.0
+            ],
+            [
+              285.0,
+              615.0
+            ],
+            [
+              245.0,
+              675.0
+            ],
+            [
+              205.0,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              700.0,
+              545.0
+            ],
+            [
+              730.0,
+              590.0
+            ],
+            [
+              760.0,
+              650.0
+            ],
+            [
+              775.0,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            13.0,
+            13.0,
+            13.0
+          ],
+          "top-stem": [
+            57.0,
+            57.0,
+            57.0
+          ],
+          "main-bar": [
+            13.0,
+            13.0,
+            13.0
+          ],
+          "inner-left": [
+            57.0,
+            43.7475,
+            3.99
+          ],
+          "inner-right": [
+            57.0,
+            43.7874,
+            4.1496
+          ],
+          "outer-left": [
+            42.0,
+            32.6319,
+            4.5276
+          ],
+          "outer-right": [
+            42.0,
+            32.8377,
+            5.3508
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "mincho",
+      "profile": "baseline",
+      "seed": 43,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "baseline",
+        "width": 1,
+        "bar_span": 1,
+        "junction_shift": 0,
+        "lower_spread": 1,
+        "curve_gain": 0,
+        "weight": 1,
+        "contrast": 0,
+        "terminal_style": "inherit",
+        "terminal_gain": 1,
+        "variation": 0
+      },
+      "sha256": "7a2fffa496c57c51b490fff19dfe719bfe30c3d947f2ca70cd38b4bafea1dd87",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          145.0,
+          120.0,
+          859.4,
+          811.6
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "baseline",
+          "width": 1,
+          "bar_span": 1,
+          "junction_shift": 0,
+          "lower_spread": 1.0,
+          "curve_gain": 0.0,
+          "weight": 1.0,
+          "contrast": 0,
+          "terminal_style": "inherit",
+          "terminal_gain": 1,
+          "variation": 0
+        },
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              270.0,
+              280.0
+            ],
+            [
+              420.0,
+              280.0
+            ],
+            [
+              580.0,
+              280.0
+            ],
+            [
+              730.0,
+              280.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              125.0
+            ],
+            [
+              502.0,
+              230.0
+            ],
+            [
+              500.0,
+              350.0
+            ],
+            [
+              500.0,
+              450.0
+            ]
+          ],
+          "main-bar": [
+            [
+              145.0,
+              450.0
+            ],
+            [
+              380.0,
+              450.0
+            ],
+            [
+              620.0,
+              450.0
+            ],
+            [
+              855.0,
+              450.0
+            ]
+          ],
+          "inner-left": [
+            [
+              420.0,
+              470.0
+            ],
+            [
+              425.0,
+              620.0
+            ],
+            [
+              380.0,
+              750.0
+            ],
+            [
+              315.0,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              585.0,
+              470.0
+            ],
+            [
+              585.0,
+              600.0
+            ],
+            [
+              585.0,
+              750.0
+            ],
+            [
+              510.0,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              300.0,
+              540.0
+            ],
+            [
+              285.0,
+              615.0
+            ],
+            [
+              245.0,
+              675.0
+            ],
+            [
+              205.0,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              700.0,
+              545.0
+            ],
+            [
+              730.0,
+              590.0
+            ],
+            [
+              760.0,
+              650.0
+            ],
+            [
+              775.0,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            13.0,
+            13.0,
+            13.0
+          ],
+          "top-stem": [
+            57.0,
+            57.0,
+            57.0
+          ],
+          "main-bar": [
+            13.0,
+            13.0,
+            13.0
+          ],
+          "inner-left": [
+            57.0,
+            43.7475,
+            3.99
+          ],
+          "inner-right": [
+            57.0,
+            43.7874,
+            4.1496
+          ],
+          "outer-left": [
+            42.0,
+            32.6319,
+            4.5276
+          ],
+          "outer-right": [
+            42.0,
+            32.8377,
+            5.3508
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "mincho",
+      "profile": "heavy-condensed-headline",
+      "seed": 42,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "heavy-condensed-headline",
+        "width": 0.76,
+        "bar_span": 0.82,
+        "junction_shift": -45,
+        "lower_spread": 0.84,
+        "curve_gain": -0.4,
+        "weight": 1.9,
+        "contrast": -0.9,
+        "terminal_style": "block",
+        "terminal_gain": 1,
+        "variation": 0.35
+      },
+      "sha256": "b126d8eb0cfadf525465870e776ccea77786a7a3404467dafb0b1c2c51fb790d",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          278.76,
+          112.9,
+          721.24,
+          838.99
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "heavy-condensed-headline",
+          "width": 0.76,
+          "bar_span": 0.82,
+          "junction_shift": -45,
+          "lower_spread": 0.836799,
+          "curve_gain": -0.375381,
+          "weight": 1.900461,
+          "contrast": -0.9,
+          "terminal_style": "block",
+          "terminal_gain": 1,
+          "variation": 0.35
+        },
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              356.664,
+              257.5
+            ],
+            [
+              450.144,
+              257.5
+            ],
+            [
+              549.856,
+              257.5
+            ],
+            [
+              643.336,
+              257.5
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              113.75
+            ],
+            [
+              501.52,
+              207.5
+            ],
+            [
+              500.0,
+              316.25
+            ],
+            [
+              500.0,
+              405.0
+            ]
+          ],
+          "main-bar": [
+            [
+              278.764,
+              405.0
+            ],
+            [
+              425.216,
+              405.0
+            ],
+            [
+              574.784,
+              405.0
+            ],
+            [
+              721.236,
+              405.0
+            ]
+          ],
+          "inner-left": [
+            [
+              439.2,
+              425.0
+            ],
+            [
+              453.7335,
+              583.2431
+            ],
+            [
+              425.1149,
+              739.5046
+            ],
+            [
+              390.3342,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              564.6,
+              425.0
+            ],
+            [
+              553.7287,
+              563.2431
+            ],
+            [
+              550.2145,
+              739.5046
+            ],
+            [
+              498.3716,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              348.0,
+              495.0
+            ],
+            [
+              346.41,
+              578.2431
+            ],
+            [
+              327.104,
+              664.5046
+            ],
+            [
+              315.8131,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              652.0,
+              500.0
+            ],
+            [
+              664.7833,
+              553.2431
+            ],
+            [
+              676.4204,
+              639.5046
+            ],
+            [
+              671.4675,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            99.9642,
+            99.9642,
+            99.9642
+          ],
+          "top-stem": [
+            108.3263,
+            108.3263,
+            108.3263
+          ],
+          "main-bar": [
+            99.9642,
+            99.9642,
+            99.9642
+          ],
+          "inner-left": [
+            108.3263,
+            106.1814,
+            99.7468
+          ],
+          "inner-right": [
+            108.3263,
+            106.3222,
+            100.3101
+          ],
+          "outer-left": [
+            79.8194,
+            78.5921,
+            74.9105
+          ],
+          "outer-right": [
+            79.8194,
+            78.7318,
+            75.4692
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "mincho",
+      "profile": "heavy-condensed-headline",
+      "seed": 43,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "heavy-condensed-headline",
+        "width": 0.76,
+        "bar_span": 0.82,
+        "junction_shift": -45,
+        "lower_spread": 0.84,
+        "curve_gain": -0.4,
+        "weight": 1.9,
+        "contrast": -0.9,
+        "terminal_style": "block",
+        "terminal_gain": 1,
+        "variation": 0.35
+      },
+      "sha256": "e06171cb07721f751cc008f645d886dadbd5d04122129a5054e6c184a70b2591",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          278.76,
+          112.91,
+          721.24,
+          838.62
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "heavy-condensed-headline",
+          "width": 0.76,
+          "bar_span": 0.82,
+          "junction_shift": -45,
+          "lower_spread": 0.836764,
+          "curve_gain": -0.40279,
+          "weight": 1.873733,
+          "contrast": -0.9,
+          "terminal_style": "block",
+          "terminal_gain": 1,
+          "variation": 0.35
+        },
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              356.664,
+              257.5
+            ],
+            [
+              450.144,
+              257.5
+            ],
+            [
+              549.856,
+              257.5
+            ],
+            [
+              643.336,
+              257.5
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              113.75
+            ],
+            [
+              501.52,
+              207.5
+            ],
+            [
+              500.0,
+              316.25
+            ],
+            [
+              500.0,
+              405.0
+            ]
+          ],
+          "main-bar": [
+            [
+              278.764,
+              405.0
+            ],
+            [
+              425.216,
+              405.0
+            ],
+            [
+              574.784,
+              405.0
+            ],
+            [
+              721.236,
+              405.0
+            ]
+          ],
+          "inner-left": [
+            [
+              439.2,
+              425.0
+            ],
+            [
+              454.4419,
+              582.7498
+            ],
+            [
+              425.8246,
+              739.8335
+            ],
+            [
+              390.9224,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              564.6,
+              425.0
+            ],
+            [
+              553.0202,
+              562.7498
+            ],
+            [
+              549.5052,
+              739.8335
+            ],
+            [
+              497.788,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              348.0,
+              495.0
+            ],
+            [
+              346.9105,
+              577.7498
+            ],
+            [
+              327.607,
+              664.8335
+            ],
+            [
+              316.071,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              652.0,
+              500.0
+            ],
+            [
+              664.2827,
+              552.7498
+            ],
+            [
+              675.9174,
+              639.8335
+            ],
+            [
+              671.2102,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            98.5584,
+            98.5584,
+            98.5584
+          ],
+          "top-stem": [
+            106.8028,
+            106.8028,
+            106.8028
+          ],
+          "main-bar": [
+            98.5584,
+            98.5584,
+            98.5584
+          ],
+          "inner-left": [
+            106.8028,
+            104.6881,
+            98.344
+          ],
+          "inner-right": [
+            106.8028,
+            104.8269,
+            98.8994
+          ],
+          "outer-left": [
+            78.6968,
+            77.4868,
+            73.8569
+          ],
+          "outer-right": [
+            78.6968,
+            77.6245,
+            74.4078
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "mincho",
+      "profile": "elegant-high-contrast-editorial",
+      "seed": 42,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "elegant-high-contrast-editorial",
+        "width": 0.98,
+        "bar_span": 1.06,
+        "junction_shift": 12,
+        "lower_spread": 1.28,
+        "curve_gain": 0.85,
+        "weight": 1.12,
+        "contrast": 0.85,
+        "terminal_style": "hairline",
+        "terminal_gain": 1.25,
+        "variation": 0.35
+      },
+      "sha256": "90bfbad0d203d50b0d0dd5df4f38e5dc096458c48bde03b92e86764c42d56247",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          120.59,
+          123.0,
+          873.52,
+          811.82
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "elegant-high-contrast-editorial",
+          "width": 0.98,
+          "bar_span": 1.06,
+          "junction_shift": 12,
+          "lower_spread": 1.274332,
+          "curve_gain": 0.835324,
+          "weight": 1.11829,
+          "contrast": 0.85,
+          "terminal_style": "hairline",
+          "terminal_gain": 1.25,
+          "variation": 0.35
+        },
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              261.076,
+              286.0
+            ],
+            [
+              416.896,
+              286.0
+            ],
+            [
+              583.104,
+              286.0
+            ],
+            [
+              738.924,
+              286.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              128.0
+            ],
+            [
+              501.96,
+              236.0
+            ],
+            [
+              500.0,
+              359.0
+            ],
+            [
+              500.0,
+              462.0
+            ]
+          ],
+          "main-bar": [
+            [
+              131.226,
+              462.0
+            ],
+            [
+              375.344,
+              462.0
+            ],
+            [
+              624.656,
+              462.0
+            ],
+            [
+              868.774,
+              462.0
+            ]
+          ],
+          "inner-left": [
+            [
+              421.6,
+              482.0
+            ],
+            [
+              396.4266,
+              643.0358
+            ],
+            [
+              340.2286,
+              743.9761
+            ],
+            [
+              246.0423,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              583.3,
+              482.0
+            ],
+            [
+              613.6721,
+              623.0358
+            ],
+            [
+              621.2894,
+              743.9761
+            ],
+            [
+              535.4097,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              304.0,
+              552.0
+            ],
+            [
+              263.2308,
+              638.0358
+            ],
+            [
+              199.984,
+              668.9761
+            ],
+            [
+              121.7672,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              696.0,
+              557.0
+            ],
+            [
+              751.9173,
+              613.0358
+            ],
+            [
+              805.5134,
+              643.9761
+            ],
+            [
+              853.2559,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            9.2242,
+            9.2242,
+            9.2242
+          ],
+          "top-stem": [
+            63.7425,
+            63.7425,
+            63.7425
+          ],
+          "main-bar": [
+            9.2242,
+            9.2242,
+            9.2242
+          ],
+          "inner-left": [
+            63.7425,
+            48.9224,
+            4.462
+          ],
+          "inner-right": [
+            63.7425,
+            48.967,
+            4.6405
+          ],
+          "outer-left": [
+            46.9682,
+            36.4919,
+            5.0632
+          ],
+          "outer-right": [
+            46.9682,
+            36.7221,
+            5.9837
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "mincho",
+      "profile": "elegant-high-contrast-editorial",
+      "seed": 43,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "elegant-high-contrast-editorial",
+        "width": 0.98,
+        "bar_span": 1.06,
+        "junction_shift": 12,
+        "lower_spread": 1.28,
+        "curve_gain": 0.85,
+        "weight": 1.12,
+        "contrast": 0.85,
+        "terminal_style": "hairline",
+        "terminal_gain": 1.25,
+        "variation": 0.35
+      },
+      "sha256": "aed2ee15ee12663475126393ee0d1e3e9a2f62251c39d1f9f4f150fedc3b5d19",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          120.68,
+          123.0,
+          873.52,
+          811.84
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "elegant-high-contrast-editorial",
+          "width": 0.98,
+          "bar_span": 1.06,
+          "junction_shift": 12,
+          "lower_spread": 1.272405,
+          "curve_gain": 0.872488,
+          "weight": 1.13239,
+          "contrast": 0.85,
+          "terminal_style": "hairline",
+          "terminal_gain": 1.25,
+          "variation": 0.35
+        },
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              261.076,
+              286.0
+            ],
+            [
+              416.896,
+              286.0
+            ],
+            [
+              583.104,
+              286.0
+            ],
+            [
+              738.924,
+              286.0
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              128.0
+            ],
+            [
+              501.96,
+              236.0
+            ],
+            [
+              500.0,
+              359.0
+            ],
+            [
+              500.0,
+              462.0
+            ]
+          ],
+          "main-bar": [
+            [
+              131.226,
+              462.0
+            ],
+            [
+              375.344,
+              462.0
+            ],
+            [
+              624.656,
+              462.0
+            ],
+            [
+              868.774,
+              462.0
+            ]
+          ],
+          "inner-left": [
+            [
+              421.6,
+              482.0
+            ],
+            [
+              395.2041,
+              643.7048
+            ],
+            [
+              339.091,
+              743.5301
+            ],
+            [
+              245.3719,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              583.3,
+              482.0
+            ],
+            [
+              614.8926,
+              623.7048
+            ],
+            [
+              622.4563,
+              743.5301
+            ],
+            [
+              536.4106,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              304.0,
+              552.0
+            ],
+            [
+              262.4018,
+              638.7048
+            ],
+            [
+              199.324,
+              668.5301
+            ],
+            [
+              121.8873,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              696.0,
+              557.0
+            ],
+            [
+              752.7431,
+              613.7048
+            ],
+            [
+              806.1693,
+              643.5301
+            ],
+            [
+              853.1736,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            9.3405,
+            9.3405,
+            9.3405
+          ],
+          "top-stem": [
+            64.5462,
+            64.5462,
+            64.5462
+          ],
+          "main-bar": [
+            9.3405,
+            9.3405,
+            9.3405
+          ],
+          "inner-left": [
+            64.5462,
+            49.5392,
+            4.5182
+          ],
+          "inner-right": [
+            64.5462,
+            49.5844,
+            4.699
+          ],
+          "outer-left": [
+            47.5604,
+            36.952,
+            5.127
+          ],
+          "outer-right": [
+            47.5604,
+            37.1851,
+            6.0592
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "mincho",
+      "profile": "showa-retro-signboard",
+      "seed": 42,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "showa-retro-signboard",
+        "width": 1.06,
+        "bar_span": 1.03,
+        "junction_shift": -15,
+        "lower_spread": 1.25,
+        "curve_gain": 1.05,
+        "weight": 1.4,
+        "contrast": -0.65,
+        "terminal_style": "round",
+        "terminal_gain": 1.15,
+        "variation": 0.35
+      },
+      "sha256": "162f3af9ce6ba3e4ddf1001d3df4c43f0228babde6a6d74314d9059d7f079312",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          62.39,
+          81.16,
+          920.36,
+          862.4
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "showa-retro-signboard",
+          "width": 1.06,
+          "bar_span": 1.03,
+          "junction_shift": -15,
+          "lower_spread": 1.251305,
+          "curve_gain": 1.040211,
+          "weight": 1.406924,
+          "contrast": -0.65,
+          "terminal_style": "round",
+          "terminal_gain": 1.15,
+          "variation": 0.35
+        },
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              248.886,
+              272.5
+            ],
+            [
+              412.656,
+              272.5
+            ],
+            [
+              587.344,
+              272.5
+            ],
+            [
+              751.114,
+              272.5
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              121.25
+            ],
+            [
+              502.12,
+              222.5
+            ],
+            [
+              500.0,
+              338.75
+            ],
+            [
+              500.0,
+              435.0
+            ]
+          ],
+          "main-bar": [
+            [
+              112.411,
+              435.0
+            ],
+            [
+              368.984,
+              435.0
+            ],
+            [
+              631.016,
+              435.0
+            ],
+            [
+              887.589,
+              435.0
+            ]
+          ],
+          "inner-left": [
+            [
+              415.2,
+              455.0
+            ],
+            [
+              380.7909,
+              628.7238
+            ],
+            [
+              321.1037,
+              732.5175
+            ],
+            [
+              223.7456,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              590.1,
+              455.0
+            ],
+            [
+              630.105,
+              608.7238
+            ],
+            [
+              637.6526,
+              732.5175
+            ],
+            [
+              544.1373,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              288.0,
+              525.0
+            ],
+            [
+              239.2734,
+              623.7238
+            ],
+            [
+              173.0469,
+              657.5175
+            ],
+            [
+              95.4854,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              712.0,
+              530.0
+            ],
+            [
+              777.0705,
+              598.7238
+            ],
+            [
+              832.845,
+              632.5175
+            ],
+            [
+              877.9869,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            58.528,
+            67.5179,
+            65.5514
+          ],
+          "top-stem": [
+            80.1947,
+            92.5126,
+            89.818
+          ],
+          "main-bar": [
+            58.528,
+            67.5179,
+            65.5514
+          ],
+          "inner-left": [
+            80.1947,
+            96.8014,
+            105.1352
+          ],
+          "inner-right": [
+            80.1947,
+            96.8014,
+            105.1352
+          ],
+          "outer-left": [
+            59.0908,
+            68.1672,
+            66.1817
+          ],
+          "outer-right": [
+            59.0908,
+            68.1672,
+            66.1817
+          ]
+        },
+        "review_required": true
+      }
+    },
+    {
+      "base": "mincho",
+      "profile": "showa-retro-signboard",
+      "seed": 43,
+      "source": {
+        "kind": "authored-skeleton",
+        "sha256": "7b46abc5835fa77c631802e1af039da401be635fa6a3bc2ccf8a1710e066c716",
+        "license_note": "Original FLAMORIS manually authored seven-role study, Apache-2.0; no third-party font or stroke dataset; manually authored mincho base, authored-structure-1"
+      },
+      "dna": {
+        "schema_version": 1,
+        "profile": "showa-retro-signboard",
+        "width": 1.06,
+        "bar_span": 1.03,
+        "junction_shift": -15,
+        "lower_spread": 1.25,
+        "curve_gain": 1.05,
+        "weight": 1.4,
+        "contrast": -0.65,
+        "terminal_style": "round",
+        "terminal_gain": 1.15,
+        "variation": 0.35
+      },
+      "sha256": "0755b5c0f36ac6933bbb9ec33a2fe40f5b3bee9ce1e347cfb4a7ff6b6c0c0199",
+      "metrics": {
+        "view_box": [
+          0,
+          0,
+          1000,
+          1000
+        ],
+        "bounds": [
+          61.94,
+          81.71,
+          919.92,
+          861.68
+        ],
+        "anchor": [
+          500,
+          500
+        ],
+        "advance": 1000
+      },
+      "structure_qa": {
+        "parameters": {
+          "profile": "showa-retro-signboard",
+          "width": 1.06,
+          "bar_span": 1.03,
+          "junction_shift": -15,
+          "lower_spread": 1.253218,
+          "curve_gain": 1.064458,
+          "weight": 1.387711,
+          "contrast": -0.65,
+          "terminal_style": "round",
+          "terminal_gain": 1.15,
+          "variation": 0.35
+        },
+        "source_family": "mincho",
+        "landmarks": {
+          "top-bar": [
+            [
+              248.886,
+              272.5
+            ],
+            [
+              412.656,
+              272.5
+            ],
+            [
+              587.344,
+              272.5
+            ],
+            [
+              751.114,
+              272.5
+            ]
+          ],
+          "top-stem": [
+            [
+              500.0,
+              121.25
+            ],
+            [
+              502.12,
+              222.5
+            ],
+            [
+              500.0,
+              338.75
+            ],
+            [
+              500.0,
+              435.0
+            ]
+          ],
+          "main-bar": [
+            [
+              112.411,
+              435.0
+            ],
+            [
+              368.984,
+              435.0
+            ],
+            [
+              631.016,
+              435.0
+            ],
+            [
+              887.589,
+              435.0
+            ]
+          ],
+          "inner-left": [
+            [
+              415.2,
+              455.0
+            ],
+            [
+              379.9002,
+              629.1602
+            ],
+            [
+              320.1217,
+              732.2265
+            ],
+            [
+              222.6508,
+              800.0
+            ]
+          ],
+          "inner-right": [
+            [
+              590.1,
+              455.0
+            ],
+            [
+              630.9981,
+              609.1602
+            ],
+            [
+              638.603,
+              732.2265
+            ],
+            [
+              544.8772,
+              810.0
+            ]
+          ],
+          "outer-left": [
+            [
+              288.0,
+              525.0
+            ],
+            [
+              238.6081,
+              624.1602
+            ],
+            [
+              172.2003,
+              657.2265
+            ],
+            [
+              94.5788,
+              710.0
+            ]
+          ],
+          "outer-right": [
+            [
+              712.0,
+              530.0
+            ],
+            [
+              777.7392,
+              599.1602
+            ],
+            [
+              833.6962,
+              632.2265
+            ],
+            [
+              878.853,
+              710.0
+            ]
+          ]
+        },
+        "stroke_widths": {
+          "top-bar": [
+            57.7288,
+            66.5959,
+            64.6562
+          ],
+          "top-stem": [
+            79.0995,
+            91.2492,
+            88.5915
+          ],
+          "main-bar": [
+            57.7288,
+            66.5959,
+            64.6562
+          ],
+          "inner-left": [
+            79.0995,
+            95.4795,
+            103.6995
+          ],
+          "inner-right": [
+            79.0995,
+            95.4795,
+            103.6995
+          ],
+          "outer-left": [
+            58.2839,
+            67.2363,
+            65.2779
+          ],
+          "outer-right": [
+            58.2839,
+            67.2363,
+            65.2779
+          ]
+        },
+        "review_required": true
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "base": "gothic",
+      "profile": "heavy-condensed-headline",
+      "changed_centerline_roles": [
+        "top-bar",
+        "top-stem",
+        "main-bar",
+        "inner-left",
+        "inner-right",
+        "outer-left",
+        "outer-right"
+      ],
+      "horizontal_vertical_ratio": 0.988889,
+      "main_bar_y": 385.0,
+      "inner_left_terminal": [
+        390.3342,
+        800.0
+      ]
+    },
+    {
+      "base": "gothic",
+      "profile": "elegant-high-contrast-editorial",
+      "changed_centerline_roles": [
+        "top-bar",
+        "top-stem",
+        "main-bar",
+        "inner-left",
+        "inner-right",
+        "outer-left",
+        "outer-right"
+      ],
+      "horizontal_vertical_ratio": 0.243833,
+      "main_bar_y": 442.0,
+      "inner_left_terminal": [
+        246.0423,
+        800.0
+      ]
+    },
+    {
+      "base": "gothic",
+      "profile": "showa-retro-signboard",
+      "changed_centerline_roles": [
+        "top-bar",
+        "top-stem",
+        "main-bar",
+        "inner-left",
+        "inner-right",
+        "outer-left",
+        "outer-right"
+      ],
+      "horizontal_vertical_ratio": 0.961112,
+      "main_bar_y": 415.0,
+      "inner_left_terminal": [
+        223.7456,
+        800.0
+      ]
+    },
+    {
+      "base": "mincho",
+      "profile": "heavy-condensed-headline",
+      "changed_centerline_roles": [
+        "top-bar",
+        "top-stem",
+        "main-bar",
+        "inner-left",
+        "inner-right",
+        "outer-left",
+        "outer-right"
+      ],
+      "horizontal_vertical_ratio": 0.922806,
+      "main_bar_y": 405.0,
+      "inner_left_terminal": [
+        390.3342,
+        800.0
+      ]
+    },
+    {
+      "base": "mincho",
+      "profile": "elegant-high-contrast-editorial",
+      "changed_centerline_roles": [
+        "top-bar",
+        "top-stem",
+        "main-bar",
+        "inner-left",
+        "inner-right",
+        "outer-left",
+        "outer-right"
+      ],
+      "horizontal_vertical_ratio": 0.14471,
+      "main_bar_y": 462.0,
+      "inner_left_terminal": [
+        246.0423,
+        800.0
+      ]
+    },
+    {
+      "base": "mincho",
+      "profile": "showa-retro-signboard",
+      "changed_centerline_roles": [
+        "top-bar",
+        "top-stem",
+        "main-bar",
+        "inner-left",
+        "inner-right",
+        "outer-left",
+        "outer-right"
+      ],
+      "horizontal_vertical_ratio": 0.729824,
+      "main_bar_y": 435.0,
+      "inner_left_terminal": [
+        223.7456,
+        800.0
+      ]
+    }
+  ],
+  "visual_review": "required",
+  "limitations": [
+    "Only manually authored seven-role maps for 赤; no automatic font decomposition.",
+    "Two bases model gothic/mincho traits; neither is an extracted existing font.",
+    "AI concept art guided author-chosen rules; no automatic raster tracing or style fitting.",
+    "No claim of complete concept-image matching, full-lyric coverage or target-size legibility."
+  ]
+}

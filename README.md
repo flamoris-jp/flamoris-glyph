@@ -92,6 +92,86 @@ python -m flamoris_glyph.cli lyrics.srt --song "My song" --out inventory.json
 
 [Architecture](docs/architecture.md) · [Bundle contract](docs/bundle-v2.md) · [Style / skeleton input](docs/inputs.md)
 
+## Experimental Pattern DNA
+
+Optional `.[patterns]` adds three descriptive outline-transform profiles and a
+baseline/seed comparison lab. Existing generation stays unchanged unless
+`--pattern` or `--pattern-file` is supplied. This is bounded morphology;
+semantic terminals, full Japanese visual acceptance and 1080p fine-line QA
+remain open. See [contract and reproduction commands](docs/pattern-dna.md)
+and [first comparison](docs/pattern-lab-report.md).
+
+The next [authored structural study](docs/authored-structure.md) explicitly
+maps seven roles of **赤**, then changes bar lengths, junction height, lower
+curves, contrast and terminals. Paired original gothic/mincho-like bases show
+how the same DNA retains different source traits. This is a manually authored
+one-character study, **not automatic decomposition of an existing font**.
+
+```bash
+python -m flamoris_glyph.structure_lab examples/aka-structure.json --out output-structure-study
+```
+
+The [bone + ink study](docs/role-anatomy-study.md) takes this further: it
+redesigns each role's angle, length and terminal direction, then constructs
+role-specific width profiles and caps. Eight source/bones/ink/combined
+comparisons separate the two layers on the same authored bases. This is a
+standalone one-character research API, not automatic font decomposition or a
+new bundle format. Visual acceptance remains open.
+
+```bash
+python -m flamoris_glyph.anatomy_lab examples/aka-structure.json examples/anatomy-dna/elastic-retro.json --out output-anatomy
+```
+
+The [fixed-ink skeleton comparison](docs/skeleton-pattern-study.md) tries six
+role arrangements on both authored bases: upright, rising, falling, compact,
+fan and offset rhythm. Ink rules stay fixed while angle, length and role
+placement change. Review sheets include centerline overlays.
+
+```bash
+python -m flamoris_glyph.skeleton_lab examples/aka-structure.json examples/anatomy-dna/elastic-retro.json examples/skeleton-patterns.json --out output-skeleton-study
+```
+
+The [three-input calligraphy study](docs/calligraphy-study.md) separates a
+resolved skeleton, design DNA and drawing tool. Two skeletons × two intents ×
+three virtual tools produce twelve comparisons. Round, broad and brush-like
+elliptical footprints vary the resulting strokes without changing the input
+centerlines. This is a geometric study, not a physical or trained brush model.
+
+```bash
+python -m flamoris_glyph.calligraphy_lab examples/aka-structure.json examples/calligraphy-study.json --out output-calligraphy-study
+```
+
+The [single-stroke action study](docs/stroke-program-study.md) models entry,
+travel and finishing as short explicit motion programs. Nine comparisons and
+two controls distinguish time alone from changes in contact position,
+pressure and nib angle. These are hand-authored research examples, not a
+trained handwriting model. Future education research is tracked in [#9](https://github.com/flamoris-jp/flamoris-glyph/issues/9).
+
+```bash
+python -m flamoris_glyph.stroke_lab examples/stroke-program-study.json --out output-stroke-study
+```
+
+## A lyric artwork: skeleton + DNA + stroke
+
+The [「もういいよ」lyric artwork](docs/lyric-performance.md) combines the three
+ideas into ten mixed Japanese/English lyric lines. TENDER, SURGE and PLAYFUL
+produce complete posters and individual closed-path glyph SVGs. The shared DNA
+contains nib/writing-style tendencies; stroke expression changes the centerline
+as well as the ink. A separate strip keeps skeleton, DNA and colour fixed while
+changing expression. This finite offline artwork uses a credited **KanjiVG
+CC BY-SA 3.0** subset and original Latin centerlines; no trained writer or music
+alignment is implied. The experimental artwork package does not change
+bundle-v2 or player integration contracts.
+
+```bash
+python -m flamoris_glyph.lyric_performance examples/mou-iiyo --out output-lyric-performance
+python -m flamoris_glyph.lyric_performance examples/mou-iiyo --intensity 4 --out output-lyric-exaggerated
+```
+
+`--intensity 1..4` strengthens the existing stroke expression while keeping
+skeleton and DNA inputs fixed. Values above 1 also export a same-size
+before/after sheet. Degree 1 retains the original glyph geometry.
+
 ## Supported boundary
 
 - UTF-8（BOM可）、LF / CRLF、plain text / SRT。SRTの数値歌詞は保持し、cue時刻をms整数で出力。文字単位の歌唱時刻は推測しません。
@@ -102,7 +182,11 @@ python -m flamoris_glyph.cli lyrics.srt --song "My song" --out inventory.json
 ## License / FLAMORIS
 
 Code and original experimental skeleton samples: [Apache License 2.0](LICENSE).
-The fontTools dependency is MIT licensed. No third-party fonts, models or stroke datasets are included. User-supplied fonts and license files live only in ignored `lib/fonts/`.
+The fontTools dependency is MIT licensed. The finite Japanese lyric skeleton
+subset and its derivative artwork are **CC BY-SA 3.0**, credited to KanjiVG /
+Ulrich Apel; see [attribution and modifications](examples/mou-iiyo/ATTRIBUTION.md).
+No third-party font binaries or models are included. User-supplied fonts and
+license files live only in ignored `lib/fonts/`.
 Font-derived artwork remains subject to the supplied font's license; recording a license note is provenance, not automated legal verification.
 
 FLAMORIS is open-source creative software. Commercial use is welcome within applicable licenses. Software is provided as-is, without guaranteed individual support.
@@ -110,3 +194,4 @@ FLAMORIS is open-source creative software. Commercial use is welcome within appl
 ## CGのactor連携（設計バックログ）
 
 [Issue #3](https://github.com/flamoris-jp/flamoris-glyph/issues/3)の依存関係を[形状契約とCG側の取り込み契約](docs/scene-actor-integration.md)に分けました。Glyphは形状・Style DNA・出典、CGは配置・動作・物理研究を持ちます。全体Scene Engineスキーマ待ちは外し、必要な二者間契約を合意します。CGのGlyph取り込みは未実装。Cinemaの旧adapterは比較対象として保存し、Cinema再開・新エンジン新設は前提にしません。
+

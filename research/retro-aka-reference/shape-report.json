@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "kind": "reference-led-shape-research",
+  "normalization": "Same height 820 and bbox center [500,500], isotropic only; no per-part fitting",
+  "native_reference_trace_iou": 0.9879330337730106,
+  "reference_trace_components": 3,
+  "metrics": {
+    "reference-trace": {
+      "bounds": [
+        55,
+        90,
+        943,
+        910
+      ],
+      "aspect": 1.0829268292682928,
+      "ink_fraction_in_bbox": 0.5736404087013843,
+      "components": 3,
+      "component_ink_fractions": [
+        0.8102881958908504,
+        0.10754317671449981,
+        0.08216862739464978
+      ],
+      "top_bar_end_neck_ratio": 1.3663366336633667,
+      "upper_bar_gap_height_fraction": 0.04878048780487804,
+      "manual_sections": {
+        "left_end": {
+          "x_fraction": 0.22,
+          "runs_height_fraction": [
+            [
+              0.1475609756097561,
+              0.31585365853658537
+            ],
+            [
+              0.36097560975609755,
+              0.5109756097560976
+            ]
+          ]
+        },
+        "left_neck": {
+          "x_fraction": 0.4,
+          "runs_height_fraction": [
+            [
+              0.16951219512195123,
+              0.2926829268292683
+            ],
+            [
+              0.348780487804878,
+              0.5597560975609757
+            ]
+          ]
+        },
+        "gap_probe": {
+          "x_fraction": 0.3,
+          "runs_height_fraction": [
+            [
+              0.17073170731707318,
+              0.30853658536585366
+            ],
+            [
+              0.3573170731707317,
+              0.4902439024390244
+            ]
+          ]
+        }
+      }
+    },
+    "previous": {
+      "bounds": [
+        47,
+        90,
+        953,
+        910
+      ],
+      "aspect": 1.104878048780488,
+      "ink_fraction_in_bbox": 0.3807893178269531,
+      "components": 3,
+      "component_ink_fractions": [
+        0.8306515468582094,
+        0.08816314122504383,
+        0.08118531191674679
+      ],
+      "top_bar_end_neck_ratio": 0.9069767441860467,
+      "upper_bar_gap_height_fraction": 0.10243902439024388,
+      "manual_sections": {
+        "left_end": {
+          "x_fraction": 0.22,
+          "runs_height_fraction": [
+            [
+              0.1719512195121951,
+              0.26707317073170733
+            ],
+            [
+              0.37317073170731707,
+              0.474390243902439
+            ]
+          ]
+        },
+        "left_neck": {
+          "x_fraction": 0.4,
+          "runs_height_fraction": [
+            [
+              0.16707317073170733,
+              0.27195121951219514
+            ],
+            [
+              0.37073170731707317,
+              0.5597560975609757
+            ]
+          ]
+        },
+        "gap_probe": {
+          "x_fraction": 0.3,
+          "runs_height_fraction": [
+            [
+              0.16951219512195123,
+              0.26951219512195124
+            ],
+            [
+              0.3719512195121951,
+              0.47560975609756095
+            ],
+            [
+              0.552439024390244,
+              0.5597560975609757
+            ]
+          ]
+        }
+      }
+    },
+    "weight-only": {
+      "bounds": [
+        53,
+        90,
+        947,
+        910
+      ],
+      "aspect": 1.0902439024390245,
+      "ink_fraction_in_bbox": 0.5266000982157473,
+      "components": 1,
+      "component_ink_fractions": [
+        1.0
+      ],
+      "top_bar_end_neck_ratio": 0.9024390243902438,
+      "upper_bar_gap_height_fraction": 0.04878048780487804,
+      "manual_sections": {
+        "left_end": {
+          "x_fraction": 0.22,
+          "runs_height_fraction": [
+            [
+              0.16341463414634147,
+              0.29878048780487804
+            ],
+            [
+              0.35365853658536583,
+              0.4951219512195122
+            ],
+            [
+              0.5475609756097561,
+              0.5597560975609757
+            ]
+          ]
+        },
+        "left_neck": {
+          "x_fraction": 0.4,
+          "runs_height_fraction": [
+            [
+              0.15609756097560976,
+              0.30609756097560975
+            ],
+            [
+              0.348780487804878,
+              0.5597560975609757
+            ]
+          ]
+        },
+        "gap_probe": {
+          "x_fraction": 0.3,
+          "runs_height_fraction": [
+            [
+              0.1597560975609756,
+              0.3024390243902439
+            ],
+            [
+              0.35121951219512193,
+              0.4975609756097561
+            ],
+            [
+              0.5097560975609756,
+              0.5597560975609757
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "iou_to_traced_reference": {
+    "reference-trace": 1.0,
+    "previous": 0.625566432398193,
+    "weight-only": 0.7576967655870711
+  },
+  "not_a_beauty_score": true,
+  "manual_semantics": true,
+  "observations": [
+    "The old model is similar in global aspect but much lighter in filled area.",
+    "The reference upper bar is fuller near its left end than near the neck; the previous model reverses that relation at the selected probes.",
+    "The reference has less upper-bar white gap at the selected probe.",
+    "Weight alone raises geometric similarity but merges three separated silhouettes into one.",
+    "Reference left lower sweep ends in a point while other terminals remain full and round; uniform rounding loses that contrast."
+  ],
+  "hypotheses_not_conclusions": [
+    "A fuller end plus a narrower neck can create a soft elastic rhythm.",
+    "Round weight contrasted with a pointed sweeping terminal can supply motion without random distortion.",
+    "Region-specific white gaps may need independent constraints instead of a single global weight."
+  ],
+  "limits": [
+    "One manually cropped AI reference and one character; no general style-learning result.",
+    "Tracing is silhouette reconstruction, not reusable DNA or stroke decomposition.",
+    "Measurements are study-specific probes, not universal typographic landmarks.",
+    "Similarity to this reference does not measure beauty, legibility or generalization."
+  ]
+}
